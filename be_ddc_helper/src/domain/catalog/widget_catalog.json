@@ -1,0 +1,16 @@
+[
+  {
+    "widgetName": "content",
+    "portlet": "v9.widgets.content.default.v1",
+    "widget_type": "Content",
+    "description": "Rich text / HTML content block.",
+    "use_when": "Body copy, headlines, CTAs, any text-based content."
+  },
+  {
+    "widgetName": "image",
+    "portlet": "v9.widgets.image.default.v1",
+    "widget_type": "Image",
+    "description": "Image display block.",
+    "use_when": "Hero images, banners, photo galleries, any visual-first slot."
+  }
+]

@@ -1,0 +1,49 @@
+# Spec Kit — may contain agent credentials
+.specify/
+.claude/
+
+# Node / Vite
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+
+# TypeScript incremental compilation
+*.tsbuildinfo
+
+# Test coverage (vitest / c8)
+coverage/
+.nyc_output/
+
+# Lint caches
+.eslintcache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+.cursor/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db

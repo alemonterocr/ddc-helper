@@ -1,0 +1,31 @@
+---
+# Spec file schema for fe_ddc_helper.
+# Agents: validate spec.md frontmatter against this before marking a spec complete.
+
+fields:
+  name:
+    type: string
+    required: true
+
+  type:
+    type: enum
+    required: true
+    values: [atom, molecule, organism, template, page, port, adapter, script, model]
+
+  status:
+    type: enum
+    required: true
+    values: [planned, in-progress, built, tested]
+
+  atomic-layer:
+    type: enum
+    required: false
+    applies_when: "type is atom | molecule | organism | template | page"
+    values: [atom, molecule, organism, template, page]
+
+required_sections:
+  - "## Purpose"
+  - "## Props / Inputs"
+  - "## Outputs / Emits"
+  - "## Contracts"
+  - "## Dependencies"

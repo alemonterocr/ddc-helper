@@ -1,0 +1,36 @@
+---
+# Spec file schema — all spec.md files in this project must conform to this.
+# Agents: validate frontmatter against this before marking a spec complete.
+
+fields:
+  name:
+    type: string
+    required: true
+    description: "Unique identifier for this module, matches the folder/file name"
+
+  type:
+    type: enum
+    required: true
+    values: [use-case, port, adapter, model, domain-rule, graph, config]
+
+  status:
+    type: enum
+    required: true
+    values: [planned, in-progress, built, tested]
+    progression: "planned → in-progress → built → tested (never skip)"
+
+  layer:
+    type: enum
+    required: true
+    values: [domain, port, application, adapter, infrastructure]
+
+required_sections:
+  - "## Purpose"
+  - "## Inputs"
+  - "## Outputs"
+  - "## Contracts"
+  - "## Dependencies"
+
+optional_sections:
+  - "## Notes"
+  - "## Known limitations"

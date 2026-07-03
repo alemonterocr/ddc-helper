@@ -1,0 +1,49 @@
+# Spec Kit — may contain agent credentials
+.specify/
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+.venv/
+.mypy_cache/
+.ruff_cache/
+
+# Local data
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE / editors
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

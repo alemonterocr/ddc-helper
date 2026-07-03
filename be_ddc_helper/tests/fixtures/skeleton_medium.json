@@ -1,0 +1,1936 @@
+{
+  "raw_html": "\n    <div class=\"di-stacks di-stacks--top\">\n    <div class=\"stack stack--header-content\">\n    <header id=\"header\" class=\"menu-top\">\n    \n\n<div class=\"visible-xs visible-sm\">\n    <div id=\"deviceHeader\">\n        <div class=\"dealerName\">\n            <div class=\"dealerName--wrapper\">\n                <div class=\"topWrapper__phone\">\n    <a href=\"/contact-us/\" data-radar=\"initialized\">\n        <span class=\"topWrapper__phone-icon desktop-icon\">\n            <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"15\" viewBox=\"0 0 24 24\" width=\"15\" xmlns=\"http://www.w3.org/2000/svg\">\n    \n    <path fill=\"#000000\" d=\"M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z\"></path>\n</svg>        </span>\n        Contact Us    </a>\n</div>\n\n<button class=\"topWrapper__address open-overlay icon-toggle-js hasAriaValues\" target=\"groupHeader2\" aria-pressed=\"false\" aria-expanded=\"false\">\n    <span class=\"topWrapper__address-icon desktop-icon\">\n        <svg aria-hidden=\"true\" class=\"di-svg\" height=\"15px\" viewBox=\"0 0 24 24\" width=\"20px\" xmlns=\"http://www.w3.org/2000/svg\">\n  \n  <path d=\"M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z\"></path>\n</svg>    </span>\n    <span class=\"topWrapper__close-icon desktop-icon\">\n        <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#ffffff\" height=\"20px\" viewBox=\"0 0 24 24\" width=\"20px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n    </span>\n    <span class=\"topWrapper__arrow-icon desktop-icon\">\n        <svg class=\"di-svg\" fill=\"#ffffff\" height=\"20px\" viewBox=\"0 0 24 24\" width=\"20px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z\"></path>\n</svg>    </span>\n    Find A Location</button>                <div class=\"dealerName__name\">\n                    <a trid=\"42a47c4ee4f34be5a92d9a\" trc=\"\" href=\"https://www.tomesautogroup.com\" itemprop=\"url\" data-radar=\"initialized\">\n                        Tomes Auto Group                    </a>\n                </div>\n                                                            </div>\n        </div>\n        <div class=\"deviceWrapper\">\n            \n            <!-- Mobile Hamburger Menu -->\n            <button trid=\"281c79f86add42b4809d78\" trc=\"\" aria-label=\"Open the main navigation menu\" class=\"deviceWrapper__menu menu-hamburger open-overlay icon-toggle-js device-icon hidden-sm\" target=\"fullMenu\" data-gtm-event=\"mobileHeaderHamburger\">\n                <span class=\"active\">\n                    <svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" class=\"di-svg\" fill=\"#000000\" width=\"25px\" height=\"25px\" viewBox=\"0 0 24 24\">\n    <path d=\"M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z\"></path></svg>                </span>\n                <span class=\"close\">\n                    <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"25px\" viewBox=\"0 0 24 24\" width=\"25px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n                </span>\n                <span class=\"icon-label hidden\">\n                    Menu                </span>\n            </button>\n\n            <!-- Tablet Hamburger Menu -->\n            <button trid=\"ea75d94fad0d461bbeb3e6\" trc=\"\" aria-label=\"Open the main navigation menu\" class=\"deviceWrapper__menu menu-hamburger open-overlay icon-toggle-js device-icon hidden-xs\" target=\"fullMenu\" data-gtm-event=\"tabletHeaderHamburger\">\n                <span class=\"active\">\n                    <svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" class=\"di-svg\" fill=\"#000000\" width=\"25px\" height=\"25px\" viewBox=\"0 0 24 24\">\n    <path d=\"M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z\"></path></svg>                </span>\n                <span class=\"close\">\n                    <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"25px\" viewBox=\"0 0 24 24\" width=\"25px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n                </span>\n                <span class=\"icon-label hidden\">\n                    Menu                </span>\n            </button>\n\n            <div class=\"deviceWrapper__logo\">\n                                                                                                <span class=\"logo\" itemscope=\"\" itemtype=\"http://schema.org/Organization\" title=\"home\">\n                                <a trid=\"797ebdd2880948c7b5993c\" trc=\"\" itemprop=\"url\" href=\"https://www.tomesautogroup.com\" data-radar=\"initialized\">\n                                    <picture>\n                                        <img itemprop=\"logo\" src=\"https://www.tomesautogroup.com/wp-content/themes/DealerInspireDealerTheme/images/logo-head-mobile.webp?ver=1779281853\" alt=\"Tomes Auto Group\" loading=\"eager\" width=\"220\" height=\"111\">\n                                    </picture>\n                                </a>\n                            </span>\n                                                </div>\n                                        <div class=\"deviceWrapper__buttons\">\n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                    \n                                            <button trid=\"66ec8a1693ca4a36abf2c3\" trc=\"\" class=\"deviceWrapper__buttons--search open-overlay icon-toggle-js device-icon\" target=\"searchOverlay\" aria-label=\"Open the inventory search\">\n                            <span class=\"active\">\n                                <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"25px\" viewBox=\"0 0 24 24\" width=\"25px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\"></path>\n</svg>                            </span>\n                            <span class=\"close\">\n                                <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"25px\" viewBox=\"0 0 24 24\" width=\"25px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n                            </span>\n                            <span class=\"icon-label hidden\">\n                                Search                            </span>\n                        </button>\n                    \n                    \n\n                                    </div>\n                                                                                        </div>\n\n        \n        \n    </div>\n</div>\n\n\n\n\n\n\n<div id=\"fullOverlay\" class=\"\">\n    <div id=\"overlayInner\" class=\"\">\n        <!-- MENU OVERLAY MOBILE -->\n                    <div id=\"fullMenu__overlay\" class=\"toolOverlay targetOverlay\" style=\"display: none;\" role=\"dialog\" aria-label=\"Navigation Menu\">\n                <div class=\"wrapper\">\n                    <div class=\"device-nav-menu\">\n                        <div class=\"navbar\">\n                            <div class=\"navbar-inner\">\n                                                                <nav class=\"nav_section main-menu-sidebar\" role=\"navigation\" aria-label=\"Main Navigation\">\n                                    <ul id=\"menu-main-menu\" class=\"nav\"><li id=\"menu-item-57\" class=\"newVehicles megamenu menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children top-level-children menu-item-57 dropdown\"><a title=\"New\" href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" aria-haspopup=\"true\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">New <span class=\"caret\"></span></a>\n<ul class=\" dropdown-menu\">\n\t<li id=\"menu-item-58\" class=\"show-count menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-58\"><a title=\"View All New Vehicles\" href=\"https://www.tomesautogroup.com/new-vehicles/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">View All New Vehicles</a></li>\n\t<li id=\"menu-item-551\" class=\"di-vehicle-icon brand ford light menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-551\"><a title=\"Ford Inventory\" href=\"https://www.tomesautogroup.com/new-vehicles/ford/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Ford Inventory</a></li>\n\t<li id=\"menu-item-1803\" class=\"di-vehicle-icon brand mitsubishi light menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-1803\"><a title=\"Mitsubishi Inventory\" href=\"https://www.tomesautogroup.com/new-vehicles/mitsubishi/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Mitsubishi Inventory</a></li>\n\t<li id=\"menu-item-550\" class=\"di-vehicle-icon brand subaru light menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-550\"><a title=\"Subaru Inventory\" href=\"https://www.tomesautogroup.com/new-vehicles/subaru/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Subaru Inventory</a></li>\n\t<li id=\"menu-item-549\" class=\"di-vehicle-icon brand volkswagen light menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-549\"><a title=\"Volkswagen Inventory\" href=\"https://www.tomesautogroup.com/new-vehicles/volkswagen/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Volkswagen Inventory</a></li>\n\t<li id=\"menu-item-552\" class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-item top-level-empty menu-item-552 active\"><a title=\"Sell Us Your Car!\" target=\"_blank\" href=\"https://www.tomesautogroup.com/sell-us-your-car/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Sell Us Your Car!</a></li>\n\t<li id=\"menu-item-75\" class=\"hide-count menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-75\"><a title=\"New Vehicle Specials\" href=\"https://www.tomesautogroup.com/new-vehicles/new-vehicle-specials/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">New Vehicle Specials</a></li>\n</ul>\n</li>\n<li id=\"menu-item-59\" class=\"split-menu left-edge menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children top-level-children menu-item-59 dropdown\"><a title=\"Pre-Owned\" href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" aria-haspopup=\"true\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Pre-Owned <span class=\"caret\"></span></a>\n<ul class=\" dropdown-menu\">\n\t<li id=\"menu-item-60\" class=\"show-count long-item menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-60\"><a title=\"View All Pre-Owned Vehicles\" href=\"https://www.tomesautogroup.com/used-vehicles/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">View All Pre-Owned Vehicles</a></li>\n\t<li id=\"menu-item-61\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-61\"><a title=\"Certified Pre-Owned Vehicles\" href=\"https://www.tomesautogroup.com/used-vehicles/certified-pre-owned-vehicles/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Certified Pre-Owned Vehicles</a></li>\n\t<li id=\"menu-item-557\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-557\"><a title=\"Pre-Owned Vehicle Specials\" href=\"https://www.tomesautogroup.com/used-vehicles/pre-owned-vehicle-specials/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Pre-Owned Vehicle Specials</a></li>\n\t<li id=\"menu-item-1948\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-1948\"><a title=\"Priced Under 15K\" href=\"https://www.tomesautogroup.com/used-vehicles/price-under-15k/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Priced Under 15K</a></li>\n\t<li id=\"menu-item-62\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-62\"><a title=\"Priced Under 20K\" href=\"https://www.tomesautogroup.com/used-vehicles/priced-under-20k/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Priced Under 20K</a></li>\n\t<li id=\"menu-item-556\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-556\"><a title=\"Used Ford Inventory\" href=\"https://www.tomesautogroup.com/used-ford-for-sale-in-mckinney/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used Ford Inventory</a></li>\n\t<li id=\"menu-item-555\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-555\"><a title=\"Used Subaru Inventory\" href=\"https://www.tomesautogroup.com/used-subaru-for-sale-in-mckinney/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used Subaru Inventory</a></li>\n\t<li id=\"menu-item-554\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-554\"><a title=\"Used Volkswagen Inventory\" href=\"https://www.tomesautogroup.com/used-volkswagen-for-sale-in-mckinney/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used Volkswagen Inventory</a></li>\n\t<li id=\"menu-item-558\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-558\"><a title=\"Used Ford Specials\" target=\"_blank\" href=\"https://www.bobtomesford.com/used-vehicles/pre-owned-vehicle-specials/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used Ford Specials</a></li>\n\t<li id=\"menu-item-559\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-559\"><a title=\"Used Subaru Specials\" target=\"_blank\" href=\"https://www.brandontomessubaru.com/used-vehicles/used-cars/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used Subaru Specials</a></li>\n\t<li id=\"menu-item-560\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-560\"><a title=\"Used Volkswagen Specials\" target=\"_blank\" href=\"https://www.brandontomesvw.com/usedspecials.html\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used Volkswagen Specials</a></li>\n\t<li id=\"menu-item-949\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-949\"><a title=\"Used SUVs\" href=\"https://www.tomesautogroup.com/used-suvs/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used SUVs</a></li>\n\t<li id=\"menu-item-948\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-948\"><a title=\"Used Trucks\" href=\"https://www.tomesautogroup.com/used-trucks/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used Trucks</a></li>\n\t<li id=\"menu-item-674\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-674\"><a title=\"Why Buy Used\" href=\"https://www.tomesautogroup.com/why-buy-used/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Why Buy Used</a></li>\n\t<li id=\"menu-item-553\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-553\"><a title=\"Used Cadillac Inventory\" href=\"https://www.tomesautogroup.com/used-cadillac/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Used Cadillac Inventory</a></li>\n\t<li id=\"menu-item-561\" class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-item top-level-empty menu-item-561 active\"><a title=\"Sell Us Your Car!\" target=\"_blank\" href=\"https://www.tomesautogroup.com/sell-us-your-car/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Sell Us Your Car!</a></li>\n</ul>\n</li>\n<li id=\"menu-item-69\" class=\"menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children top-level-children menu-item-69 dropdown\"><a title=\"Finance\" href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" aria-haspopup=\"true\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Finance <span class=\"caret\"></span></a>\n<ul class=\" dropdown-menu\">\n\t<li id=\"menu-item-70\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-70\"><a title=\"Finance Centers\" href=\"https://www.tomesautogroup.com/finance/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Finance Centers</a></li>\n\t<li id=\"menu-item-72\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-72\"><a title=\"Payment Calculator\" href=\"https://www.tomesautogroup.com/payment-calculator/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Payment Calculator</a></li>\n\t<li id=\"menu-item-73\" class=\"menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-31 current_page_item top-level-empty menu-item-73 active\"><a title=\"Sell Us Your Car\" href=\"https://www.tomesautogroup.com/sell-us-your-car/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Sell Us Your Car</a></li>\n\t<li id=\"menu-item-562\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-562\"><a title=\"Value Your Trade\" href=\"https://www.tomesautogroup.com/value-your-trade/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Value Your Trade</a></li>\n</ul>\n</li>\n<li id=\"menu-item-63\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children top-level-children menu-item-63 dropdown\"><a title=\"Service\" href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" aria-haspopup=\"true\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Service <span class=\"caret\"></span></a>\n<ul class=\" dropdown-menu\">\n\t<li id=\"menu-item-64\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-64\"><a title=\"Service Centers\" href=\"https://www.tomesautogroup.com/service/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Service Centers</a></li>\n\t<li id=\"menu-item-563\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-563\"><a title=\"Ford Service\" target=\"_blank\" href=\"https://www.bobtomesford.com/service-department/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Ford Service</a></li>\n\t<li id=\"menu-item-1800\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-1800\"><a title=\"Mitsubishi Service\" href=\"https://www.brandontomesmitsubishi.com/service/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Mitsubishi Service</a></li>\n\t<li id=\"menu-item-564\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-564\"><a title=\"Subaru Service\" target=\"_blank\" href=\"https://www.brandontomessubaru.com/service/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Subaru Service</a></li>\n\t<li id=\"menu-item-565\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-565\"><a title=\"Volkswagen Service\" target=\"_blank\" href=\"https://www.brandontomesvw.com/service/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Volkswagen Service</a></li>\n\t<li id=\"menu-item-67\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-67\"><a title=\"Parts Centers\" href=\"https://www.tomesautogroup.com/parts/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Parts Centers</a></li>\n\t<li id=\"menu-item-667\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-667\"><a title=\"Battery Service\" href=\"https://www.tomesautogroup.com/battery-service/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Battery Service</a></li>\n\t<li id=\"menu-item-668\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-668\"><a title=\"Hail Damage Repair\" href=\"https://www.tomesautogroup.com/hail-damage-repair/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Hail Damage Repair</a></li>\n</ul>\n</li>\n<li id=\"menu-item-567\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-567\"><a title=\"Model Research\" href=\"https://www.tomesautogroup.com/model-research/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Model Research</a></li>\n<li id=\"menu-item-676\" class=\"menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-31 current_page_item top-level-empty menu-item-676 active\"><a title=\"Sell Your Car\" href=\"https://www.tomesautogroup.com/sell-us-your-car/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Sell Your Car</a></li>\n<li id=\"menu-item-1674\" class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-1674\"><a title=\"Collision Center\" href=\"https://www.tomesautogroup.com/collision-center/#gform_wrapper_6\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Collision Center</a></li>\n<li id=\"menu-item-79\" class=\"right-edge menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children top-level-children menu-item-79 dropdown\"><a title=\"About\" href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" aria-haspopup=\"true\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">About <span class=\"caret\"></span></a>\n<ul class=\" dropdown-menu\">\n\t<li id=\"menu-item-576\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-576\"><a title=\"Our Locations\" href=\"https://www.tomesautogroup.com/locations/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Our Locations</a></li>\n\t<li id=\"menu-item-80\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-80\"><a title=\"About Us\" href=\"https://www.tomesautogroup.com/about-us/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">About Us</a></li>\n\t<li id=\"menu-item-81\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-81\"><a title=\"Contact Us\" href=\"https://www.tomesautogroup.com/contact-us/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Contact Us</a></li>\n\t<li id=\"menu-item-83\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-83\"><a title=\"Careers\" href=\"https://www.tomesautogroup.com/careers/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Careers</a></li>\n\t<li id=\"menu-item-903\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-903\"><a title=\"Our Blogs\" href=\"https://www.tomesautogroup.com/blog/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Our Blogs</a></li>\n\t<li id=\"menu-item-84\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-84\"><a title=\"Leave Us A Review\" href=\"https://www.tomesautogroup.com/about-us/reviews/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Leave Us A Review</a></li>\n\t<li id=\"menu-item-85\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-85\"><a title=\"Customer Testimonials\" href=\"https://www.tomesautogroup.com/about-us/customer-testimonials/\" trid=\"bAy4M97KXWossYaaRXFQD\" trc=\"\" data-radar=\"initialized\">Customer Testimonials</a></li>\n</ul>\n</li>\n</ul>                                    <div id=\"menu-submenu-overlay\" class=\"overlay hamburger-menu-content\">\n                                        <div class=\"device-back-button\">\n                                            <button trid=\"decb3638c97b48e3bf0fe8\" trc=\"\" id=\"device-back-button\" class=\"back\" aria-label=\"Back to the main menu\">\n                                                <svg class=\"di-svg\" fill=\"#000000\" height=\"35px\" viewBox=\"0 0 24 24\" width=\"35px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z\"></path>\n</svg>                                            </button>\n                                            <div id=\"heading-title\" class=\"title\">\n                                                <span></span>\n                                            </div>\n                                        </div>\n\n                                        <div class=\"menu-wrapper\">\n                                                                                    </div>\n\n                                        <button trig=\"\" aria-label=\"close menu\" class=\"close-overlay\">\n                                            <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"15px\" viewBox=\"0 0 24 24\" width=\"15px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n close                                        </button>\n\n                                    </div>\n                                                                        <button trig=\"\" aria-label=\"close menu\" class=\"close-overlay\">\n                                        <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"15px\" viewBox=\"0 0 24 24\" width=\"15px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n close                                    </button>\n                                </nav>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n                            <div id=\"fulldesktopmenu__overlay\" class=\"toolOverlay targetOverlay hamburger-menu-content\" style=\"display: none;\" role=\"dialog\" aria-label=\"Navigation Menu\">\n                <div class=\"wrapper hidden-xs hidden-sm\">\n                    <div class=\"container-wide\">\n                        <div class=\"row\">\n                            <div class=\"col-sm-12\">\n                                                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n                            <div id=\"searchOverlay__overlay\" class=\"toolOverlay targetOverlay\" style=\"display: none;\" role=\"dialog\" aria-labelledby=\"searchOverlay__overlayHeading\">\n                <div class=\"wrapper\">\n                    <div class=\"container-wide\">\n                                                <div class=\"col-sm-12 text-center\">\n                            <h2 id=\"searchOverlay__overlayHeading\">Search</h2>\n                        </div>\n\n                        <div class=\"row algoliaRow hidden-xs hidden-sm\">\n                            <div class=\"col-xs-12\">\n                                <form action=\"/\" class=\"searchform\" role=\"search\" method=\"get\">\n\t\t\t\t\t<span class=\"twitter-typeahead\" style=\"position: relative; display: inline-block; direction: ltr;\"><input trid=\"w1EVT5hHDMrsYq8pRmgDyF\" trch=\"\" aria-label=\"e.g. Blue Coupe\" type=\"text\" placeholder=\"e.g. Blue Coupe\" id=\"alg-search\" name=\"alg-search\" data-testid=\"alg-search\" class=\"alg-searc-class tt-input\" data-gtm-event=\"desktopBannerSearchAnythingField\" autocomplete=\"off\" spellcheck=\"false\" dir=\"auto\" style=\"position: relative; vertical-align: top;\"><pre aria-hidden=\"true\" style=\"position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Albert Sans&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;\"></pre><span class=\"tt-dropdown-menu\" style=\"position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;\"><div class=\"algolia-dataset tt-dataset-inventory\"></div><div class=\"algolia-dataset tt-dataset-email_addresses\"></div><div class=\"algolia-dataset tt-dataset-phone_numbers\"></div><div class=\"algolia-dataset tt-dataset-departmentHours\"></div><div class=\"algolia-dataset tt-dataset-pages\"></div><div class=\"algolia-dataset tt-dataset-defaults\"></div></span></span>\n\t\t </form>\n                            </div>\n                        </div>\n\n                        <div class=\"row searchInventoryRow hidden-md hidden-lg hidden-xl\">\n                            <div class=\"col-xs-12 search-field\">\n                                <form action=\"/\" id=\"searchform\" role=\"search\" method=\"get\">\n                                    <label for=\"search\" class=\"sr-hidden\">Search Vehicles (Search...). Press enter to submit your selection.</label><input type=\"text\" value=\"\" placeholder=\"Search...\" name=\"search\" id=\"search\" class=\"inventory-search-field search-anything-field\" autocomplete=\"off\" data-ajaxurl=\"https://www.tomesautogroup.com/wp/wp-admin/admin-ajax.php\" data-limit=\"10\" data-popover-placement=\"right\" data-redirect-to-vdp=\"enabled\" data-filters=\"{&quot;type&quot;:{&quot;0&quot;:&quot;New&quot;,&quot;1&quot;:&quot;Used&quot;,&quot;2&quot;:&quot;Certified Used&quot;}}\">                                    <button trid=\"cb753c729d0446b5bf5b00\" trc=\"\" type=\"submit\" class=\"btn search-anything-submit-btn\" value=\"inventory search query\" data-gtm-event=\"mobileSearchOverlaySearchBtn\">\n                                        <span class=\"sr-hidden\">Inventory search submit button</span><i class=\"fa fa-search\"></i>\n                                    </button>\n                                </form>\n                            </div>\n                        </div>\n                        <div class=\"row middleRow\">\n                            <div class=\"col-sm-12 text-center\">\n                                <span class=\"orselect\">\n                                    -\n                                    or select -</span>\n                            </div>\n                        </div>\n                        <div class=\"row filtersRow\">\n                            <div class=\"col-sm-12\">\n                                <div class=\"filters-container\">\n                                    <div class=\"filters searchfields\">\n                                        \n                <select name=\"type[]\" class=\"vehicle-type\" aria-label=\"Vehicle Type\">\n                    <option value=\"\">Type</option>\n                    <option value=\"New\">New</option>\n                    <option value=\"Used\">Used</option>\n                    <option value=\"Certified\">Certified Pre-Owned</option>\n                </select>\n\n            <select name=\"years[]\" class=\"vehicle-year\" aria-label=\"Vehicle Year\">\n                <option value=\"\">Year</option>\n            </select>\n\n\n                <select name=\"makes[]\" class=\"vehicle-make\" aria-label=\"Vehicle Make\">\n                    <option value=\"\">Make</option>\n                </select>\n\n\n            <select name=\"models[]\" class=\"vehicle-model\" aria-label=\"Vehicle Model\">\n                <option value=\"\">Model</option>\n            </select>\n\n\n\n<button trid=\"2216c5550ae044d5bb04ba\" trc=\"\" type=\"submit\" class=\"btn advanced-search-btn\">Search </button>\n\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                                                <button trid=\"c856613efb484ed9a453f5\" trc=\"\" aria-label=\"Close Search\" class=\"close-overlay\">\n                            <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"15px\" viewBox=\"0 0 24 24\" width=\"15px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n close                        </button>\n                    </div>\n                </div>\n            </div>\n                <div id=\"groupHeader2__overlay\" class=\"toolOverlay targetOverlay\" style=\"display: none;\">\n    <div class=\"container-wide\">\n        <div class=\"row locationWrapper\">\n\n            \n                    <div class=\"locationItem\">\n                        <div class=\"locationItem__dealer\">\n                            <a href=\"https://www.bobtomesford.com/\" target=\"_blank\" data-radar=\"initialized\">\n                                <h3>Bob Tomes Ford</h3>\n                            </a>\n                        </div>\n                        <div class=\"locationItem__address\">\n                            <a href=\"https://www.google.com/maps/dir/?api=1&amp;destination=33.1904014,-96.6404585\" target=\"_blank\" data-radar=\"initialized\">\n                                <span class=\"address-street\">\n                                    Bob Tomes Ford                                </span>\n                                 950 S Central Expy,  McKinney  TX 75070                            </a>\n                        </div>\n                    </div>\n\n            \n                    <div class=\"locationItem\">\n                        <div class=\"locationItem__dealer\">\n                            <a href=\"https://www.brandontomesmitsubishi.com/\" target=\"_blank\" data-radar=\"initialized\">\n                                <h3>Brandon Tomes Mitsubishi</h3>\n                            </a>\n                        </div>\n                        <div class=\"locationItem__address\">\n                            <a href=\"https://www.google.com/maps/dir/?api=1&amp;destination=33.1892431,-96.6399007\" target=\"_blank\" data-radar=\"initialized\">\n                                <span class=\"address-street\">\n                                    Brandon Tomes Mitsubishi                                </span>\n                                 1100 South Central Expressway,  McKinney  TX 75070                            </a>\n                        </div>\n                    </div>\n\n            \n                    <div class=\"locationItem\">\n                        <div class=\"locationItem__dealer\">\n                            <a href=\"https://www.brandontomessubaru.com/\" target=\"_blank\" data-radar=\"initialized\">\n                                <h3>Brandon Tomes Subaru</h3>\n                            </a>\n                        </div>\n                        <div class=\"locationItem__address\">\n                            <a href=\"https://www.google.com/maps/dir/?api=1&amp;destination=33.1533923,-96.6589383\" target=\"_blank\" data-radar=\"initialized\">\n                                <span class=\"address-street\">\n                                    Brandon Tomes Subaru                                </span>\n                                 4660 S Highway 121,  McKinney  TX 75070                            </a>\n                        </div>\n                    </div>\n\n            \n                    <div class=\"locationItem\">\n                        <div class=\"locationItem__dealer\">\n                            <a href=\"https://www.brandontomesvw.com/\" target=\"_blank\" data-radar=\"initialized\">\n                                <h3>Brandon Tomes Volkswagen</h3>\n                            </a>\n                        </div>\n                        <div class=\"locationItem__address\">\n                            <a href=\"https://www.google.com/maps/dir/?api=1&amp;destination=33.1637937,-96.6446272\" target=\"_blank\" data-radar=\"initialized\">\n                                <span class=\"address-street\">\n                                    Brandon Tomes Volkswagen                                </span>\n                                 3600 S Central Expy,  McKinney  TX 75070                            </a>\n                        </div>\n                    </div>\n\n            \n        </div>\n\n    </div>\n</div>    </div>\n</div>\n\n\n\n    \n\n<div id=\"headerTop\" class=\"hidden-xs hidden-sm\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"topWrapper\">\n                <div class=\"topWrapper__phone\">\n    <a href=\"/contact-us/\" data-radar=\"initialized\">\n        <span class=\"topWrapper__phone-icon desktop-icon\">\n            <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"15\" viewBox=\"0 0 24 24\" width=\"15\" xmlns=\"http://www.w3.org/2000/svg\">\n    \n    <path fill=\"#000000\" d=\"M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z\"></path>\n</svg>        </span>\n        Contact Us    </a>\n</div>\n\n<button class=\"topWrapper__address open-overlay icon-toggle-js hasAriaValues\" target=\"groupHeader2\" aria-pressed=\"false\" aria-expanded=\"false\">\n    <span class=\"topWrapper__address-icon desktop-icon\">\n        <svg aria-hidden=\"true\" class=\"di-svg\" height=\"15px\" viewBox=\"0 0 24 24\" width=\"20px\" xmlns=\"http://www.w3.org/2000/svg\">\n  \n  <path d=\"M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z\"></path>\n</svg>    </span>\n    <span class=\"topWrapper__close-icon desktop-icon\">\n        <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#ffffff\" height=\"20px\" viewBox=\"0 0 24 24\" width=\"20px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n    </span>\n    <span class=\"topWrapper__arrow-icon desktop-icon\">\n        <svg class=\"di-svg\" fill=\"#ffffff\" height=\"20px\" viewBox=\"0 0 24 24\" width=\"20px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z\"></path>\n</svg>    </span>\n    Find A Location</button>                                                                                                \n\n                \n                            </div>\n        </div>\n    </div>\n</div>\n<div id=\"headerBottom\" class=\"hidden-xs hidden-sm\">\n    <div class=\"container-fluid\">\n                <div class=\"row\">\n            <div class=\"bottomWrapper\">\n                                                <div class=\"bottomWrapper__logo\">\n                                                                                                                <span class=\"logo\" itemscope=\"\" itemtype=\"http://schema.org/Organization\">\n                                <a trid=\"6d9e2deca2074194b8b265\" trc=\"\" itemprop=\"url\" href=\"https://www.tomesautogroup.com\" data-radar=\"initialized\">\n                                    <picture>\n                                        <img itemprop=\"logo\" src=\"https://www.tomesautogroup.com/wp-content/themes/DealerInspireDealerTheme/images/logo-header.webp?ver=1779281853\" alt=\"Tomes Auto Group\" class=\"header-logo loaded\" loading=\"eager\">\n                                    </picture>\n                                </a>\n                            </span>\n                                            \n                </div>\n                                                    <div class=\"bottomWrapper__nav\">\n\n                        \n                        <div class=\"navbar\">\n                            <div class=\"navbar-inner\">\n                                                                <nav class=\"nav_section\" role=\"navigation\" aria-label=\"Main Navigation\">\n                                    <ul id=\"menu-main-menu-1\" class=\"nav\"><li class=\"newVehicles megamenu menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children top-level-children menu-item-57\"><a href=\"https://www.tomesautogroup.com/new-vehicles/\" data-radar=\"initialized\">New</a>\n<ul class=\"sub-menu\">\n\t<li class=\"show-count menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-58\"><a href=\"https://www.tomesautogroup.com/new-vehicles/\" data-radar=\"initialized\">View All New Vehicles</a></li>\n\t<li class=\"di-vehicle-icon brand ford light menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-551\"><a href=\"https://www.tomesautogroup.com/new-vehicles/ford/\" data-radar=\"initialized\">Ford Inventory</a></li>\n\t<li class=\"di-vehicle-icon brand mitsubishi light menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-1803\"><a href=\"https://www.tomesautogroup.com/new-vehicles/mitsubishi/\" data-radar=\"initialized\">Mitsubishi Inventory</a></li>\n\t<li class=\"di-vehicle-icon brand subaru light menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-550\"><a href=\"https://www.tomesautogroup.com/new-vehicles/subaru/\" data-radar=\"initialized\">Subaru Inventory</a></li>\n\t<li class=\"di-vehicle-icon brand volkswagen light menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-549\"><a href=\"https://www.tomesautogroup.com/new-vehicles/volkswagen/\" data-radar=\"initialized\">Volkswagen Inventory</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-item top-level-empty menu-item-552\"><a target=\"_blank\" rel=\"noopener\" href=\"https://www.tomesautogroup.com/sell-us-your-car/\" aria-current=\"page\" data-radar=\"initialized\">Sell Us Your Car!</a></li>\n\t<li class=\"hide-count menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-75\"><a href=\"https://www.tomesautogroup.com/new-vehicles/new-vehicle-specials/\" data-radar=\"initialized\">New Vehicle Specials</a></li>\n</ul>\n</li>\n<li class=\"split-menu left-edge menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children top-level-children menu-item-59\"><a href=\"https://www.tomesautogroup.com/used-vehicles/\" data-radar=\"initialized\">Pre-Owned</a>\n<ul class=\"sub-menu\">\n\t<li class=\"show-count long-item menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-60\"><a href=\"https://www.tomesautogroup.com/used-vehicles/\" data-radar=\"initialized\">View All Pre-Owned Vehicles</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-61\"><a href=\"https://www.tomesautogroup.com/used-vehicles/certified-pre-owned-vehicles/\" data-radar=\"initialized\">Certified Pre-Owned Vehicles</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-557\"><a href=\"https://www.tomesautogroup.com/used-vehicles/pre-owned-vehicle-specials/\" data-radar=\"initialized\">Pre-Owned Vehicle Specials</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-1948\"><a href=\"https://www.tomesautogroup.com/used-vehicles/price-under-15k/\" data-radar=\"initialized\">Priced Under 15K</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-62\"><a href=\"https://www.tomesautogroup.com/used-vehicles/priced-under-20k/\" data-radar=\"initialized\">Priced Under 20K</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-556\"><a href=\"https://www.tomesautogroup.com/used-ford-for-sale-in-mckinney/\" data-radar=\"initialized\">Used Ford Inventory</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-555\"><a href=\"https://www.tomesautogroup.com/used-subaru-for-sale-in-mckinney/\" data-radar=\"initialized\">Used Subaru Inventory</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-554\"><a href=\"https://www.tomesautogroup.com/used-volkswagen-for-sale-in-mckinney/\" data-radar=\"initialized\">Used Volkswagen Inventory</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-558\"><a target=\"_blank\" rel=\"noopener\" href=\"https://www.bobtomesford.com/used-vehicles/pre-owned-vehicle-specials/\" data-radar=\"initialized\">Used Ford Specials</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-559\"><a target=\"_blank\" rel=\"noopener\" href=\"https://www.brandontomessubaru.com/used-vehicles/used-cars/\" data-radar=\"initialized\">Used Subaru Specials</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-560\"><a target=\"_blank\" rel=\"noopener\" href=\"https://www.brandontomesvw.com/usedspecials.html\" data-radar=\"initialized\">Used Volkswagen Specials</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-949\"><a href=\"https://www.tomesautogroup.com/used-suvs/\" data-radar=\"initialized\">Used SUVs</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-948\"><a href=\"https://www.tomesautogroup.com/used-trucks/\" data-radar=\"initialized\">Used Trucks</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-674\"><a href=\"https://www.tomesautogroup.com/why-buy-used/\" data-radar=\"initialized\">Why Buy Used</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-553\"><a href=\"https://www.tomesautogroup.com/used-cadillac/\" data-radar=\"initialized\">Used Cadillac Inventory</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-item top-level-empty menu-item-561\"><a target=\"_blank\" rel=\"noopener\" href=\"https://www.tomesautogroup.com/sell-us-your-car/\" aria-current=\"page\" data-radar=\"initialized\">Sell Us Your Car!</a></li>\n</ul>\n</li>\n<li class=\"menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children top-level-children menu-item-69\"><a href=\"https://www.tomesautogroup.com/finance/\" data-radar=\"initialized\">Finance</a>\n<ul class=\"sub-menu\">\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-70\"><a href=\"https://www.tomesautogroup.com/finance/\" data-radar=\"initialized\">Finance Centers</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-72\"><a href=\"https://www.tomesautogroup.com/payment-calculator/\" data-radar=\"initialized\">Payment Calculator</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-31 current_page_item top-level-empty menu-item-73\"><a href=\"https://www.tomesautogroup.com/sell-us-your-car/\" aria-current=\"page\" data-radar=\"initialized\">Sell Us Your Car</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-562\"><a href=\"https://www.tomesautogroup.com/value-your-trade/\" data-radar=\"initialized\">Value Your Trade</a></li>\n</ul>\n</li>\n<li class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children top-level-children menu-item-63\"><a href=\"https://www.tomesautogroup.com/service/\" data-radar=\"initialized\">Service</a>\n<ul class=\"sub-menu\">\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-64\"><a href=\"https://www.tomesautogroup.com/service/\" data-radar=\"initialized\">Service Centers</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-563\"><a target=\"_blank\" rel=\"noopener\" href=\"https://www.bobtomesford.com/service-department/\" data-radar=\"initialized\">Ford Service</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-1800\"><a href=\"https://www.brandontomesmitsubishi.com/service/\" data-radar=\"initialized\">Mitsubishi Service</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-564\"><a target=\"_blank\" rel=\"noopener\" href=\"https://www.brandontomessubaru.com/service/\" data-radar=\"initialized\">Subaru Service</a></li>\n\t<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-565\"><a target=\"_blank\" rel=\"noopener\" href=\"https://www.brandontomesvw.com/service/\" data-radar=\"initialized\">Volkswagen Service</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-67\"><a href=\"https://www.tomesautogroup.com/parts/\" data-radar=\"initialized\">Parts Centers</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-667\"><a href=\"https://www.tomesautogroup.com/battery-service/\" data-radar=\"initialized\">Battery Service</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-668\"><a href=\"https://www.tomesautogroup.com/hail-damage-repair/\" data-radar=\"initialized\">Hail Damage Repair</a></li>\n</ul>\n</li>\n<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-567\"><a href=\"https://www.tomesautogroup.com/model-research/\" data-radar=\"initialized\">Model Research</a></li>\n<li class=\"menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-31 current_page_item top-level-empty menu-item-676\"><a href=\"https://www.tomesautogroup.com/sell-us-your-car/\" aria-current=\"page\" data-radar=\"initialized\">Sell Your Car</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom top-level-empty menu-item-1674\"><a href=\"https://www.tomesautogroup.com/collision-center/#gform_wrapper_6\" data-radar=\"initialized\">Collision Center</a></li>\n<li class=\"right-edge menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children top-level-children menu-item-79\"><a href=\"https://www.tomesautogroup.com/about-us/\" data-radar=\"initialized\">About</a>\n<ul class=\"sub-menu\">\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-576\"><a href=\"https://www.tomesautogroup.com/locations/\" data-radar=\"initialized\">Our Locations</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-80\"><a href=\"https://www.tomesautogroup.com/about-us/\" data-radar=\"initialized\">About Us</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-81\"><a href=\"https://www.tomesautogroup.com/contact-us/\" data-radar=\"initialized\">Contact Us</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-83\"><a href=\"https://www.tomesautogroup.com/careers/\" data-radar=\"initialized\">Careers</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-903\"><a href=\"https://www.tomesautogroup.com/blog/\" data-radar=\"initialized\">Our Blogs</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-84\"><a href=\"https://www.tomesautogroup.com/about-us/reviews/\" data-radar=\"initialized\">Leave Us A Review</a></li>\n\t<li class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-85\"><a href=\"https://www.tomesautogroup.com/about-us/customer-testimonials/\" data-radar=\"initialized\">Customer Testimonials</a></li>\n</ul>\n</li>\n</ul>                                </nav>\n                            </div>\n                        </div>\n                                            </div>\n                                                                                                                                                                                <div class=\"bottomWrapper__search\">\n                            <div class=\"searchToggle\" id=\"search-toggle-button\">\n                                <button trid=\"362818ef0cb344b38c719d\" trc=\"\" class=\"searchToggle__button search-toggle-js device-icon search-anything-submit-btn hasAriaValues\" id=\"toggle-icons\" data-testid=\"search-menu\" accesskey=\"s\" aria-pressed=\"false\" aria-expanded=\"false\" role=\"button\" aria-label=\"Open the search field\">\n                                    <span class=\"active\">\n                                        <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"48px\" viewBox=\"0 0 24 24\" width=\"48px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\"></path>\n</svg>                                    </span>\n                                    <span class=\"close\">\n                                        <svg aria-hidden=\"true\" class=\"di-svg\" fill=\"#000000\" height=\"48px\" viewBox=\"0 0 24 24\" width=\"48px\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\"></path>\n  <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n</svg>\n                                    </span>\n                                    <span class=\"icon-label search-label\">\n                                        Search </span>\n\n                                </button>\n                                <form action=\"/\" class=\"searchform\" role=\"search\" method=\"get\">\n\t\t\t\t\t<span class=\"twitter-typeahead\" style=\"position: relative; display: inline-block; direction: ltr;\"><input trid=\"w1EVT5hHDMrsYq8pRmgDyF\" trch=\"\" aria-label=\"e.g. Blue Coupe\" type=\"text\" placeholder=\"e.g. Blue Coupe\" id=\"alg-search\" name=\"alg-search\" data-testid=\"alg-search\" class=\"alg-searc-class tt-input\" data-gtm-event=\"desktopBannerSearchAnythingField\" autocomplete=\"off\" spellcheck=\"false\" dir=\"auto\" style=\"position: relative; vertical-align: top;\"><pre aria-hidden=\"true\" style=\"position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Albert Sans&quot;, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;\"></pre><span class=\"tt-dropdown-menu\" style=\"position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;\"><div class=\"algolia-dataset tt-dataset-inventory\"></div><div class=\"algolia-dataset tt-dataset-email_addresses\"></div><div class=\"algolia-dataset tt-dataset-phone_numbers\"></div><div class=\"algolia-dataset tt-dataset-departmentHours\"></div><div class=\"algolia-dataset tt-dataset-pages\"></div><div class=\"algolia-dataset tt-dataset-defaults\"></div></span></span>\n\t\t </form>\n                            </div>\n                        </div>\n                                                                        </div>\n        </div>\n    </div>\n</div>\n\n\n  \n</header>\n<div class=\"fixed-top-spacer\"></div></div>\n<div class=\"stack stack--site-notice\">\n    \n\t\t<script>\n\tif (sessionStorage.getItem('DIsiteNotice-' + 12456) == 'hide') {\n\t\tdocument.body.classList.remove('site-notice-visible');\n\t}\n\t</script>\n\n\t\n\t<div role=\"region\" aria-label=\"Site notice\" class=\"sb-section error notice notice-top action-bar-enabled\" id=\"DIsiteNotice\">\n\t\t\t\t<div class=\"notice__info\"><i class=\"fa fa-exclamation-circle\"></i></div>\n\t\t\t\t<div class=\"site-notice-message\">\n\t\t\t<style>\n  .ftc-notice-subaru {\n    background-color: #003399;\n    color: #FFFFFF;\n    text-align: center;\n    padding: 20px 15px;\n    font-weight: 900;\n    font-family: 'Arial Black', sans-serif;\n    font-size: 1.25rem;\n    text-transform: uppercase;\n    width: 100%;\n    box-sizing: border-box;\n  }\n  @media (max-width: 600px) {\n    .ftc-notice-subaru {\n      font-size: 0.8rem;\n      padding: 12px 10px;\n      letter-spacing: 0px;\n    }\n  }\n</style>\n<div class=\"ftc-notice-subaru\">\n  <span style=\"text-decoration: underline;\">FTC PRICE GUARANTEE: Every advertised price is the total price (excluding govt. fees).</span>\n</div>\t\n\t\t</div>\n\t\t\t\t<div id=\"closeIcon\" class=\"closeIcon__top\" tabindex=\"1\" role=\"button\" aria-label=\"close site notice banner\">\n\t\t\t<i class=\"fa fa-times-circle\"></i>\n\t\t</div>\n\t\t\t</div>\n</div>\n</div><!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-5GMHJXN\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) --><style>\n.di-action-bar:first-child {\n   display: none;\n}\n#actionbar.di-action-bar  {\n    padding: 5px;\n    background-color: #fff;\n    display: flex!important;\n    justify-content: space-between\n}\n.bar-item{\n    display: flex!important;\n}\n</style><!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-TCD77Z4N\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) --><script>\n            var bindViewStateToDatalayer = function () {\n                var dataLayer = window.DIDataLayer;\n                if (typeof dataLayer != 'undefined') {\n                    jQuery('[name=input_1337]').val(dataLayer.vars.site.view_state);\n                }\n            }\n            window.addEventListener('di_datalayer_ready', function () {\n                var datalayer = window.DIDataLayer;\n                bindViewStateToDatalayer();\n                jQuery(document).bind('gform_post_render', bindViewStateToDatalayer);\n            });\n            </script>            <div id=\"whitewrap\">\n    <!-- di page composer css --><!-- eof: di page composer css -->\n<style>\n    .dipc-password-protection {\n        text-align: center;\n        padding: 5% 0;\n    }\n\n    .dipc-password-protection form {\n        display: inline-block;\n    }\n</style>\n\n\n<div id=\"di-page-composer\" class=\"modelpagebuilder contentcontainer\">\n                \n\n<div id=\"\" class=\"text-center fullcontentrow bgimagerow dark-text cover\" style=\"background-size:cover;padding:1%;background-repeat:no-repeat;width:100%\">\n    <div class=\"  container-wide \">\n        <div class=\"row\">\n            <div class=\"col-xs-12 inner-wysiwyg\">\n                <p><img loading=\"lazy\" src=\"https://di-uploads-development.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars.jpg\" alt=\"Tomes We Buy Cars\" width=\"1200\" height=\"371\" class=\"alignnone size-full wp-image-471 lazyload-loading\" srcset=\"//di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars.jpg 1200w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-300x93.jpg 300w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-1024x317.jpg 1024w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-768x237.jpg 768w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-250x77.jpg 250w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-500x155.jpg 500w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-767x237.jpg 767w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-70x22.jpg 70w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-190x59.jpg 190w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-385x119.jpg 385w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-770x238.jpg 770w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars-150x46.jpg 150w\" sizes=\"(max-width: 1200px) 100vw, 1200px\"></p>\n<div class=\"row\">\n<div class=\"col-md-4\"><a class=\"button primary-button block\" href=\"/new-vehicles/\">New Inventory</a></div>\n<div class=\"col-md-4\"><a class=\"button primary-button block\" href=\"/used-vehicles/\">Used Inventory</a></div>\n<div class=\"col-md-4\"><a class=\"button primary-button block\" href=\"/contact-us/\">Contact Us</a></div>\n</div>\n            </div>\n        </div>\n\n        \n\n    </div>\n</div>\n\n\n<div id=\"\" class=\" fullcontentrow bgimagerow dark-text cover\" style=\"background-size:cover;background-repeat:no-repeat;width:100%\">\n    <div class=\"  container-wide \">\n        <div class=\"row\">\n            <div class=\"col-xs-12 inner-wysiwyg\">\n                <h1 class=\"text-center\">Sell or Trade Your Car near McKinney, TX</h1>\n<div class=\"row\">\n<div class=\"col-md-4\">\n<img loading=\"lazy\" src=\"https://di-uploads-development.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile.jpg\" alt=\"Person signing paperwork\" width=\"767\" height=\"511\" class=\"alignnone size-full wp-image-496 lazyload-loading\" srcset=\"//di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile.jpg 767w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile-300x200.jpg 300w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile-250x167.jpg 250w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile-500x333.jpg 500w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile-70x47.jpg 70w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile-190x127.jpg 190w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile-385x256.jpg 385w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile-150x100.jpg 150w\" sizes=\"(max-width: 767px) 100vw, 767px\">\n</div>\n<div class=\"col-md-4\">\n<img loading=\"lazy\" src=\"https://di-uploads-development.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile.jpg\" alt=\"A car salesman and customer shake hands after agreeing on a purchase price_mobile\" width=\"767\" height=\"511\" class=\"alignnone size-full wp-image-493 lazyload-loading\" srcset=\"//di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile.jpg 767w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile-300x200.jpg 300w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile-250x167.jpg 250w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile-500x333.jpg 500w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile-70x47.jpg 70w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile-190x127.jpg 190w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile-385x256.jpg 385w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile-150x100.jpg 150w\" sizes=\"(max-width: 767px) 100vw, 767px\">\n</div>\n<div class=\"col-md-4\">\n<img loading=\"lazy\" src=\"https://di-uploads-development.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile.jpg\" alt=\"Hand holding smartphone\" width=\"767\" height=\"511\" class=\"alignnone size-full wp-image-492 lazyload-loading\" srcset=\"//di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile.jpg 767w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile-300x200.jpg 300w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile-250x167.jpg 250w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile-500x333.jpg 500w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile-70x47.jpg 70w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile-190x127.jpg 190w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile-385x256.jpg 385w, //di-uploads-pod47.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile-150x100.jpg 150w\" sizes=\"(max-width: 767px) 100vw, 767px\">\n</div>\n</div>\n<div class=\"row\">\n<div class=\"col-md-4\">\n<h3>Swift Appraisal</h3>\n<p>Ready to make a change? Drop by for a quick and complimentary appraisal. No appointment necessary; we\u2019re prepared to assess your vehicle today.\n</p></div>\n<div class=\"col-md-4\">\n<h3>Secure &amp; Professional</h3>\n<p>Our appraisers will handle your evaluation with the utmost professionalism and respect \u2013 expect only fair and competitive offers, no lowballing.\n</p></div>\n<div class=\"col-md-4\">\n<h3>On-The-Spot Payment</h3>\n<p>Once we assess your vehicle, our goal is to finalize the deal quickly. You could possibly leave our dealership with a check that very same day.\n</p></div>\n</div>\n<div class=\"row\">\n<div class=\"col-md-offset-4 col-md-4\"><a class=\"button primary-button block\" href=\"https://www.bobtomesford.com/value-your-trade/\" target=\"_blank\">Get Your Easy key Exchange Offer!</a></div>\n</div>\n            </div>\n        </div>\n\n        \n\n    </div>\n</div>\n\n\n<div id=\"\" class=\" fullcontentrow bgimagerow dark-text cover\" style=\"background-size:cover;padding:1%;background-repeat:no-repeat;width:100%\">\n    <div class=\"  container-wide \">\n        <div class=\"row\">\n            <div class=\"col-xs-12 inner-wysiwyg\">\n                <h2>Get a No-Obligation Trade Appraisal Today!</h2>\n<p>Thinking it might be time for a new ride? Whether your current vehicle is costing you too much in repairs, its warranty has expired, or you\u2019re simply looking to move on from an upside-down loan, Tomes Auto Group is here to help with our hassle-free \u201cSell Us Your Car\u201d program. This program is designed to ease you into a brand-new Ford, Volkswagen, or Subaru with minimal fuss. Often, you can transition with little to no money down while potentially lowering your monthly payments!</p>\n<p>Ready to see how much you could switch up your drive? Speak with one of our dedicated Trade-In Specialists today to arrange a no-obligation trade appraisal. At Tomes Auto Group, we\u2019re committed to maximizing your satisfaction with both your trade-in and your overall car buying experience. Let us assist you in getting the best value for your trade and in selecting the new Volkswagen, Subaru, or Ford that perfectly suits your family\u2019s needs.</p>\n<h3>Benefits of Trading In at Tomes Auto Group</h3>\n<ul>\n<li><span>Above Market Value Offers:</span> At Tomes Auto Group, we evaluate every trade with precision and integrity, ensuring you receive the best possible offer that often surpasses market value.</li>\n<li><span>Advantageous Financing Terms:</span> Transition smoothly with financing options that work for you. Our relationships with top lenders allow us to secure favorable terms, making your next purchase more affordable.</li>\n<li><span>Enhanced Efficiency:</span> Upgrade to a newer model that runs cleaner and goes further, reducing your environmental impact and saving you money at the pump.</li>\n<li><span>Reduced Maintenance Costs:</span> Say goodbye to frequent repairs. Our newer models come with fewer maintenance needs, giving you peace of mind and saving on upkeep.</li>\n<li><span>Latest Features:</span> Experience cutting-edge technology with the latest in-car entertainment and convenience features designed to enhance your driving experience.</li>\n<li><span>Lower Monthly Payments:</span> We work hard to make your new car as affordable as possible. With our tailored financing solutions, you can enjoy lower monthly payments on your next vehicle.</li>\n<li><span>Extended Warranty Coverage:</span> Drive with confidence knowing your new vehicle is covered. Our newer models come with comprehensive warranty plans that protect your investment.</li>\n<li><span>Advanced Safety Technologies:</span> Benefit from the latest safety innovations. Our modern vehicles are equipped with state-of-the-art safety features that protect you and your loved ones on the road.</li>\n</ul>\n<p>Experience all these benefits and more when you choose to trade in your current vehicle for a new or newer model at Tomes Auto Group. Let us help you make a smooth transition to a car that fits your lifestyle and budget.</p>\n<h3>Why Sell To Us?</h3>\n<ul>\n<li><span>In-Person Scheduling:</span> Visit us at your convenience, or we can schedule a specific time for your appraisal.</li>\n<li><span>Transparent Appraisals:</span> We pride ourselves on providing clear, straightforward appraisals. You\u2019ll understand every part of the process and how we arrive at our offer.</li>\n<li><span>Efficient Appraisal Process:</span> Receive an offer in 20 minutes or less. We value your time as much as we value your car.</li>\n<li><span>Streamlined Paperwork:</span> Our paperwork process is quick and efficient, ensuring you can sell your car and move on without hassle.</li>\n</ul>\n<h3>What to Bring When Selling Your Car</h3>\n<p>To ensure a smooth and efficient transaction, please bring the following items:</p>\n<ul>\n<li><span>Car Title:</span> Bring your car\u2019s title or payoff information. It\u2019s important that all titleholders are present during the transaction.</li>\n<li><span>Registration:</span> Ensure you have a valid and current vehicle registration to verify ownership.</li>\n<li><span>Valid State-Issued Photo ID:</span> Required for all title holders to verify ownership and identity.</li>\n<li><span>Keys, Remotes, and Owner\u2019s Manuals:</span> Bringing all original keys, remotes, and manuals is crucial. Missing items may adjust the offer.</li>\n<li><span>Title or Payoff Information:</span> All title holders should be present during the sale. If your title shows a lien that has been paid off, please bring the lien release from the lien holder.</li>\n</ul>\n<p>Bringing these items will help expedite the process and ensure that you receive the best possible offer for your vehicle.</p>\n<h3>How It Works</h3>\n<ul>\n<li><span>Get an Instant Estimate:</span> Find out what your car is worth with our instant online valuation tool.</li>\n<li><span>No-Appointment Final Offer:</span> Come to our dealership whenever you\u2019re ready. No appointment needed\u2014we\u2019re here to finalize your offer quickly.</li>\n<li><span>Quick, No-Obligation Offer:</span> Our experts will inspect your car and provide a no-obligation offer within 30 minutes.</li>\n<li><span>Flexible Options:</span> Use the value of your trade to step into a new car, or simply sell it to us for cash. The choice is yours!</li>\n</ul>\n<h2>Frequently Asked Questions on Selling Your Car</h2>\n<h3>Can I sell my car without buying another one from you?</h3>\n<p>Absolutely! You can sell your car to us whether you choose to buy from us or not, and our offer will remain consistent.</p>\n<h3>Can I receive an offer for my car online?</h3>\n<p>Yes, you can get a preliminary trade-in offer online. Simply click on our \u201cGet Your KBB Cash Offer\u201d button to start the process!</p>\n<h3>How do you determine the offer for my car?</h3>\n<p>We assess your car based on current market trends and specific details such as the year, make, model, mileage, and vehicle history. We conduct a thorough inspection for any major issues like frame or flood damage and perform a test drive to check mechanical functions like brakes and turn signals. Our offer may be adjusted based on the necessary repairs. However, the overall maintenance and care your car has received play a crucial role in our final appraisal.</p>\n<h3>How will I get paid for my car?</h3>\n<p>You will receive a check on the same day you sell us your car\u2014no delays, just quick and easy payment.</p>\n<h3>Do I need an appointment to get an offer on my car?</h3>\n<p>No appointment is necessary to receive an offer. However, scheduling one can save you time at the dealership, allowing us to expedite the process and get you paid faster.</p>\n<h3>Do you purchase leased cars?</h3>\n<p>Yes, you can sell your leased car to us much like any other financed vehicle in most cases.</p>\n<h3>What if I owe more on my car than your offer?</h3>\n<p>If the payoff amount is greater than our offer, this difference is referred to as \u201cnegative equity.\u201d In some situations, this negative equity can be rolled into the financing of your next vehicle purchase from us.</p>\n<h3>Can I sell a car on behalf of a company?</h3>\n<p>Yes, if you are selling a vehicle on behalf of a company, please consult with a Business Office associate to understand the specific documentation and requirements needed.</p>\n            </div>\n        </div>\n\n        \n\n    </div>\n</div>\n\n\n<div id=\"\" class=\" fullcontentrow bgimagerow dark-text cover\" style=\"background-size:cover;background-repeat:no-repeat;width:100%\">\n    <div class=\"  container-fluid \">\n        <div class=\"row\">\n            <div class=\"col-xs-12 inner-wysiwyg\">\n                <div id=\"getdirectionsrow\">\n\t<div class=\"container-wide\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t\t\t\t\t<span class=\"location-text\">Get directions to one of our locations: </span>\n\t\t\t\t<form class=\"getdirections\" action=\"https://maps.google.com/maps\" method=\"get\" target=\"_blank\">\n\t\t\t\t\t\n\t\t    \t            <div class=\"get-directions-wrap\">\n\t\t    \t            \t<select id=\"select-location\" data-toggle=\"tooltip\" data-placement=\"top\" data-animation=\"false\" title=\"Please select a location\">\n\t\t    \t            \t    <option value=\"\">Select Location</option>\n\t\t    \t            \t    \t\t\t\t\t\t\t\t\t\t<option value=\"Bob Tomes Ford, South Central Expressway, McKinney, TX, USA\">Bob Tomes Ford</option>\n\n\t\t    \t            \t    \t\t\t\t\t\t\t\t\t\t<option value=\"Brandon Tomes Mitsubishi, South Central Expressway, McKinney, TX, USA\">Brandon Tomes Mitsubishi</option>\n\n\t\t    \t            \t    \t\t\t\t\t\t\t\t\t\t<option value=\"Brandon Tomes Subaru, State Highway 121, McKinney, TX, USA\">Brandon Tomes Subaru</option>\n\n\t\t    \t            \t    \t\t\t\t\t\t\t\t\t\t<option value=\"Brandon Tomes Volkswagen of McKinney, South Central Expressway, McKinney, TX, USA\">Brandon Tomes Volkswagen</option>\n\n\t\t    \t            \t    \t\t    \t            \t</select>\n\t\t    \t            </div>\n\t\t    \t            <input type=\"hidden\" id=\"insert-location\" name=\"daddr\" value=\"\">\n\t\t    \t            \t\t\t\t\t\n\t\t\t\t\t<button trid=\"47cd15e6eb2b4de1a19810\" trc=\"\" type=\"submit\" class=\"button secondary-button\">Go</button>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n            </div>\n        </div>\n\n        \n\n    </div>\n</div>\n</div>\n\n\n<script id=\"di-page-composer-scripts\" type=\"text/javascript\">\n\n    var $ = (typeof jQuery != 'undefined') ? jQuery : ''; // define $ to jQuery in case users aren't but are attempting to extend off the library\n\n\n    jQuery(document).ready(function($) {\n        // initialize fancybox elements\n        $(\".dipc-fancybox\").fancybox({\n            fitToView: true\n        });\n    });\n\n</script>\n\n<footer class=\"footerRow\">\n\t<section class=\"footerTop\">\n\t\t<div class=\"container-wide\">\n\t\t\t<div class=\"linkWrapper\">\n\t\t\t\t<div class=\"linkWrapper__dealer visible-xs\">\n\n\t\t\t\t\t\n\t\t\t\t\t\t<a class=\"link__dealerName\" href=\"https://www.tomesautogroup.com\">Tomes Auto Group</a>\n\n\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t\t<div class=\"linkWrapper__widgets\">\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li id=\"nav_menu-1\" class=\"widget widget_nav_menu\"><span class=\"widgettitle\" role=\"heading\" aria-level=\"3\">Inventory<span class=\"widgettitle--arrow\" aria-hidden=\"true\"></span></span><div class=\"menu-inventory-pre-footer-container\"><ul id=\"menu-inventory-pre-footer\" class=\"menu\"><li id=\"menu-item-87\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-87\"><a href=\"https://www.tomesautogroup.com/new-vehicles/\" data-radar=\"initialized\">New Vehicles</a></li>\n<li id=\"menu-item-88\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-88\"><a href=\"https://www.tomesautogroup.com/used-vehicles/\" data-radar=\"initialized\">Pre-Owned Vehicles</a></li>\n<li id=\"menu-item-89\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-89\"><a href=\"https://www.tomesautogroup.com/used-vehicles/certified-pre-owned-vehicles/\" data-radar=\"initialized\">Certified Pre-Owned Vehicles</a></li>\n<li id=\"menu-item-90\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-90\"><a href=\"https://www.tomesautogroup.com/used-vehicles/priced-under-20k/\" data-radar=\"initialized\">Priced Under 20K</a></li>\n</ul></div></li><li id=\"nav_menu-2\" class=\"widget widget_nav_menu\"><span class=\"widgettitle\" role=\"heading\" aria-level=\"3\">Service<span class=\"widgettitle--arrow\" aria-hidden=\"true\"></span></span><div class=\"menu-service-pre-footer-container\"><ul id=\"menu-service-pre-footer\" class=\"menu\"><li id=\"menu-item-91\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-91\"><a href=\"https://www.tomesautogroup.com/service/\" data-radar=\"initialized\">Service Centers</a></li>\n<li id=\"menu-item-93\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-93\"><a href=\"https://www.tomesautogroup.com/parts/\" data-radar=\"initialized\">Parts Centers</a></li>\n</ul></div></li><li id=\"nav_menu-3\" class=\"widget widget_nav_menu\"><span class=\"widgettitle\" role=\"heading\" aria-level=\"3\">Financing<span class=\"widgettitle--arrow\" aria-hidden=\"true\"></span></span><div class=\"menu-finance-pre-footer-container\"><ul id=\"menu-finance-pre-footer\" class=\"menu\"><li id=\"menu-item-95\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-95\"><a href=\"https://www.tomesautogroup.com/finance/\" data-radar=\"initialized\">Finance Centers</a></li>\n<li id=\"menu-item-97\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-97\"><a href=\"https://www.tomesautogroup.com/payment-calculator/\" data-radar=\"initialized\">Payment Calculator</a></li>\n<li id=\"menu-item-98\" class=\"menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-31 current_page_item top-level-empty menu-item-98\"><a href=\"https://www.tomesautogroup.com/sell-us-your-car/\" aria-current=\"page\" data-radar=\"initialized\">Sell Us Your Car</a></li>\n</ul></div></li><li id=\"nav_menu-4\" class=\"widget widget_nav_menu\"><span class=\"widgettitle\" role=\"heading\" aria-level=\"3\">About<span class=\"widgettitle--arrow\" aria-hidden=\"true\"></span></span><div class=\"menu-about-pre-footer-container\"><ul id=\"menu-about-pre-footer\" class=\"menu\"><li id=\"menu-item-99\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-99\"><a href=\"https://www.tomesautogroup.com/about-us/\" data-radar=\"initialized\">About Us</a></li>\n<li id=\"menu-item-100\" class=\"menu-item menu-item-type-post_type menu-item-object-page top-level-empty menu-item-100\"><a href=\"https://www.tomesautogr",
+  "structure": {
+    "bg": "rgb(255, 255, 255)",
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "cls": "stack stack--header-content",
+            "fontSize": 14,
+            "h": 143,
+            "tag": "div",
+            "text": "",
+            "w": 1692,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "children": [
+              {
+                "bg": "rgb(3, 157, 220)",
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [],
+                        "cls": "fa fa-exclamation-circle",
+                        "fontSize": 77,
+                        "h": 77,
+                        "tag": "i",
+                        "text": "",
+                        "w": 66,
+                        "x": -22,
+                        "y": 143
+                      }
+                    ],
+                    "cls": "notice__info",
+                    "fontSize": 14,
+                    "h": 77,
+                    "tag": "div",
+                    "text": "",
+                    "w": 77,
+                    "x": 0,
+                    "y": 143
+                  },
+                  {
+                    "children": [
+                      {
+                        "bg": "rgb(0, 51, 153)",
+                        "children": [
+                          {
+                            "children": [],
+                            "cls": "",
+                            "fontSize": 12,
+                            "h": 18,
+                            "tag": "span",
+                            "text": "FTC PRICE GUARANTEE: Every advertised price is the total price (excluding govt. fees).",
+                            "w": 691,
+                            "x": 501,
+                            "y": 178
+                          }
+                        ],
+                        "cls": "ftc-notice-subaru",
+                        "fontSize": 12,
+                        "h": 58,
+                        "tag": "div",
+                        "text": "",
+                        "w": 1662,
+                        "x": 15,
+                        "y": 158
+                      }
+                    ],
+                    "cls": "site-notice-message",
+                    "fontSize": 18,
+                    "h": 58,
+                    "tag": "div",
+                    "text": "",
+                    "w": 1662,
+                    "x": 15,
+                    "y": 158
+                  },
+                  {
+                    "bg": "rgb(255, 255, 255)",
+                    "children": [
+                      {
+                        "children": [],
+                        "cls": "fa fa-times-circle",
+                        "fontSize": 25,
+                        "h": 25,
+                        "tag": "i",
+                        "text": "",
+                        "w": 25,
+                        "x": 1633,
+                        "y": 215
+                      }
+                    ],
+                    "cls": "closeIcon__top",
+                    "fontSize": 28,
+                    "h": 25,
+                    "role": "button",
+                    "tag": "div",
+                    "text": "",
+                    "w": 25,
+                    "x": 1633,
+                    "y": 215
+                  }
+                ],
+                "cls": "sb-section error notice notice-top action-bar-enabled",
+                "fontSize": 14,
+                "h": 88,
+                "role": "region",
+                "tag": "div",
+                "text": "",
+                "w": 1692,
+                "x": 0,
+                "y": 143
+              }
+            ],
+            "cls": "stack stack--site-notice",
+            "fontSize": 14,
+            "h": 88,
+            "tag": "div",
+            "text": "",
+            "w": 1692,
+            "x": 0,
+            "y": 143
+          }
+        ],
+        "cls": "di-stacks di-stacks--top",
+        "fontSize": 14,
+        "h": 231,
+        "tag": "div",
+        "text": "",
+        "w": 1692,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "children": [],
+                                    "cls": "alignnone size-full wp-image-471 lazyload-loading",
+                                    "fontSize": 16,
+                                    "h": 371,
+                                    "src": "https://di-uploads-development.dealerinspire.com/tomesautogroup/uploads/2024/07/Tomes-We-Buy-Cars.jpg",
+                                    "tag": "img",
+                                    "text": "",
+                                    "w": 1200,
+                                    "x": 246,
+                                    "y": 248
+                                  }
+                                ],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 371,
+                                "tag": "p",
+                                "text": "",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 248
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "bg": "rgb(3, 157, 220)",
+                                        "children": [],
+                                        "cls": "button primary-button block",
+                                        "fontSize": 16,
+                                        "h": 56,
+                                        "href": "https://www.tomesautogroup.com/new-vehicles/",
+                                        "tag": "a",
+                                        "text": "New Inventory",
+                                        "w": 437,
+                                        "x": 161,
+                                        "y": 634
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 66,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 146,
+                                    "y": 629
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "bg": "rgb(3, 157, 220)",
+                                        "children": [],
+                                        "cls": "button primary-button block",
+                                        "fontSize": 16,
+                                        "h": 56,
+                                        "href": "https://www.tomesautogroup.com/used-vehicles/",
+                                        "tag": "a",
+                                        "text": "Used Inventory",
+                                        "w": 437,
+                                        "x": 628,
+                                        "y": 634
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 66,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 613,
+                                    "y": 629
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "bg": "rgb(3, 157, 220)",
+                                        "children": [],
+                                        "cls": "button primary-button block",
+                                        "fontSize": 16,
+                                        "h": 56,
+                                        "href": "https://www.tomesautogroup.com/contact-us/",
+                                        "tag": "a",
+                                        "text": "Contact Us",
+                                        "w": 437,
+                                        "x": 1094,
+                                        "y": 634
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 66,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 1079,
+                                    "y": 629
+                                  }
+                                ],
+                                "cls": "row",
+                                "fontSize": 16,
+                                "h": 66,
+                                "tag": "div",
+                                "text": "",
+                                "w": 1400,
+                                "x": 146,
+                                "y": 629
+                              }
+                            ],
+                            "cls": "col-xs-12 inner-wysiwyg",
+                            "fontSize": 16,
+                            "h": 447,
+                            "tag": "div",
+                            "text": "",
+                            "w": 1400,
+                            "x": 146,
+                            "y": 248
+                          }
+                        ],
+                        "cls": "row",
+                        "fontSize": 16,
+                        "h": 447,
+                        "tag": "div",
+                        "text": "",
+                        "w": 1400,
+                        "x": 146,
+                        "y": 248
+                      }
+                    ],
+                    "cls": "  container-wide ",
+                    "fontSize": 16,
+                    "h": 447,
+                    "tag": "div",
+                    "text": "",
+                    "w": 1400,
+                    "x": 146,
+                    "y": 248
+                  }
+                ],
+                "cls": "text-center fullcontentrow bgimagerow dark-text cover",
+                "fontSize": 16,
+                "h": 481,
+                "style": "width:100%",
+                "tag": "div",
+                "text": "",
+                "w": 1692,
+                "x": 0,
+                "y": 231
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "children": [],
+                                "cls": "text-center",
+                                "fontSize": 30,
+                                "h": 33,
+                                "tag": "h1",
+                                "text": "Sell or Trade Your Car near McKinney, TX",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 732
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "alignnone size-full wp-image-496 lazyload-loading",
+                                        "fontSize": 16,
+                                        "h": 291,
+                                        "src": "https://di-uploads-development.dealerinspire.com/tomesautogroup/uploads/2024/07/Finance-Banner-1800-x-700_mobile.jpg",
+                                        "tag": "img",
+                                        "text": "",
+                                        "w": 437,
+                                        "x": 161,
+                                        "y": 775
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 291,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 146,
+                                    "y": 775
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "alignnone size-full wp-image-493 lazyload-loading",
+                                        "fontSize": 16,
+                                        "h": 291,
+                                        "src": "https://di-uploads-development.dealerinspire.com/tomesautogroup/uploads/2024/07/A-car-salesman-and-customer-shake-hands-after-agreeing-on-a-purchase-price_mobile.jpg",
+                                        "tag": "img",
+                                        "text": "",
+                                        "w": 437,
+                                        "x": 628,
+                                        "y": 775
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 291,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 613,
+                                    "y": 775
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "alignnone size-full wp-image-492 lazyload-loading",
+                                        "fontSize": 16,
+                                        "h": 291,
+                                        "src": "https://di-uploads-development.dealerinspire.com/tomesautogroup/uploads/2024/07/Dealer-Financing_mobile.jpg",
+                                        "tag": "img",
+                                        "text": "",
+                                        "w": 437,
+                                        "x": 1094,
+                                        "y": 775
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 291,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 1079,
+                                    "y": 775
+                                  }
+                                ],
+                                "cls": "row",
+                                "fontSize": 16,
+                                "h": 291,
+                                "tag": "div",
+                                "text": "",
+                                "w": 1400,
+                                "x": 146,
+                                "y": 775
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 18,
+                                        "h": 20,
+                                        "tag": "h3",
+                                        "text": "Swift Appraisal",
+                                        "w": 437,
+                                        "x": 161,
+                                        "y": 1086
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 56,
+                                        "tag": "p",
+                                        "text": "Ready to make a change? Drop by for a quick and complimentary appraisal. No appointment necessary; we\u2019re prepared to assess your vehicle today.",
+                                        "w": 437,
+                                        "x": 161,
+                                        "y": 1116
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 116,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 146,
+                                    "y": 1066
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 18,
+                                        "h": 20,
+                                        "tag": "h3",
+                                        "text": "Secure & Professional",
+                                        "w": 437,
+                                        "x": 628,
+                                        "y": 1086
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 56,
+                                        "tag": "p",
+                                        "text": "Our appraisers will handle your evaluation with the utmost professionalism and respect \u2013 expect only fair and competitive offers, no lowballing.",
+                                        "w": 437,
+                                        "x": 628,
+                                        "y": 1116
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 116,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 613,
+                                    "y": 1066
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 18,
+                                        "h": 20,
+                                        "tag": "h3",
+                                        "text": "On-The-Spot Payment",
+                                        "w": 437,
+                                        "x": 1094,
+                                        "y": 1086
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 56,
+                                        "tag": "p",
+                                        "text": "Once we assess your vehicle, our goal is to finalize the deal quickly. You could possibly leave our dealership with a check that very same day.",
+                                        "w": 437,
+                                        "x": 1094,
+                                        "y": 1116
+                                      }
+                                    ],
+                                    "cls": "col-md-4",
+                                    "fontSize": 16,
+                                    "h": 116,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 1079,
+                                    "y": 1066
+                                  }
+                                ],
+                                "cls": "row",
+                                "fontSize": 16,
+                                "h": 116,
+                                "tag": "div",
+                                "text": "",
+                                "w": 1400,
+                                "x": 146,
+                                "y": 1066
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "bg": "rgb(3, 157, 220)",
+                                        "children": [],
+                                        "cls": "button primary-button block",
+                                        "fontSize": 16,
+                                        "h": 56,
+                                        "href": "https://www.bobtomesford.com/value-your-trade/",
+                                        "tag": "a",
+                                        "target": "_blank",
+                                        "text": "Get Your Easy key Exchange Offer!",
+                                        "w": 437,
+                                        "x": 628,
+                                        "y": 1187
+                                      }
+                                    ],
+                                    "cls": "col-md-offset-4 col-md-4",
+                                    "fontSize": 16,
+                                    "h": 66,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 467,
+                                    "x": 613,
+                                    "y": 1182
+                                  }
+                                ],
+                                "cls": "row",
+                                "fontSize": 16,
+                                "h": 66,
+                                "tag": "div",
+                                "text": "",
+                                "w": 1400,
+                                "x": 146,
+                                "y": 1182
+                              }
+                            ],
+                            "cls": "col-xs-12 inner-wysiwyg",
+                            "fontSize": 16,
+                            "h": 536,
+                            "tag": "div",
+                            "text": "",
+                            "w": 1400,
+                            "x": 146,
+                            "y": 712
+                          }
+                        ],
+                        "cls": "row",
+                        "fontSize": 16,
+                        "h": 536,
+                        "tag": "div",
+                        "text": "",
+                        "w": 1400,
+                        "x": 146,
+                        "y": 712
+                      }
+                    ],
+                    "cls": "  container-wide ",
+                    "fontSize": 16,
+                    "h": 536,
+                    "tag": "div",
+                    "text": "",
+                    "w": 1400,
+                    "x": 146,
+                    "y": 712
+                  }
+                ],
+                "cls": " fullcontentrow bgimagerow dark-text cover",
+                "fontSize": 16,
+                "h": 536,
+                "style": "width:100%",
+                "tag": "div",
+                "text": "",
+                "w": 1692,
+                "x": 0,
+                "y": 712
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 32,
+                                "h": 35,
+                                "tag": "h2",
+                                "text": "Get a No-Obligation Trade Appraisal Today!",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1285
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 56,
+                                "tag": "p",
+                                "text": "Thinking it might be time for a new ride? Whether your current vehicle is costing you too much in repairs, its warranty has expired, or you\u2019re simply looking to move on from an upside-down loan, Tomes Auto Group is here to help with our hassle-free \u201cSell Us Your Car\u201d program. This program is designed to ease you into a brand-new Ford, Volkswagen, or Subaru with minimal fuss. Often, you can transition with little to no money down while potentially lowering your monthly payments!",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1340
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 56,
+                                "tag": "p",
+                                "text": "Ready to see how much you could switch up your drive? Speak with one of our dedicated Trade-In Specialists today to arrange a no-obligation trade appraisal. At Tomes Auto Group, we\u2019re committed to maximizing your satisfaction with both your trade-in and your overall car buying experience. Let us assist you in getting the best value for your trade and in selecting the new Volkswagen, Subaru, or Ford that perfectly suits your family\u2019s needs.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1406
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "Benefits of Trading In at Tomes Auto Group",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1482
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Above Market Value Offers:",
+                                        "w": 195,
+                                        "x": 201,
+                                        "y": 1512
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " At Tomes Auto Group, we evaluate every trade with precision and integrity, ensuring you receive the best possible offer that often surpasses market value."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1512
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Advantageous Financing Terms:",
+                                        "w": 228,
+                                        "x": 201,
+                                        "y": 1530
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Transition smoothly with financing options that work for you. Our relationships with top lenders allow us to secure favorable terms, making your next purchase more affordable."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 37,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1530
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Enhanced Efficiency:",
+                                        "w": 149,
+                                        "x": 201,
+                                        "y": 1568
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Upgrade to a newer model that runs cleaner and goes further, reducing your environmental impact and saving you money at the pump."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1568
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Reduced Maintenance Costs:",
+                                        "w": 210,
+                                        "x": 201,
+                                        "y": 1586
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Say goodbye to frequent repairs. Our newer models come with fewer maintenance needs, giving you peace of mind and saving on upkeep."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1586
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Latest Features:",
+                                        "w": 116,
+                                        "x": 201,
+                                        "y": 1605
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Experience cutting-edge technology with the latest in-car entertainment and convenience features designed to enhance your driving experience."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1605
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Lower Monthly Payments:",
+                                        "w": 184,
+                                        "x": 201,
+                                        "y": 1624
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " We work hard to make your new car as affordable as possible. With our tailored financing solutions, you can enjoy lower monthly payments on your next vehicle."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1624
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Extended Warranty Coverage:",
+                                        "w": 215,
+                                        "x": 201,
+                                        "y": 1642
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Drive with confidence knowing your new vehicle is covered. Our newer models come with comprehensive warranty plans that protect your investment."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1642
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Advanced Safety Technologies:",
+                                        "w": 223,
+                                        "x": 201,
+                                        "y": 1661
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Benefit from the latest safety innovations. Our modern vehicles are equipped with state-of-the-art safety features that protect you and your loved ones on the road."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 37,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1661
+                                  }
+                                ],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 187,
+                                "tag": "ul",
+                                "text": "",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1512
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 37,
+                                "tag": "p",
+                                "text": "Experience all these benefits and more when you choose to trade in your current vehicle for a new or newer model at Tomes Auto Group. Let us help you make a smooth transition to a car that fits your lifestyle and budget.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1708
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "Why Sell To Us?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1766
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "In-Person Scheduling:",
+                                        "w": 157,
+                                        "x": 201,
+                                        "y": 1796
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Visit us at your convenience, or we can schedule a specific time for your appraisal."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1796
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Transparent Appraisals:",
+                                        "w": 168,
+                                        "x": 201,
+                                        "y": 1814
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " We pride ourselves on providing clear, straightforward appraisals. You\u2019ll understand every part of the process and how we arrive at our offer."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1814
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Efficient Appraisal Process:",
+                                        "w": 194,
+                                        "x": 201,
+                                        "y": 1833
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Receive an offer in 20 minutes or less. We value your time as much as we value your car."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1833
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Streamlined Paperwork:",
+                                        "w": 171,
+                                        "x": 201,
+                                        "y": 1852
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Our paperwork process is quick and efficient, ensuring you can sell your car and move on without hassle."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1852
+                                  }
+                                ],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 75,
+                                "tag": "ul",
+                                "text": "",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1796
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "What to Bring When Selling Your Car",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1890
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 19,
+                                "tag": "p",
+                                "text": "To ensure a smooth and efficient transaction, please bring the following items:",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1920
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Car Title:",
+                                        "w": 64,
+                                        "x": 201,
+                                        "y": 1949
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Bring your car\u2019s title or payoff information. It\u2019s important that all titleholders are present during the transaction."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1949
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Registration:",
+                                        "w": 90,
+                                        "x": 201,
+                                        "y": 1967
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Ensure you have a valid and current vehicle registration to verify ownership."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1967
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Valid State-Issued Photo ID:",
+                                        "w": 200,
+                                        "x": 201,
+                                        "y": 1986
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Required for all title holders to verify ownership and identity."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 1986
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Keys, Remotes, and Owner\u2019s Manuals:",
+                                        "w": 277,
+                                        "x": 201,
+                                        "y": 2005
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Bringing all original keys, remotes, and manuals is crucial. Missing items may adjust the offer."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 2005
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Title or Payoff Information:",
+                                        "w": 187,
+                                        "x": 201,
+                                        "y": 2023
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " All title holders should be present during the sale. If your title shows a lien that has been paid off, please bring the lien release from the lien holder."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 2023
+                                  }
+                                ],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 93,
+                                "tag": "ul",
+                                "text": "",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 1949
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 19,
+                                "tag": "p",
+                                "text": "Bringing these items will help expedite the process and ensure that you receive the best possible offer for your vehicle.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2052
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "How It Works",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2091
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Get an Instant Estimate:",
+                                        "w": 172,
+                                        "x": 201,
+                                        "y": 2120
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Find out what your car is worth with our instant online valuation tool."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 2120
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "No-Appointment Final Offer:",
+                                        "w": 199,
+                                        "x": 201,
+                                        "y": 2139
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Come to our dealership whenever you\u2019re ready. No appointment needed\u2014we\u2019re here to finalize your offer quickly."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 2139
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Quick, No-Obligation Offer:",
+                                        "w": 192,
+                                        "x": 201,
+                                        "y": 2158
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Our experts will inspect your car and provide a no-obligation offer within 30 minutes."
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 2158
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "fontSize": 16,
+                                        "h": 18,
+                                        "tag": "span",
+                                        "text": "Flexible Options:",
+                                        "w": 119,
+                                        "x": 201,
+                                        "y": 2176
+                                      },
+                                      {
+                                        "children": [],
+                                        "cls": "",
+                                        "tag": "#text",
+                                        "text": " Use the value of your trade to step into a new car, or simply sell it to us for cash. The choice is yours!"
+                                      }
+                                    ],
+                                    "cls": "",
+                                    "fontSize": 16,
+                                    "h": 19,
+                                    "tag": "li",
+                                    "text": "",
+                                    "w": 1330,
+                                    "x": 201,
+                                    "y": 2176
+                                  }
+                                ],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 75,
+                                "tag": "ul",
+                                "text": "",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2120
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 32,
+                                "h": 35,
+                                "tag": "h2",
+                                "text": "Frequently Asked Questions on Selling Your Car",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2215
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "Can I sell my car without buying another one from you?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2270
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 19,
+                                "tag": "p",
+                                "text": "Absolutely! You can sell your car to us whether you choose to buy from us or not, and our offer will remain consistent.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2300
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "Can I receive an offer for my car online?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2339
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 19,
+                                "tag": "p",
+                                "text": "Yes, you can get a preliminary trade-in offer online. Simply click on our \u201cGet Your KBB Cash Offer\u201d button to start the process!",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2369
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "How do you determine the offer for my car?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2407
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 56,
+                                "tag": "p",
+                                "text": "We assess your car based on current market trends and specific details such as the year, make, model, mileage, and vehicle history. We conduct a thorough inspection for any major issues like frame or flood damage and perform a test drive to check mechanical functions like brakes and turn signals. Our offer may be adjusted based on the necessary repairs. However, the overall maintenance and care your car has received play a crucial role in our final appraisal.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2437
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "How will I get paid for my car?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2513
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 19,
+                                "tag": "p",
+                                "text": "You will receive a check on the same day you sell us your car\u2014no delays, just quick and easy payment.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2543
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "Do I need an appointment to get an offer on my car?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2582
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 19,
+                                "tag": "p",
+                                "text": "No appointment is necessary to receive an offer. However, scheduling one can save you time at the dealership, allowing us to expedite the process and get you paid faster.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2611
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "Do you purchase leased cars?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2650
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 19,
+                                "tag": "p",
+                                "text": "Yes, you can sell your leased car to us much like any other financed vehicle in most cases.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2680
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "What if I owe more on my car than your offer?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2718
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 37,
+                                "tag": "p",
+                                "text": "If the payoff amount is greater than our offer, this difference is referred to as \u201cnegative equity.\u201d In some situations, this negative equity can be rolled into the financing of your next vehicle purchase from us.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2748
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 20,
+                                "tag": "h3",
+                                "text": "Can I sell a car on behalf of a company?",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2806
+                              },
+                              {
+                                "children": [],
+                                "cls": "",
+                                "fontSize": 16,
+                                "h": 19,
+                                "tag": "p",
+                                "text": "Yes, if you are selling a vehicle on behalf of a company, please consult with a Business Office associate to understand the specific documentation and requirements needed.",
+                                "w": 1370,
+                                "x": 161,
+                                "y": 2835
+                              }
+                            ],
+                            "cls": "col-xs-12 inner-wysiwyg",
+                            "fontSize": 16,
+                            "h": 1599,
+                            "tag": "div",
+                            "text": "",
+                            "w": 1400,
+                            "x": 146,
+                            "y": 1265
+                          }
+                        ],
+                        "cls": "row",
+                        "fontSize": 16,
+                        "h": 1599,
+                        "tag": "div",
+                        "text": "",
+                        "w": 1400,
+                        "x": 146,
+                        "y": 1265
+                      }
+                    ],
+                    "cls": "  container-wide ",
+                    "fontSize": 16,
+                    "h": 1599,
+                    "tag": "div",
+                    "text": "",
+                    "w": 1400,
+                    "x": 146,
+                    "y": 1265
+                  }
+                ],
+                "cls": " fullcontentrow bgimagerow dark-text cover",
+                "fontSize": 16,
+                "h": 1633,
+                "style": "width:100%",
+                "tag": "div",
+                "text": "",
+                "w": 1692,
+                "x": 0,
+                "y": 1248
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "bg": "rgb(3, 157, 220)",
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "children": [],
+                                                "cls": "location-text",
+                                                "fontSize": 18,
+                                                "h": 24,
+                                                "tag": "span",
+                                                "text": "Get directions to one of our locations:",
+                                                "w": 318,
+                                                "x": 687,
+                                                "y": 2903
+                                              },
+                                              {
+                                                "children": [
+                                                  {
+                                                    "bg": "rgb(255, 255, 255)",
+                                                    "children": [
+                                                      {
+                                                        "children": [],
+                                                        "cls": "",
+                                                        "fontSize": 18,
+                                                        "h": 40,
+                                                        "tag": "select",
+                                                        "text": "",
+                                                        "w": 306,
+                                                        "x": 663,
+                                                        "y": 2940
+                                                      }
+                                                    ],
+                                                    "cls": "get-directions-wrap",
+                                                    "fontSize": 18,
+                                                    "h": 40,
+                                                    "tag": "div",
+                                                    "text": "",
+                                                    "w": 306,
+                                                    "x": 663,
+                                                    "y": 2940
+                                                  },
+                                                  {
+                                                    "bg": "rgb(1, 30, 80)",
+                                                    "children": [],
+                                                    "cls": "button secondary-button",
+                                                    "fontSize": 15,
+                                                    "h": 40,
+                                                    "tag": "button",
+                                                    "text": "Go",
+                                                    "w": 51,
+                                                    "x": 978,
+                                                    "y": 2940
+                                                  }
+                                                ],
+                                                "cls": "getdirections",
+                                                "fontSize": 18,
+                                                "h": 40,
+                                                "tag": "form",
+                                                "text": "",
+                                                "w": 1370,
+                                                "x": 161,
+                                                "y": 2940
+                                              }
+                                            ],
+                                            "cls": "col-sm-12",
+                                            "fontSize": 18,
+                                            "h": 79,
+                                            "tag": "div",
+                                            "text": "",
+                                            "w": 1400,
+                                            "x": 146,
+                                            "y": 2901
+                                          }
+                                        ],
+                                        "cls": "row",
+                                        "fontSize": 18,
+                                        "h": 79,
+                                        "tag": "div",
+                                        "text": "",
+                                        "w": 1400,
+                                        "x": 146,
+                                        "y": 2901
+                                      }
+                                    ],
+                                    "cls": "container-wide",
+                                    "fontSize": 18,
+                                    "h": 79,
+                                    "tag": "div",
+                                    "text": "",
+                                    "w": 1400,
+                                    "x": 146,
+                                    "y": 2901
+                                  }
+                                ],
+                                "cls": "",
+                                "fontSize": 18,
+                                "h": 119,
+                                "tag": "div",
+                                "text": "",
+                                "w": 1692,
+                                "x": 0,
+                                "y": 2881
+                              }
+                            ],
+                            "cls": "col-xs-12 inner-wysiwyg",
+                            "fontSize": 16,
+                            "h": 119,
+                            "tag": "div",
+                            "text": "",
+                            "w": 1692,
+                            "x": 0,
+                            "y": 2881
+                          }
+                        ],
+                        "cls": "row",
+                        "fontSize": 16,
+                        "h": 119,
+                        "tag": "div",
+                        "text": "",
+                        "w": 1692,
+                        "x": 0,
+                        "y": 2881
+                      }
+                    ],
+                    "cls": "  container-fluid ",
+                    "fontSize": 16,
+                    "h": 119,
+                    "tag": "div",
+                    "text": "",
+                    "w": 1692,
+                    "x": 0,
+                    "y": 2881
+                  }
+                ],
+                "cls": " fullcontentrow bgimagerow dark-text cover",
+                "fontSize": 16,
+                "h": 119,
+                "style": "width:100%",
+                "tag": "div",
+                "text": "",
+                "w": 1692,
+                "x": 0,
+                "y": 2881
+              }
+            ],
+            "cls": "modelpagebuilder contentcontainer",
+            "fontSize": 16,
+            "h": 2768,
+            "tag": "div",
+            "text": "",
+            "w": 1692,
+            "x": 0,
+            "y": 231
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "bg": "rgb(255, 255, 255)",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "children": [],
+                                    "cls": "",
+                                    "fontSize": 14,
+                                    "h": 16,
+                                    "tag": "span",
+                                    "text": "Search",
+                                    "w": 49,
+                                    "x": 36,
+                                    "y": 860
+                                  }
+                                ],
+                                "cls": "bar-item__icon",
+                                "fontSize": 14,
+                                "h": 16,
+                                "tag": "div",
+                                "text": "",
+                                "w": 95,
+                                "x": 5,
+                                "y": 860
+                              }
+                            ],
+                            "cls": "\n        bar-item\n        di-modal\n        bar-item--size-inherit\n        \n        bar-item--vehicle-search \n    ",
+                            "fontSize": 14,
+                            "h": 50,
+                            "href": "https://www.tomesautogroup.com/sell-us-your-car/#ab-modal--vehicle-search",
+                            "tag": "a",
+                            "text": "",
+                            "w": 96,
+                            "x": 5,
+                            "y": 843
+                          },
+                          {
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "children": [],
+                                    "cls": "",
+                                    "fontSize": 14,
+                                    "h": 16,
+                                    "tag": "span",
+                                    "text": "Contact",
+                                    "w": 53,
+                                    "x": 1618,
+                                    "y": 860
+                                  }
+                                ],
+                                "cls": "bar-item__icon",
+                                "fontSize": 14,
+                                "h": 16,
+                                "tag": "div",
+                                "text": "",
+                                "w": 99,
+                                "x": 1587,
+                                "y": 860
+                              }
+                            ],
+                            "cls": "\n        bar-item\n        bar-item--size-inherit\n        bar-item--flush-right\n         \n    ",
+                            "fontSize": 14,
+                            "h": 50,
+                            "href": "https://www.tomesautogroup.com/contact-us/",
+                            "tag": "a",
+                            "text": "",
+                            "w": 101,
+                            "x": 1586,
+                            "y": 843
+                          }
+                        ],
+                        "cls": "di-action-bar di-action-bar--desktop  ",
+                        "fontSize": 14,
+                        "h": 61,
+                        "tag": "div",
+                        "text": "",
+                        "w": 1692,
+                        "x": 0,
+                        "y": 837
+                      }
+                    ],
+                    "cls": "sb-section",
+                    "fontSize": 14,
+                    "h": 61,
+                    "tag": "section",
+                    "text": "",
+                    "w": 1692,
+                    "x": 0,
+                    "y": 837
+                  }
+                ],
+                "cls": "stack stack--action-bar",
+                "fontSize": 14,
+                "h": 61,
+                "tag": "div",
+                "text": "",
+                "w": 1692,
+                "x": 0,
+                "y": 837
+              }
+            ],
+            "cls": "di-stacks di-stacks--bottom",
+            "fontSize": 14,
+            "h": 61,
+            "tag": "div",
+            "text": "",
+            "w": 1692,
+            "x": 0,
+            "y": 837
+          }
+        ],
+        "cls": "",
+        "fontSize": 14,
+        "h": 3498,
+        "tag": "div",
+        "text": "",
+        "w": 1692,
+        "x": 0,
+        "y": 231
+      },
+      {
+        "children": [],
+        "cls": "a11y-speak-region",
+        "fontSize": 14,
+        "h": 1,
+        "style": "width:1px",
+        "tag": "div",
+        "text": "",
+        "w": 1,
+        "x": -1,
+        "y": 3728
+      },
+      {
+        "children": [],
+        "cls": "a11y-speak-region",
+        "fontSize": 14,
+        "h": 1,
+        "style": "width:1px",
+        "tag": "div",
+        "text": "",
+        "w": 1,
+        "x": -1,
+        "y": 3728
+      }
+    ],
+    "cls": "page-template page-template-page-di-page-composer page-template-page-di-page-composer-php page page-id-31 custom bootstrap3 containerized site-notice-visible stacks-enabled",
+    "fontSize": 14,
+    "h": 3729,
+    "tag": "body",
+    "text": "",
+    "w": 1692,
+    "x": 0,
+    "y": 0
+  },
+  "title": "Sell Us Your Car | Tomes Auto Group",
+  "url": "https://www.tomesautogroup.com/sell-us-your-car/"
+}

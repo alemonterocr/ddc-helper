@@ -1,0 +1,1029 @@
+[
+  {
+    "section": "empty-one",
+    "slots": [
+      [
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "section": "empty-66-33",
+    "slots": [
+      [
+        {
+          "type": "content",
+          "html": "<p class=\"font-weight-bold text-center my-3\">***Please call the dealership to schedule recall appointments to ensure that the proper remedy parts will be available. If scheduling online, there is a possibility that parts may not be available to complete the repair(s).***</p>",
+          "preview": "***Please call the dealership to schedule recall appointments to ensur",
+          "node_count": 1
+        },
+        {
+          "type": "image",
+          "url": "https://service.secureoffersites.com//images/GetLibraryImage?fileNameOrId=349386"
+        },
+        {
+          "type": "content",
+          "html": "<h2>Kia Service Center</h2>\n<p>From routine maintenance to complex repairs, our Kia service team has you covered. Secure your spot by booking an appointment now, and be sure to take advantage of our exclusive Kia service coupons.</p>",
+          "preview": "Kia Service Center",
+          "node_count": 2
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "Schedule Service",
+              "href": "https://www.castlekiamchenry.com/scheduleservice",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Service Specials",
+              "href": "https://www.castlekiamchenry.com/specials/service-specials",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<h3 class=\"text-center my-4\">Services We Offer</h3>",
+          "preview": "Services We Offer",
+          "node_count": 1
+        },
+        {
+          "type": "image",
+          "url": "https://service.secureoffersites.com//images/GetLibraryImage?fileNameOrId=349389"
+        },
+        {
+          "type": "content",
+          "html": "<h4>Oil Change Service</h4>",
+          "preview": "Oil Change Service",
+          "node_count": 1
+        },
+        {
+          "type": "image",
+          "url": "https://service.secureoffersites.com//images/GetLibraryImage?fileNameOrId=349388"
+        },
+        {
+          "type": "content",
+          "html": "<h4>Brake Service</h4>",
+          "preview": "Brake Service",
+          "node_count": 1
+        },
+        {
+          "type": "image",
+          "url": "https://service.secureoffersites.com//images/GetLibraryImage?fileNameOrId=349390"
+        },
+        {
+          "type": "content",
+          "html": "<h4>Tire Service</h4>",
+          "preview": "Tire Service",
+          "node_count": 1
+        },
+        {
+          "type": "image",
+          "url": "https://service.secureoffersites.com//images/GetLibraryImage?fileNameOrId=349387"
+        },
+        {
+          "type": "content",
+          "html": "<h4>Battery Service</h4>\n<h3>Schedule Your Kia Service Today</h3>\n<p>Schedule your Kia service appointment, hassle-free. With just a few quick clicks, book today using our streamlined online scheduler. Experience the difference at Kia, where Kia service in McHenry, IL, is taken to a whole new level of excellence.</p>",
+          "preview": "Battery Service",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "Schedule Service",
+              "href": "https://www.castlekiamchenry.com/scheduleservice",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "url": "https://service.secureoffersites.com//images/GetLibraryImage?fileNameOrId=349387"
+        },
+        {
+          "type": "content",
+          "html": "<h3>Visit Castle Kia McHenry for Kia Service in McHenry, IL</h3>\n<p>When it comes to reliable automobile services, locals rely on the expertise of Kia. We understand the importance of offering excellent service and great prices, which is why we prioritize both for our customers. We encourage you to browse through our service specials to find incredible savings on a variety of maintenance services.</p>",
+          "preview": "Visit Castle Kia McHenry for Kia Service in McHenry, IL",
+          "node_count": 2
+        }
+      ],
+      [
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "Call Castle Kia McHenry",
+              "href": "tel:779-217-8381",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<h5 class=\"color-primary _text_color theme-text-color\">Phone Numbers</h5>\n<span>Sales</span>\n:",
+          "preview": "Phone Numbers",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "779-217-8381",
+              "href": "tel:779-217-8381",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<span>Service</span>\n:",
+          "preview": "Service",
+          "node_count": 2
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "779-237-7265",
+              "href": "tel:779-237-7265",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<span>Parts</span>\n:",
+          "preview": "Parts",
+          "node_count": 2
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "779-368-1561",
+              "href": "tel:779-368-1561",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<h5 class=\"color-primary _text_color theme-text-color\">Sales Hours</h5>\n<div>Sunday:</div>\n<div class=\"textTransform text-uppercase\">closed</div>\n<div>Monday:</div>\n<div class=\"text-uppercase\">9:00 AM - 8:00 PM</div>\n<div>Tuesday:</div>\n<div class=\"text-uppercase\">9:00 AM - 8:00 PM</div>\n<div>Wednesday:</div>\n<div class=\"text-uppercase\">9:00 AM - 8:00 PM</div>\n<div>Thursday:</div>\n<div class=\"text-uppercase\">9:00 AM - 8:00 PM</div>\n<div>Friday:</div>\n<div class=\"text-uppercase\">9:00 AM - 8:00 PM</div>\n<div>Saturday:</div>\n<div class=\"text-uppercase\">9:00 AM - 6:00 PM</div>",
+          "preview": "Sales Hours",
+          "node_count": 15
+        },
+        {
+          "type": "content",
+          "html": "<h5 class=\"color-primary _text_color theme-text-color\">Service &amp; Parts Hours</h5>\n<div>Sunday:</div>\n<div class=\"textTransform text-uppercase\">closed</div>\n<div>Monday:</div>\n<div class=\"text-uppercase\">6:30 AM - 6:00 PM</div>\n<div>Tuesday:</div>\n<div class=\"text-uppercase\">6:30 AM - 6:00 PM</div>\n<div>Wednesday:</div>\n<div class=\"text-uppercase\">6:30 AM - 6:00 PM</div>\n<div>Thursday:</div>\n<div class=\"text-uppercase\">6:30 AM - 6:00 PM</div>\n<div>Friday:</div>\n<div class=\"text-uppercase\">6:30 AM - 6:00 PM</div>\n<div>Saturday:</div>\n<div class=\"text-uppercase\">6:30 AM - 2:00 PM</div>",
+          "preview": "Service & Parts Hours",
+          "node_count": 15
+        },
+        {
+          "type": "content",
+          "html": "<h5 class=\"color-primary _text_color theme-text-color\">Holiday Hours</h5>\n<div>Independence Day</div>\n July 4th \n<span>9:00 AM - 5:00 PM</span>\n<div class=\"text-muted\">Service,  Parts: Special Hours</div>",
+          "preview": "Holiday Hours",
+          "node_count": 5
+        }
+      ]
+    ]
+  },
+  {
+    "section": "empty-one",
+    "slots": [
+      [
+        {
+          "type": "content",
+          "html": "<h2 class=\"m-0 p-o font-weight-bold simplify-font-reg title\">Service Specials</h2>",
+          "preview": "Service Specials",
+          "node_count": 1
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View All Service Specials",
+              "href": "https://www.castlekiamchenry.com/specials/servicespecials",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule Service",
+              "href": "https://www.castlekiamchenry.com/scheduleservice",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Tire Rotation</h4>\n<div class=\"_theme_font_bold\">Only $5</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">with paid oil change</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Tire Price Match Guarantee</h4>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">Show us a quote from any local tire competitor within 25 miles and we&#x27;ll match or beat their price!</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary text-uppercase ft-11 _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Wild Card Savings</h4>\n<div>Up to $100</div>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">OEM Accessories</h4>\n<div class=\"_theme_font_bold\">15% off</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">15% off Dealer-Installed OEM Accessories</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Complimentary</h4>\n<div class=\"_theme_font_bold\">Shuttles &amp; Loaner Vehicles</div>",
+          "preview": "Castle Kia McHenry",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">4-Wheel Alignment</h4>\n<div class=\"_theme_font_bold\">$25 OFF</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">with the purchase of 4 tires</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Full-Synthetic Oil Change</h4>\n<div class=\"_theme_font_bold\">$84.95</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">plus tax, up to 5 qts</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Tire Rotation</h4>\n<div class=\"_theme_font_bold\">Only $5</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">with paid oil change</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Tire Price Match Guarantee</h4>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">Show us a quote from any local tire competitor within 25 miles and we&#x27;ll match or beat their price!</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary text-uppercase ft-11 _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Wild Card Savings</h4>\n<div>Up to $100</div>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">OEM Accessories</h4>\n<div class=\"_theme_font_bold\">15% off</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">15% off Dealer-Installed OEM Accessories</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Complimentary</h4>\n<div class=\"_theme_font_bold\">Shuttles &amp; Loaner Vehicles</div>",
+          "preview": "Castle Kia McHenry",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">4-Wheel Alignment</h4>\n<div class=\"_theme_font_bold\">$25 OFF</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">with the purchase of 4 tires</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Full-Synthetic Oil Change</h4>\n<div class=\"_theme_font_bold\">$84.95</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">plus tax, up to 5 qts</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Tire Rotation</h4>\n<div class=\"_theme_font_bold\">Only $5</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">with paid oil change</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Tire Price Match Guarantee</h4>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">Show us a quote from any local tire competitor within 25 miles and we&#x27;ll match or beat their price!</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary text-uppercase ft-11 _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">Wild Card Savings</h4>\n<div>Up to $100</div>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 3
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<div class=\"color-secondary ft-11 text-uppercase _theme_coupon_text_color description-image-template-pre-text\">Castle Kia McHenry Service Special</div>\n<h4 class=\"_theme_font_bold font-weight-bold mt-2 description-image-template-heading\">OEM Accessories</h4>\n<div class=\"_theme_font_bold\">15% off</div>\n<p class=\"color-black text-left _theme_coupon_text_color small-font service-specials-description cursor-pointer\">15% off Dealer-Installed OEM Accessories</p>",
+          "preview": "Castle Kia McHenry Service Special",
+          "node_count": 4
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "View Details",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Print",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Schedule",
+              "href": "",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            },
+            {
+              "text": "Get Offer",
+              "href": "",
+              "style": "secondary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "section": "empty-33-66",
+    "slots": [
+      [
+        {
+          "type": "content",
+          "html": "<h3 class=\"mb-3 color-primary ft-20 footer-menu-title\">Castle Kia McHenry</h3>",
+          "preview": "Castle Kia McHenry",
+          "node_count": 1
+        },
+        {
+          "type": "links",
+          "buttons": [
+            {
+              "text": "Contact Us",
+              "href": "https://www.castlekiamchenry.com/contactus",
+              "style": "primary",
+              "target": "_self",
+              "link_class": ""
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "html": "<span>1121 State Rte 31,</span>\n<span>McHenry, IL 60050</span>\nSales: \n<a href=\"tel:779-217-8381\" class=\"text-underline no-hover Phone_Sales color-secondary pe-none\">779-217-8381</a>\nService: \n<a href=\"tel:779-237-7265\" class=\"text-underline no-hover Phone_Service color-secondary pe-none\">779-237-7265</a>\nParts: \n<a href=\"tel:779-368-1561\" class=\"text-underline no-hover Phone_Parts color-secondary pe-none\">779-368-1561</a>",
+          "preview": "1121 State Rte 31,",
+          "node_count": 8
+        }
+      ],
+      [
+        {
+          "type": "content",
+          "html": "<h3 class=\"mb-3 color-primary footer-menu-title ft-20\"><a href=\"https://www.castlekiamchenry.com/Inventory\" class=\"no-hover\">Inventory</a></h3>\n<ul class=\"list-style-none p-0\"><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/inventory/new\" class=\"no-hover ft-14 footer-submenu color-secondary\">New Vehicles</a></li><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/inventory/used\" class=\"no-hover ft-14 footer-submenu color-secondary\">Pre-Owned Vehicles</a></li><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/inventory/cpo\" class=\"no-hover ft-14 footer-submenu color-secondary\">Certified Pre-Owned Vehicles</a></li></ul>",
+          "preview": "Inventory",
+          "node_count": 2
+        },
+        {
+          "type": "content",
+          "html": "<h3 class=\"mb-3 color-primary footer-menu-title ft-20\"><a href=\"https://www.castlekiamchenry.com/scheduleservice\" class=\"no-hover\">Service</a></h3>\n<ul class=\"list-style-none p-0\"><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/scheduleservice\" class=\"no-hover ft-14 footer-submenu color-secondary\">Schedule Service</a></li><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/specials/service-specials\" class=\"no-hover ft-14 footer-submenu color-secondary\">Service Specials</a></li></ul>",
+          "preview": "Service",
+          "node_count": 2
+        },
+        {
+          "type": "content",
+          "html": "<h3 class=\"mb-3 color-primary footer-menu-title ft-20\"><a href=\"https://www.castlekiamchenry.com/getfinancing\" class=\"no-hover\">Financing</a></h3>\n<ul class=\"list-style-none p-0\"><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/getfinancing\" class=\"no-hover ft-14 footer-submenu color-secondary\">Apply for Financing</a></li><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/shopperwizard/mytradevalue\" class=\"no-hover ft-14 footer-submenu color-secondary\">Value My Trade</a></li></ul>",
+          "preview": "Financing",
+          "node_count": 2
+        },
+        {
+          "type": "content",
+          "html": "<h3 class=\"mb-3 color-primary footer-menu-title ft-20\"><a href=\"https://www.castlekiamchenry.com/contactus\" class=\"no-hover\">Dealership</a></h3>\n<ul class=\"list-style-none p-0\"><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/contactus\" class=\"no-hover ft-14 footer-submenu color-secondary\">Contact Us</a></li><li class=\"mt-2\"><a href=\"https://www.castlekiamchenry.com/get-directions\" class=\"no-hover ft-14 footer-submenu color-secondary\">Directions</a></li></ul>",
+          "preview": "Dealership",
+          "node_count": 2
+        }
+      ]
+    ]
+  },
+  {
+    "section": "empty-66-33",
+    "slots": [
+      [
+        {
+          "type": "content",
+          "html": "<a href=\"https://www.castlekiamchenry.com/kia-service-center-mchenry-il\" class=\"mr-2 text-decoration-none footer-client-name color-secondary\">Castle Kia McHenry</a>\n<a href=\"https://www.castlekiamchenry.com/privacy-policy\" class=\"mr-2 text-underline color-secondary\">Privacy Policy</a>\n<a href=\"https://www.castlekiamchenry.com/kia-service-center-mchenry-il\" class=\"mr-2 text-underline color-secondary\">Terms Of Use</a>\n<a href=\"https://www.castlekiamchenry.com/sitemap.xml\" class=\"mr-2 text-underline color-secondary\">Sitemap</a>\n<a href=\"https://www.castlekiamchenry.com/sitemap.html\" class=\"mr-2 text-underline color-secondary\">Sitemap Html</a>\n<a href=\"https://www.castlekiamchenry.com/contactus\" class=\"mr-2 text-underline color-secondary\">Contact Us</a>\n<a href=\"https://www.castlekiamchenry.com/optout\" class=\"mr-2 text-underline color-secondary\">Opt-Out</a>\n<a href=\"https://www.kia.com/us/en/\" class=\"mr-2 text-underline color-secondary\">Kia.com</a>",
+          "preview": "Castle Kia McHenry",
+          "node_count": 8
+        }
+      ],
+      [
+        {
+          "type": "content",
+          "html": "Website by \n<a href=\"https://teamvelocitymarketing.com/\">Team Velocity\u00ae</a>\n - Fueled by Apollo\u00ae | Copyright \u00a92026",
+          "preview": "Website by",
+          "node_count": 3
+        }
+      ]
+    ]
+  }
+]

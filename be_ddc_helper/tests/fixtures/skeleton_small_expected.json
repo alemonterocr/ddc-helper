@@ -1,0 +1,27 @@
+[
+  {
+    "section": "empty-one",
+    "slots": [
+      [
+        {
+          "type": "content",
+          "html": "<h1>Error 403 Forbidden</h1>\n<p>Forbidden</p>",
+          "preview": "Error 403 Forbidden",
+          "node_count": 2
+        },
+        {
+          "type": "content",
+          "html": "<h3>Error 54113</h3>\n<p>Details: cache-ams-eham8680067-AMS 1782391366 758770195</p>",
+          "preview": "Error 54113",
+          "node_count": 2
+        },
+        {
+          "type": "content",
+          "html": "<p>Varnish cache server</p>",
+          "preview": "Varnish cache server",
+          "node_count": 1
+        }
+      ]
+    ]
+  }
+]

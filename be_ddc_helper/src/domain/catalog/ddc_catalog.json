@@ -1,0 +1,95 @@
+[
+  {
+    "sectionName": "empty-one",
+    "description": "Single full-width column. The default layout for any standalone content block.",
+    "use_when": "Hero sections, standalone text blocks, banners, any content that spans the full width. DEFAULT choice when content does not require columns.",
+    "columns": 1,
+    "column_widths": ["col-xs-12"],
+    "category": "SECTION_CUSTOM_EMPTY",
+    "pre_wired": false
+  },
+  {
+    "sectionName": "empty-fifty-fifty",
+    "description": "Two equal columns side by side (50/50 split).",
+    "use_when": "Image + text pairs, two equal CTA blocks, any symmetric two-column layout.",
+    "columns": 2,
+    "column_widths": ["col-xs-12 col-sm-6", "col-xs-12 col-sm-6"],
+    "category": "SECTION_CUSTOM_EMPTY",
+    "pre_wired": false
+  },
+  {
+    "sectionName": "empty-66-33",
+    "description": "Two columns: wide main (66%) on the left, narrow sidebar (33%) on the right.",
+    "use_when": "Main content with a supporting element on the right. Text-heavy left side with image or CTA on the right.",
+    "columns": 2,
+    "column_widths": ["col-xs-12 col-sm-8", "col-xs-12 col-sm-4"],
+    "column_names": ["container-66-33-main", "container-66-33-side"],
+    "category": "SECTION_CUSTOM_EMPTY",
+    "pre_wired": false
+  },
+  {
+    "sectionName": "empty-33-66",
+    "description": "Two columns: narrow sidebar (33%) on the left, wide main (66%) on the right.",
+    "use_when": "Supporting element (image, icon, nav) on the left with main text content on the right.",
+    "columns": 2,
+    "column_widths": ["col-xs-12 col-sm-4", "col-xs-12 col-sm-8"],
+    "column_names": ["container-33-66-side", "container-33-66-main"],
+    "category": "SECTION_CUSTOM_EMPTY",
+    "pre_wired": false
+  },
+  {
+    "sectionName": "empty-thirds",
+    "description": "Three equal columns side by side (33/33/33 split).",
+    "use_when": "Three-item feature rows, three equal CTA blocks, three-column content grids.",
+    "columns": 3,
+    "column_widths": [
+      "col-xs-12 col-sm-4",
+      "col-xs-12 col-sm-4",
+      "col-xs-12 col-sm-4"
+    ],
+    "category": "SECTION_CUSTOM_EMPTY",
+    "pre_wired": false
+  },
+  {
+    "sectionName": "empty-fourths",
+    "description": "Four equal columns side by side (25/25/25/25 split). Shows as 2×2 grid on mobile.",
+    "use_when": "Four-item feature rows, four equal cards or icons, four-column content grids.",
+    "columns": 4,
+    "column_widths": [
+      "col-xs-6 col-sm-3",
+      "col-xs-6 col-sm-3",
+      "col-xs-6 col-sm-3",
+      "col-xs-6 col-sm-3"
+    ],
+    "category": "SECTION_CUSTOM_EMPTY",
+    "pre_wired": false
+  },
+  {
+    "sectionName": "empty-fifths",
+    "description": "Five narrow equal columns (each ~20% width with offset).",
+    "use_when": "Five-item icon rows, five small cards, navigation link grids with exactly five items.",
+    "columns": 5,
+    "column_widths": [
+      "col-sm-offset-1 col-xs-12 col-sm-2",
+      "col-xs-12 col-sm-2",
+      "col-xs-12 col-sm-2",
+      "col-xs-12 col-sm-2",
+      "col-xs-12 col-sm-2"
+    ],
+    "category": "SECTION_CUSTOM_EMPTY",
+    "pre_wired": false
+  },
+  {
+    "sectionName": "map-hours",
+    "description": "Pre-wired section with an interactive map and a contact/hours overlay. Ships with map widget, contact info widget (phone), and hours widget already configured.",
+    "use_when": "Any contact or location section. ALWAYS use this for map + hours combinations. Do NOT recreate with empty sections — pre-wired defaults are tuned for dealership context.",
+    "columns": 2,
+    "category": "SECTION_CONTACT_FORMS",
+    "pre_wired": true,
+    "pre_wired_widgets": [
+      "v9.viewmodel.map.dynamic",
+      "v9.widgets.contact.info.v1",
+      "ws-hours"
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+# Monorepo root — patterns that apply outside be_ddc_helper/ and fe_ddc_helper/.
+# Each subproject has its own .gitignore for stack-specific patterns.
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editors
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# Python (for scripts/ helpers like scripts/export_be_requirements.py)
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Env at monorepo root (subprojects have their own)
+.env
+.env.*
+!.env.example
+
+# Personal scratch / notes not intended for the repo
+NOTES.md
+notes/
+scratch/
+tmp/

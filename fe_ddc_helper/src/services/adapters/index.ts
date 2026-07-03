@@ -1,0 +1,6 @@
+export { BackendHttpAdapter } from './BackendHttpAdapter'
+export { ChromeStorageCredentialAdapter } from './ChromeStorageCredentialAdapter'
+export { CMSInjectionAdapter } from './CMSInjectionAdapter'
+export { DOMExtractorAdapter } from './DOMExtractorAdapter'
+export { LabelAdapter } from './LabelAdapter'
+export { WSClientAdapter } from './WSClientAdapter'

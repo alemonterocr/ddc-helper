@@ -1,0 +1,25 @@
+# pre-commit hooks for the DDC Helper monorepo.
+# Install once per clone:
+#   pip install pre-commit && pre-commit install
+#
+# Run manually across the whole tree:
+#   pre-commit run --all-files
+
+repos:
+  - repo: local
+    hooks:
+      - id: uv-export-requirements
+        name: Regenerate be_ddc_helper/requirements.txt from uv.lock
+        description: >
+          Keeps requirements.txt in lockstep with pyproject.toml + uv.lock so
+          peers who prefer plain pip get the same pinned dependency set.
+          Auto-regenerates and stages the file when either input changes.
+          Runs via Python (cross-platform) — no bash / cmd.exe / PowerShell
+          coupling.
+        language: system
+        # Fire only when the two source-of-truth files change.
+        files: '^be_ddc_helper/(pyproject\.toml|uv\.lock)$'
+        # pass_filenames: false — the script doesn't need the changed paths;
+        # it just needs to know *something* under the trigger changed.
+        pass_filenames: false
+        entry: python scripts/export_be_requirements.py
