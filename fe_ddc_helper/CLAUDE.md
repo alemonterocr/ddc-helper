@@ -93,11 +93,27 @@ atomic-layer: atom | molecule | organism | template | page   # UI only
 Same status ladder as the backend: a module's status cannot exceed the status
 of any dependency.
 
-## Feature-level specs (Spec Kit)
+## When to use which spec format
 
-Feature-scoped work lives under `specs/NNN-feature-name/` and is authored via
-the `/speckit-*` slash commands. Module-level `spec.md` files describe current
-state; feature specs describe *proposed change*. Both coexist.
+### Module-level `spec.md` (next to the code it describes)
+
+- For a single component, port, adapter, script, or model
+- Describes **current state**: what it does, inputs, outputs, contracts, dependencies
+- Must include YAML frontmatter per `spec-schema.yaml`
+- Required sections for BE modules: Purpose, Inputs, Outputs, Contracts, Dependencies
+
+### Feature-level `specs/NNN-feature-name/spec.md` (under `../be_ddc_helper/specs/`)
+
+- For **cross-cutting features** spanning multiple modules or both subprojects (BE + FE)
+- Freeform narrative format — no YAML frontmatter required
+- Numbered sequentially: `001-`, `002-`, …
+- Covers architecture, pipeline, data model, design decisions, and a complete file map
+- Examples: `001-salesforce-intake/spec.md`, `002-spanish-translation/spec.md`
+
+**Existing feature specs (in `../be_ddc_helper/specs/`):**
+
+- `001-salesforce-intake/spec.md` — Salesforce intake wizard
+- `002-spanish-translation/spec.md` — Spanish label translation workflow (covers BE pipeline, glossary, validation, FE components, and data model)
 
 ## Key contracts (do not violate)
 

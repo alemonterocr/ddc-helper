@@ -50,11 +50,27 @@ layer: domain | port | application | adapter | infrastructure
 - `built` — code matches spec, no dedicated tests yet
 - `tested` — code + tests pass
 
-## Feature-level specs (Spec Kit)
+## When to use which spec format
 
-Feature-scoped work lives under `specs/NNN-feature-name/` and is authored via
-the `/speckit-*` slash commands. Module-level `spec.md` files describe current
-state; feature specs describe *proposed change*. Both coexist.
+### Module-level `spec.md` (next to the code it describes)
+
+- For a single module, adapter, domain rule, or application use case
+- Describes **current state**: what it does, inputs, outputs, contracts, dependencies
+- Must include YAML frontmatter per `spec-schema.yaml`
+- Required sections: Purpose, Inputs, Outputs, Contracts, Dependencies
+
+### Feature-level `specs/NNN-feature-name/spec.md` (under `specs/`)
+
+- For **cross-cutting features** spanning multiple modules or both subprojects (BE + FE)
+- Freeform narrative format — no YAML frontmatter required
+- Numbered sequentially: `001-`, `002-`, …
+- Covers architecture, pipeline, data model, design decisions, and a complete file map
+- Examples: `specs/001-salesforce-intake/spec.md`, `specs/002-spanish-translation/spec.md`
+
+**Existing feature specs:**
+
+- `specs/001-salesforce-intake/spec.md` — Salesforce intake wizard (4 UI API GETs + parser + LLM classifier)
+- `specs/002-spanish-translation/spec.md` — Spanish label translation workflow (glossary, validation, FE components, data model)
 
 ## Key contracts (do not violate)
 
