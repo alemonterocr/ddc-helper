@@ -1,6 +1,9 @@
 import type {
   DDCLabelFetchResult,
   DDCLabelSaveResult,
+  NavCheckRequest,
+  NavCheckResponse,
+  NavLoadResult,
   SanitizeAliasesResponse,
   TranslateLabelRequest,
   TranslateLabelResponse,
@@ -10,8 +13,8 @@ import type {
  * Single port for the Spanish migration flow.
  *
  * Wraps both sides of the round-trip:
- *   - `sanitizeAliases` and `translateLabel` go to the FastAPI backend.
- *   - `fetchLabel` and `saveLabel` run inside the active DDC composer tab via
+ *   - `sanitizeAliases`, `translateLabel`, and `navCheck` go to the FastAPI backend.
+ *   - `fetchLabel`, `saveLabel`, and `loadNav` run inside the active DDC composer tab via
  *     `chrome.scripting.executeScript`, reusing the user's existing session
  *     cookies (no separate auth flow — same pattern as `CMSPort`).
  *
@@ -27,6 +30,8 @@ export interface LabelPort {
     signal?: AbortSignal,
   ): Promise<TranslateLabelResponse>
 
+  navCheck(request: NavCheckRequest): Promise<NavCheckResponse>
+
   /** Read the current en_US / es_US values for one label from DDC. */
   fetchLabel(dealerSlug: string, alias: string): Promise<DDCLabelFetchResult>
 
@@ -37,4 +42,10 @@ export interface LabelPort {
     enHtml: string,
     esHtml: string,
   ): Promise<DDCLabelSaveResult>
+
+  /** Load the navigation tree from DDC's CommandExecutor.
+   *  Injects a self-contained script into the composer tab.
+   *  Derives siteId from the composer tab's hostname — the tab must
+   *  match the project's dealer. */
+  loadNav(): Promise<NavLoadResult>
 }

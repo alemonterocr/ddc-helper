@@ -34,3 +34,22 @@ class TranslateLabelResponse(BaseModel):
     warnings: list[str] = []
     raw: str | None = None  # only populated when status == "error"
     reasoning: str = ""     # translator's brief reasoning; empty on legacy paths
+
+
+# ── /translations/nav-check ─────────────────────────────────────────────────────
+
+
+class NavCheckItem(BaseModel):
+    alias: str
+    label_es: str
+
+
+class NavCheckRequest(BaseModel):
+    nav_json: object  # the raw LoadNavigation response body
+    dealer_name: str
+
+
+class NavCheckResponse(BaseModel):
+    to_translate: list[NavCheckItem]
+    skipped: list[NavCheckItem]
+    total: int

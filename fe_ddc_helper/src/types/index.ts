@@ -390,6 +390,35 @@ export interface DDCLabelSaveResult {
   error?: string
 }
 
+// ── API: /translations/nav-check ───────────────────────────────────────────
+
+export interface NavCheckItem {
+  alias: string
+  label_es: string
+}
+
+export interface NavCheckRequest {
+  nav_json: object
+  dealer_name: string
+}
+
+export interface NavCheckResponse {
+  to_translate: NavCheckItem[]
+  skipped: NavCheckItem[]
+  total: number
+}
+
+// ── Nav load result (extension-side) ───────────────────────────────────────
+
+export interface NavLoadResult {
+  /** Flat array of { alias, label_es } extracted from the nav tree. */
+  items: { alias: string; label_es: string }[]
+  /** Raw nav JSON returned to the BE for /nav-check provenance. */
+  raw: object | null
+  /** Error message when the injected script failed. */
+  error?: string
+}
+
 // ── Salesforce intake ───────────────────────────────────────────────────────
 export type {
   Classification,
