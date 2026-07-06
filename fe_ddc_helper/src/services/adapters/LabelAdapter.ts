@@ -1,6 +1,9 @@
 import type {
   DDCLabelFetchResult,
   DDCLabelSaveResult,
+  NavCheckRequest,
+  NavCheckResponse,
+  NavLoadResult,
   SanitizeAliasesRequest,
   SanitizeAliasesResponse,
   TranslateLabelRequest,
@@ -37,6 +40,10 @@ export class LabelAdapter implements LabelPort {
     signal?: AbortSignal,
   ): Promise<TranslateLabelResponse> {
     return this.post<TranslateLabelResponse>('/translations/translate', request, signal)
+  }
+
+  async navCheck(request: NavCheckRequest): Promise<NavCheckResponse> {
+    return this.post<NavCheckResponse>('/translations/nav-check', request)
   }
 
   // ── DDC ─────────────────────────────────────────────────────────────────
@@ -80,6 +87,27 @@ export class LabelAdapter implements LabelPort {
     return results[0]?.result ?? { success: false, error: 'No result from script' }
   }
 
+  async loadNav(): Promise<NavLoadResult> {
+    let tabId: number
+    try {
+      tabId = await findComposerTabId()
+    } catch (err) {
+      return { items: [], raw: null, error: (err as Error).message }
+    }
+
+    const storage = await chrome.storage.local.get(['ccIdtToken'])
+    const jwt = (storage['ccIdtToken'] as string) ?? ''
+    const userId = _extractUserId(jwt)
+
+    const results = await chrome.scripting.executeScript({
+      target: { tabId },
+      func: loadNavInjected,
+      args: [userId],
+    })
+
+    return results[0]?.result ?? { items: [], raw: null, error: 'No result from script' }
+  }
+
   // ── HTTP helper ─────────────────────────────────────────────────────────
 
   private async post<T>(path: string, body: unknown, signal?: AbortSignal): Promise<T> {
@@ -119,6 +147,19 @@ async function findComposerTabId(): Promise<number> {
   throw new Error(
     'No DDC composer tab found — open the composer in a browser tab first',
   )
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+
+function _extractUserId(jwt: string): string {
+  try {
+    const base64 = jwt.split('.')[1]?.replace(/-/g, '+').replace(/_/g, '/')
+    if (!base64) return ''
+    const claims = JSON.parse(atob(base64)) as Record<string, unknown>
+    return (claims['sub'] as string) ?? ''
+  } catch {
+    return ''
+  }
 }
 
 // ── Injected functions — self-contained, zero imports ────────────────────────
@@ -200,5 +241,116 @@ async function saveLabelInjected(
     return { success: false, error: `Status: ${response.status}` }
   } catch (err) {
     return { success: false, error: (err as Error).message }
+  }
+}
+
+/**
+ * POST /composer/views/CommandExecutor?cmd=LoadNavigation with es_US locale.
+ * userId comes from the FE side (extracted from JWT). navId is discovered from
+ * page state or via a preferences call.
+ */
+async function loadNavInjected(
+  userId: string,
+): Promise<NavLoadResult> {
+  async function discoverNavId(): Promise<string> {
+    let pageUrl = `https://${window.location.hostname}/?_renderer=desktop&buildingPage=false&useAjaxWrap=true&locale=es_US&_toggleBasePageCache=false`;
+    try {
+      let res = await fetch(pageUrl, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        },
+      });
+      if (!res.ok) return '';
+      let text = await res.text();
+      let match = text.match(/"navigation\.id"\s*:\s*"([^"]+)"/);
+      if (match?.[1]) return match[1];
+    } catch (_) { /* page fetch may fail */ }
+    return '';
+  }
+
+  function extractItems(dto: Record<string, unknown>): { alias: string; label_es: string }[] {
+    let result: { alias: string; label_es: string }[] = [];
+    let navItems = dto.navigationItems as Record<string, unknown> | undefined;
+    if (!navItems) { return result; }
+    let list = navItems.list as Array<Record<string, unknown>> | undefined;
+    if (!list) { return result; }
+
+    function walk(items: Array<Record<string, unknown>>) {
+      for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        if (!item) continue;
+        let alias = (item.labelAlias as string || '').trim();
+        let label = (item.label as string || '').trim();
+        if (alias) {
+          result.push({ alias: alias, label_es: label });
+        }
+        let children = item.navigationItems as Record<string, unknown> | undefined;
+        if (children) {
+          let childList = children.list as Array<Record<string, unknown>> | undefined;
+          if (childList) { walk(childList); }
+        }
+      }
+    }
+
+    walk(list);
+    return result;
+  }
+
+  let navId = await discoverNavId();
+
+  let siteId = window.location.hostname.split('.')[0] || '';
+
+  if (!userId) {
+    return { items: [], raw: null, error: 'No userId available' };
+  }
+  if (!navId) {
+    return { items: [], raw: null, error: 'Could not discover navId from page context' };
+  }
+
+  let url = `https://${window.location.hostname}/composer/views/CommandExecutor?cmd=LoadNavigation`;
+
+  let payload = {
+    javaClass: 'com.dealer.cms.apps.composer.commands.nav.LoadNavigation',
+    navId: navId,
+    siteId: siteId,
+    locale: 'es_US',
+    accountId: siteId,
+    userId: userId,
+    siteType: 'primary',
+  };
+
+  try {
+    let res = await fetch(url, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        accept: '*/*',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'x-coxauto-traffic-group': 'composer-dynamic-request',
+        'x-requested-with': 'XMLHttpRequest',
+      },
+      body: `json=${encodeURIComponent(JSON.stringify(payload))}`,
+    });
+
+    if (!res.ok) {
+      return { items: [], raw: null, error: `Status: ${res.status}` };
+    }
+
+    let data = await res.json() as Record<string, unknown>;
+    let result = data.result as Record<string, unknown> | undefined;
+    let dto = result?.dto as Record<string, unknown> | undefined;
+    if (!dto) {
+      let resultNavId = (result?.navId as string) || '';
+      return {
+        items: [], raw: null,
+        error: `Nav '${resultNavId}' returned no data for dealer '${siteId}'. Make sure the composer tab matches this project's dealer.`,
+      };
+    }
+
+    return { items: extractItems(dto), raw: data };
+  } catch (err) {
+    return { items: [], raw: null, error: (err as Error).message };
   }
 }

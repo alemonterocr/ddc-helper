@@ -14,6 +14,7 @@ import { PageListPanel } from "../../organisms/PageListPanel/PageListPanel";
 import { MigrationFlowPanel } from "../../organisms/MigrationFlowPanel/MigrationFlowPanel";
 import { StaffFlowPanel } from "../../organisms/StaffFlowPanel/StaffFlowPanel";
 import { SpanishPanelWorkflow } from "../../organisms/SpanishPanelWorkflow/SpanishPanelWorkflow";
+import { NavTranslateTab } from "../../organisms/NavTranslateTab/NavTranslateTab";
 import { SettingsPanel } from "../../organisms/SettingsPanel/SettingsPanel";
 import { LinkReplacementsPanel } from "../../organisms/LinkReplacementsPanel/LinkReplacementsPanel";
 import { ProjectStatusPanel } from "../../organisms/ProjectStatusPanel/ProjectStatusPanel";
@@ -51,6 +52,8 @@ export function ProjectPage() {
   useEffect(() => {
     if (activePageId) setGmPrebuildTab("migration");
   }, [activePageId]);
+
+  const [spanishTab, setSpanishTab] = useState<"simple" | "nav">("simple");
 
   if (!project) return null;
 
@@ -153,9 +156,26 @@ export function ProjectPage() {
         {/* ── Center: migration flow ─────────────────────────────────── */}
         <section className="flex-1 min-w-0 p-5 overflow-y-auto scrollbar-thin">
           {isSpanish ? (
-            <SpanishPanelWorkflow
-              project={project as SpanishMigrationProject}
-            />
+            <Tabs
+              value={spanishTab}
+              onValueChange={(v) => setSpanishTab(v as "simple" | "nav")}
+              className="h-full"
+            >
+              <TabsList>
+                <TabsTrigger value="simple">Simple Labels</TabsTrigger>
+                <TabsTrigger value="nav">Translate Nav</TabsTrigger>
+              </TabsList>
+              <TabsContent value="simple">
+                <SpanishPanelWorkflow
+                  project={project as SpanishMigrationProject}
+                />
+              </TabsContent>
+              <TabsContent value="nav">
+                <NavTranslateTab
+                  project={project as SpanishMigrationProject}
+                />
+              </TabsContent>
+            </Tabs>
           ) : project.type === "gm-buysell" && gmBundle ? (
             <GmBuySellDashboard bundle={gmBundle} />
           ) : project.type === "gm-prebuild" && gmBundle ? (
