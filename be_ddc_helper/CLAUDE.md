@@ -72,6 +72,7 @@ layer: domain | port | application | adapter | infrastructure
 - `specs/001-salesforce-intake/spec.md` — Salesforce intake wizard (4 UI API GETs + parser + LLM classifier)
 - `specs/002-spanish-translation/spec.md` — Spanish label translation workflow (glossary, validation, FE components, data model)
 - `specs/003-translate-nav/spec.md` — Batch nav label translation (LoadNavigation → nav-check → translate loop, reuse existing pipeline)
+- `specs/004-translate-pages/spec.md` — Page widget translation (render GET ×2 → streaming fan-out graph: extract (bs4) → LLM check → Send per widget → reuse translate_labels_graph → NDJSON stream → two-save dance)
 
 ## Key contracts (do not violate)
 
