@@ -14,8 +14,8 @@ class FakeLLM:
 
     - judge_translation: a non-empty es is a genuine translation UNLESS it
       contains "PLACEHOLDER" (stand-in for DDC's Spanish filler).
-    - translate_label_with_tools: echoes the English so the structural validator
-      stays clean and the label graph returns status "ready".
+    - translate_text_segments: suffixes each fragment so structure stays intact
+      and the widget node returns status "ready".
     """
 
     usage_log: list = []
@@ -26,8 +26,8 @@ class FakeLLM:
     async def judge_translation(self, en_html, es_html, dealer_name):
         return {"ok": "PLACEHOLDER" not in es_html, "reason": ""}
 
-    async def translate_label_with_tools(self, en_html, dealer_name, glossary_lookup, extra_hint=""):
-        return {"translation": en_html, "reasoning": "echoed"}
+    async def translate_text_segments(self, segments, dealer_name):
+        return [f"{s} (es)" for s in segments]
 
 
 def _content(window_id, en, es):

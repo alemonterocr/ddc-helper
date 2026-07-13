@@ -78,7 +78,8 @@ be_ddc_helper/
 │   │       ├── extract_node.py         # node: extract → to_translate/skipped candidates
 │   │       ├── check_node.py           # node: judge_translation on ambiguous widgets
 │   │       ├── routing.py              # pure route_to_widget_branches → list[Send]
-│   │       ├── translate_widget_node.py# node: invoke translate_labels_graph per widget
+│   │       ├── html_translate.py       # text-node extract → batch translate → reinsert
+│   │       ├── translate_widget_node.py# node: translate widget text nodes (translate_text_segments)
 │   │       └── translate_page_graph.py # build_translate_page_graph(llm)
 │   ├── adapters/inbound/http/
 │   │   ├── translations_router.py      # + POST /translations/translate-page (streaming)

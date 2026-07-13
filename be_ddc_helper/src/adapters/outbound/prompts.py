@@ -711,6 +711,39 @@ HTML / VARIABLE RULES (apply to `translation` field only)
 NEVER emit plain text in your turn — always call a tool. Your final turn is always `submit_translation`."""
 
 
+# ── Segment translation prompts (text-node batch, EN → es_US) ──────────────────
+
+
+def build_segment_translation_system_prompt(dealer_name: str) -> str:
+    """Translate a batch of visible text fragments pulled out of a page widget.
+
+    Markup never reaches the model — only the human-readable strings. Fragments
+    are addressed by id (not position) so a dropped or reordered item can't
+    misalign the rest: the caller matches results back by id and fills any
+    missing id with the original English."""
+    return f"""You translate short pieces of visible website text from English to es_US (Mexican Spanish) for "{dealer_name}".
+
+You receive a JSON object mapping string ids to English fragments. Return, via the `submit_translations` tool, an array of {{id, es}} objects — one for EVERY id in the input.
+
+RULES
+- Include every id exactly once. Never invent ids that weren't in the input. Order does not matter (results are matched by id).
+- Brand, model, and proper names are NEVER translated ("Toyota 4Runner" stays "Toyota 4Runner"; "{dealer_name}" stays "{dealer_name}").
+- Do NOT use Spanish articles (el/la) before specific vehicle model names.
+- Preserve bracketed variables like [PRICE], [MODEL], [YEAR], plus any URLs, emails, and phone numbers, exactly.
+- These are PLAIN TEXT fragments — do not add or invent any HTML tags.
+- If a fragment is already Spanish, a number, or has nothing to translate (symbols/whitespace only), return it unchanged.
+- Keep it natural and concise — these are UI strings and short paragraphs, not literal word-for-word renderings."""
+
+
+def build_segment_translation_user_message(segments: list[str]) -> str:
+    indexed = {str(i): segment for i, segment in enumerate(segments)}
+    return (
+        "Translate every fragment to es_US. Return one {id, es} object per input id.\n\n"
+        "FRAGMENTS (JSON object, id → English):\n"
+        + json.dumps(indexed, ensure_ascii=False)
+    )
+
+
 # ── Translation guardrail (reviewer) prompts ───────────────────────────────────
 
 

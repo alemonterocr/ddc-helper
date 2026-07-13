@@ -9,6 +9,7 @@ import {
   ChromeStorageCredentialAdapter,
   DOMExtractorAdapter,
   LabelAdapter,
+  PageAdapter,
   WSClientAdapter,
 } from "./services/adapters";
 
@@ -24,6 +25,7 @@ function makeServices(): Services {
     credentialPort: new ChromeStorageCredentialAdapter(),
     extractorPort: new DOMExtractorAdapter(),
     labelPort: new LabelAdapter(),
+    pagePort: new PageAdapter(),
     createWSClient: () => new WSClientAdapter(),
   };
 }

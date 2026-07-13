@@ -3,4 +3,5 @@ export { ChromeStorageCredentialAdapter } from './ChromeStorageCredentialAdapter
 export { CMSInjectionAdapter } from './CMSInjectionAdapter'
 export { DOMExtractorAdapter } from './DOMExtractorAdapter'
 export { LabelAdapter } from './LabelAdapter'
+export { PageAdapter } from './PageAdapter'
 export { WSClientAdapter } from './WSClientAdapter'

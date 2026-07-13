@@ -53,7 +53,8 @@ loadPage(path, es_US) ─┴─► POST /translations/translate-page  (NDJSON St
                              │        ▼
                              │   Send(one branch per to_translate widget)  ← true fan-out
                              │        │
-                             │   translate_widget ─ invokes translate_labels_graph (REUSED)
+                             │   translate_widget ─ translate TEXT NODES only (bs4 extract →
+                             │        │              batch translate_text_segments → reinsert)
                              │        │              per widget                → emits "widget" (streamed)
                              │        ▼
                              └─ END                                           → emits "done"
@@ -98,11 +99,13 @@ Per paired widget:
 
 The judge calls for ambiguous widgets run concurrently (`asyncio.gather`). Emit a **`skipped`** event carrying the full skipped list (known before fan-out).
 
-### 3.4 Fan-out (`Send`) → `translate_widget` branch — reuses `translate_labels_graph`
+### 3.4 Fan-out (`Send`) → `translate_widget` branch — text-node translation
 
-The check node returns `Send("translate_widget", {widget})` per to-translate widget — LangGraph's true map-reduce fan-out, one independently-observable branch each. `translate_widget` invokes the **existing** `translate_labels_graph` with `en_html = widget.en_html`, `dealer_name`, so the widget flows through the unchanged pipeline (glossary tool → structural validator → semantic judge → 1 retry). As each branch finishes, its result is streamed as a **`widget`** event. Order is non-deterministic; the FE keys by `window_id`.
+The check node's routing returns `Send("translate_widget", {widget})` per to-translate widget — LangGraph's true map-reduce fan-out, one independently-observable branch each. `translate_widget` translates the widget by translating **only its text nodes** (`html_translate.translate_widget_html`): bs4 pulls the visible text out of the fragment, batches it through `LLMPort.translate_text_segments`, and drops the translations back into the untouched markup. A structural check (`validate_translation`) still runs as a cheap defensive net; it stays clean because tags/hrefs never change. As each branch finishes, its result is streamed as a **`widget`** event. Order is non-deterministic; the FE keys by `window_id`.
 
-> The per-widget "subagent" the user asked for **is** `translate_labels_graph`, reused verbatim. Retranslate-one-card stays a single `POST /translations/translate` call from the FE — no graph needed for that path.
+> **Why not reuse `translate_labels_graph`?** The label pipeline emits the *whole* translated HTML through the model with `max_tokens=4096` — fine for short labels, but a large content widget (one real case: ~16.8k tokens of HTML, mostly inline `style` attributes) truncates and returns an **empty translation**. Translating only text nodes (a) never sends markup to the LLM, so it can't be truncated or mangled; (b) shrinks the payload ~90% (that widget: ~1.5k text tokens vs ~16.8k); (c) is structurally exact by construction. The checker still reuses `judge_translation`; retranslate-one-card stays a single `POST /translations/translate` call from the FE.
+
+> **Fragments are addressed by id, not position.** `translate_text_segments` sends `{id → text}` and expects `{id, es}` back; the adapter matches results to inputs by id and fills any id the model drops with the original English. This is deliberate — an LLM is nondeterministic about count/order, and with a bare positional array a single dropped item misaligns every fragment after it (and crashed the first cut with "segment count mismatch: sent 20, got 18"). With id-matching, a dropped fragment simply stays English in its own slot; nothing shifts, nothing crashes. Batches are capped at 20 segments to keep each call small.
 
 ### 3.5 Streaming transport — NDJSON over a POST (`StreamingResponse`)
 
@@ -177,7 +180,7 @@ class PageTranslateState(TypedDict, total=False):
     results: Annotated[list[dict], operator.add]   # fan-in accumulator
 ```
 
-The per-widget branch reuses `TranslateLabelState` (unchanged) inside `translate_labels_graph`.
+The per-widget branch translates text nodes via `html_translate` + `LLMPort.translate_text_segments` (it does **not** run the label graph — see §3.4).
 
 ### 4.2 FE types (`types/index.ts` — new)
 
@@ -205,7 +208,7 @@ interface SpanishWidgetRow {
   warnings: string[]; raw: string | null; error: string | null; reasoning: string
 }
 ```
-`SpanishMigrationProject` gains an optional `pages` map (`targetPath → SpanishWidgetRow[]`); `labels` untouched. Final shape settled in the plan.
+`SpanishMigrationProject` gains `pageWidgets: SpanishWidgetRow[]` + `pageTargetPath?` (v1 single-page — see §8.8); `labels` untouched.
 
 ---
 
@@ -240,7 +243,7 @@ Single-widget retranslate reuses `LabelPort.translateLabel`.
 ## 6. Key design decisions
 
 1. **A graph is warranted here (reversing the 002/003 default).** The LLM checker (placeholder-vs-real-translation) plus the parallel fan-out + streamed batch review are genuine multi-step LLM/map-reduce work — not a plain loop. See §2.
-2. **Reuse, don't rebuild:** the per-widget "subagent" is `translate_labels_graph` invoked per `Send` branch; the checker is the existing `judge_translation`. Zero new translate/judge logic.
+2. **Translate text, not markup.** Per-widget translation extracts visible text nodes and translates only those (`translate_text_segments`), reinserting into untouched HTML — robust to any widget size and structurally exact. (Reusing `translate_labels_graph`, which re-emits the whole HTML at `max_tokens=4096`, truncated large widgets to an empty result — see §3.4.) The checker still reuses the existing `judge_translation`.
 3. **Graph stays browser-free.** Like every graph in this repo, it computes over state passed in. The FE performs all DDC render GETs and save POSTs. No WS-RPC tool-nodes — the FE fetches both renders in parallel and hands them in.
 4. **Extraction on the BE (BeautifulSoup).** Reuses the specialist's `extract_main_content` logic, unit-testable, consistent with parsing living in Python. Cost: adds `beautifulsoup4`+`lxml`; ships two multi-MB blobs to localhost.
 5. **True `Send` fan-out + NDJSON streaming.** One observable branch per widget; results stream as each lands so the user sees a live-filling board rather than one long spinner. Streaming rides a `StreamingResponse` NDJSON over POST (not the WS bridge), keeping 004 in the HTTP family.
@@ -260,7 +263,9 @@ Single-widget retranslate reuses `LabelPort.translateLabel`.
 | `src/application/translate_pages/extract_node.py` | Node wrapping `widget_extract` + emits `extracted` |
 | `src/application/translate_pages/check_node.py` | Three-way check; `judge_translation` on ambiguous widgets (concurrent) |
 | `src/application/translate_pages/routing.py` | Pure `route_to_widget_branches(state) → list[Send]` fan-out (I/O stays in the check node) |
-| `src/application/translate_pages/translate_widget_node.py` | Invokes `translate_labels_graph` for one widget |
+| `src/application/translate_pages/html_translate.py` | `translate_widget_html(html, translate_batch)` — text-node extract → batch translate → reinsert (bs4) |
+| `src/application/translate_pages/translate_widget_node.py` | Translates one widget's text nodes via `html_translate` + `LLMPort.translate_text_segments` |
+| `src/ports/outbound/llm_port.py` + 3 adapters + `prompts.py` | New `translate_text_segments(segments, dealer_name)` batch method + prompts |
 | `src/application/translate_pages/translate_page_graph.py` | `build_translate_page_graph(llm)` — extract → check → Send → translate_widget → END |
 | `src/adapters/inbound/http/translations_router.py` | Add `POST /translations/translate-page` (`StreamingResponse`, NDJSON) |
 | `src/adapters/inbound/http/translations_dtos.py` | `WidgetType`, `PageWidget`, `TranslatePageRequest` |
@@ -289,11 +294,11 @@ Single-widget retranslate reuses `LabelPort.translateLabel`.
 
 ## 8. Risks & open questions
 
-- **8.1 Widget size vs. LLM/validator limits.** RAW widgets can be large; a single translate call may hit token limits or noisy structural warnings. Measure first; consider a content-tuned prompt or chunking later. Not blocking v1.
+- **8.1 Widget size vs. LLM limits — RESOLVED.** The first cut reused `translate_labels_graph`, which re-emits the whole HTML at `max_tokens=4096`; a ~16.8k-token content widget truncated to an **empty translation**. Fixed by translating **text nodes only** (`html_translate` + `translate_text_segments`, batched at 40 segments/call): markup never reaches the model, payload drops ~90%, and there is no output-size ceiling. See §3.4.
 - **8.2 `div.main` assumption.** Templates without it yield nothing → clean "no editable content" message; log for template analysis; consider fallback selectors.
 - **8.3 Inner-HTML fidelity.** bs4 re-serialization can normalize quotes/entities; use `decode_contents()` and a round-trip fixture. The translate validator also guards drift.
 - **8.4 Check-node latency / cost.** Many ambiguous widgets ⇒ many judge calls before fan-out. They run concurrently; cap concurrency. Emit `extracted` before the checks so the UI isn't blank while checking.
-- **8.5 `Send` is new to this repo.** No existing fan-out precedent; the `translate_labels_graph`-as-subroutine + `Annotated[list, operator.add]` accumulator pattern needs a focused test.
+- **8.5 `Send` is new to this repo.** No existing fan-out precedent; the `Send` fan-out + `Annotated[list, operator.add]` accumulator pattern is covered by `test_translate_page_graph.py`.
 - **8.6 Streaming plumbing.** NDJSON-over-POST + fetch-ReadableStream is new to the FE; needs an abort path and partial-line buffering. Errors mid-stream arrive as an `error` event, not an HTTP status.
 - **8.7 `siteType`/`accountId` beyond "primary".** SaveContent hardcodes `siteType:"primary"`, `accountId==siteId`; parameterize if a secondary-site dealer appears.
 - **8.8 Multi-page store shape.** `pages` keyed-by-path needs persistence + a page switcher; v1 may scope to one page at a time.

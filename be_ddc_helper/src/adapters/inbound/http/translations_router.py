@@ -209,8 +209,10 @@ async def translate_page(
     try:
         llm = factory.get(body.provider)
     except ProviderNotConfiguredError as e:
+        err_msg = str(e)
+
         async def _error_only() -> AsyncIterator[str]:
-            yield json.dumps({"type": "error", "message": str(e)}) + "\n"
+            yield json.dumps({"type": "error", "message": err_msg}) + "\n"
 
         return StreamingResponse(_error_only(), media_type="application/x-ndjson")
 

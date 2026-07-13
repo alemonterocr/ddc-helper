@@ -15,6 +15,7 @@ import { MigrationFlowPanel } from "../../organisms/MigrationFlowPanel/Migration
 import { StaffFlowPanel } from "../../organisms/StaffFlowPanel/StaffFlowPanel";
 import { SpanishPanelWorkflow } from "../../organisms/SpanishPanelWorkflow/SpanishPanelWorkflow";
 import { NavTranslateTab } from "../../organisms/NavTranslateTab/NavTranslateTab";
+import { PageTranslateTab } from "../../organisms/PageTranslateTab/PageTranslateTab";
 import { SettingsPanel } from "../../organisms/SettingsPanel/SettingsPanel";
 import { LinkReplacementsPanel } from "../../organisms/LinkReplacementsPanel/LinkReplacementsPanel";
 import { ProjectStatusPanel } from "../../organisms/ProjectStatusPanel/ProjectStatusPanel";
@@ -53,7 +54,9 @@ export function ProjectPage() {
     if (activePageId) setGmPrebuildTab("migration");
   }, [activePageId]);
 
-  const [spanishTab, setSpanishTab] = useState<"simple" | "nav">("simple");
+  const [spanishTab, setSpanishTab] = useState<"simple" | "nav" | "page">(
+    "simple",
+  );
 
   if (!project) return null;
 
@@ -158,12 +161,15 @@ export function ProjectPage() {
           {isSpanish ? (
             <Tabs
               value={spanishTab}
-              onValueChange={(v) => setSpanishTab(v as "simple" | "nav")}
+              onValueChange={(v) =>
+                setSpanishTab(v as "simple" | "nav" | "page")
+              }
               className="h-full"
             >
               <TabsList>
                 <TabsTrigger value="simple">Simple Labels</TabsTrigger>
                 <TabsTrigger value="nav">Translate Nav</TabsTrigger>
+                <TabsTrigger value="page">Translate Page</TabsTrigger>
               </TabsList>
               <TabsContent value="simple">
                 <SpanishPanelWorkflow
@@ -172,6 +178,11 @@ export function ProjectPage() {
               </TabsContent>
               <TabsContent value="nav">
                 <NavTranslateTab
+                  project={project as SpanishMigrationProject}
+                />
+              </TabsContent>
+              <TabsContent value="page">
+                <PageTranslateTab
                   project={project as SpanishMigrationProject}
                 />
               </TabsContent>

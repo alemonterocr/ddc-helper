@@ -16,6 +16,8 @@ from src.adapters.outbound.prompts import (
     build_intake_extractor_system_prompt,
     build_intake_extractor_user_message,
     build_judge_translation_system_prompt,
+    build_segment_translation_system_prompt,
+    build_segment_translation_user_message,
     build_judge_translation_user_message,
     build_label_translation_system_prompt,
     build_label_translation_system_prompt_v2,
@@ -37,6 +39,22 @@ from src.domain.pricing import cost_usd
 
 _DEEPSEEK_BASE_URL = "https://api.deepseek.com/v1"
 _PROVIDER = "deepseek"
+
+
+def _segments_in_order(items: list, originals: list[str]) -> list[str]:
+    """Match {id, es} items back to input order by id; fill any dropped id with
+    the original English. Empty when no usable items (signals a hard failure)."""
+    by_id: dict[str, str] = {}
+    for entry in items or []:
+        if not isinstance(entry, dict):
+            continue
+        key = str(entry.get("id", ""))
+        value = entry.get("es")
+        if key and isinstance(value, str):
+            by_id[key] = value
+    if not by_id:
+        return []
+    return [by_id.get(str(i), originals[i]) for i in range(len(originals))]
 
 _TOOL_LOOP_CAP = 5
 
@@ -340,6 +358,7 @@ class DeepSeekLLMAdapter:
         for _ in range(_TOOL_LOOP_CAP):
             response = await self._client.chat.completions.create(
                 model=model,
+                max_tokens=16000,
                 messages=messages,
                 tools=[_DEEPSEEK_GLOSSARY_TOOL, _DEEPSEEK_TRANSLATION_SUBMIT_TOOL],
             )
@@ -400,6 +419,40 @@ class DeepSeekLLMAdapter:
                 })
 
         return {"translation": fallback_text, "reasoning": ""}
+
+    async def translate_text_segments(
+        self,
+        segments: list[str],
+        dealer_name: str,
+    ) -> list[str]:
+        if not segments:
+            return []
+        model = "deepseek-chat"
+        try:
+            response = await self._client.chat.completions.create(
+                model=model,
+                response_format={"type": "json_object"},
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            build_segment_translation_system_prompt(dealer_name)
+                            + "\n\nOUTPUT FORMAT: a JSON object with a single key "
+                              "`items` whose value is an array of {\"id\": string, "
+                              "\"es\": string} objects — one per input id."
+                        ),
+                    },
+                    {
+                        "role": "user",
+                        "content": build_segment_translation_user_message(segments),
+                    },
+                ],
+            )
+            self._record(model, "translate_text_segments", response)
+            payload = json.loads(response.choices[0].message.content or "{}")
+            return _segments_in_order(payload.get("items", []), segments)
+        except Exception:
+            return []
 
     async def judge_translation(
         self,

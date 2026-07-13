@@ -81,6 +81,6 @@ Body: newline-delimited JSON, **one event object per line**, streamed as work co
 
 ## Reuse
 
-- Per-widget translation is the existing `translate_labels_graph` (glossary tool → structural validator → semantic judge → 1 retry), invoked once per `Send` branch.
+- Per-widget translation extracts the widget's **text nodes** and translates only those via `LLMPort.translate_text_segments` (batched), reinserting into untouched markup — robust to widget size, structurally exact. (It does not reuse `translate_labels_graph`; that truncated large widgets — see spec §3.4.)
 - The check step reuses `LLMPort.judge_translation`.
 - No change to `/translations/translate`; single-widget **retranslate** and **force-translate** call that existing endpoint.

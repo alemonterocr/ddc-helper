@@ -1,7 +1,7 @@
 ---
 name: translate_pages
 type: graph
-status: in-progress
+status: built
 layer: application
 ---
 
@@ -40,15 +40,22 @@ extract_widgets → check → route_to_widget_branches (Send) → translate_widg
 - `check_node.py` — three-way classify; `judge_translation` on ambiguous widgets
   (concurrent, semaphore).
 - `routing.py` — pure `route_to_widget_branches(state) → list[Send]` fan-out.
-- `translate_widget_node.py` — invokes the reused `translate_labels_graph` per widget.
+- `html_translate.py` — `translate_widget_html(html, translate_batch)`: extract
+  text nodes (bs4) → batch translate → reinsert into untouched markup.
+- `translate_widget_node.py` — translates one widget's text nodes via
+  `html_translate` + `LLMPort.translate_text_segments`.
 - `translate_page_graph.py` — graph wiring.
 
 ## Contracts
 
-- Per-widget translation reuses `application/translate_labels/translate_labels_graph`.
+- Per-widget translation sends only **text nodes** to the LLM
+  (`translate_text_segments`), never markup — robust to widget size, structurally
+  exact. It does NOT reuse `translate_labels_graph` (that truncated large widgets
+  to empty; see feature spec §3.4).
 - The checker reuses `LLMPort.judge_translation`.
 - The graph never touches DDC — the FE performs all render GETs and save POSTs.
 
 ## Dependencies
 
-- `LLMPort` (ports/outbound), `translate_labels_graph` (application), `beautifulsoup4`/`lxml`.
+- `LLMPort` (ports/outbound, incl. `translate_text_segments` + `judge_translation`),
+  `translate_labels/validator` (defensive check), `beautifulsoup4`/`lxml`.

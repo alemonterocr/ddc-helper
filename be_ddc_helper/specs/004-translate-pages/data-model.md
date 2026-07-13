@@ -72,13 +72,13 @@ class PageTranslateState(TypedDict, total=False):
     results: Annotated[list[dict], operator.add]
 ```
 
-Per-widget branches reuse `TranslateLabelState` (unchanged) inside `translate_labels_graph`. Each `translate_widget_node` returns `{"results": [widget_result]}`.
+Each `translate_widget_node` translates the widget's text nodes (`html_translate` + `LLMPort.translate_text_segments`) and returns `{"results": [widget_result]}`. (It does not run the label graph — see spec §3.4.)
 
 **`widget_result` shape** (what a branch appends; becomes a `widget` event):
 ```
 { window_id, widget_type, en_html, es_html, status, warnings, raw, reasoning }
 ```
-where `es_html/status/warnings/raw/reasoning` come straight from `translate_labels_graph`'s output for that widget's `en_html`.
+where `es_html` is the widget's HTML with its text nodes translated; `status` is `ready` (or `error` if the translator returned a mismatched segment count); `warnings` are any residual structural-validator notes; `reasoning` records the segment count.
 
 ---
 
@@ -153,7 +153,7 @@ interface SpanishWidgetRow {
 }
 ```
 
-`SpanishMigrationProject` gains an optional `pages?: Record<string, SpanishWidgetRow[]>` keyed by `targetPath`. The existing `labels` array is untouched. (v1 may scope to a single page — see spec §8.8.)
+`SpanishMigrationProject` gains `pageWidgets: SpanishWidgetRow[]` + `pageTargetPath?: string` — **v1 holds one page at a time** (spec §8.8), which is simpler than a per-path map and sufficient for the workflow. The existing `labels` array is untouched. (A `Record<string, SpanishWidgetRow[]>` keyed by path is the future multi-page shape.)
 
 ---
 
@@ -163,6 +163,6 @@ interface SpanishWidgetRow {
 TranslatePageRequest ──(extract_node: bs4)──► candidates: PageWidget[]
 candidates ──(check_node: judge on ambiguous)──► to_translate[] + skipped[]
 to_translate[] ──(route_to_widget_branches: Send)──► translate_widget_node × N
-translate_widget_node ──(reuse translate_labels_graph)──► results[] (widget events)
+translate_widget_node ──(text-node translate: translate_text_segments)──► results[] (widget events)
 skipped[] ──────────────────────────────────────────────► FE skipped footer (force-translate)
 ```

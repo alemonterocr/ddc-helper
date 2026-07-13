@@ -21,6 +21,7 @@ import type {
   CredentialPort,
   DOMExtractorPort,
   LabelPort,
+  PagePort,
   WSClientPort,
 } from './ports'
 
@@ -31,6 +32,7 @@ export interface Services {
   credentialPort: CredentialPort
   extractorPort: DOMExtractorPort
   labelPort: LabelPort
+  pagePort: PagePort
   /** Per-operation factory — call to create a fresh WS connection wrapper. */
   createWSClient: () => WSClientPort
 }

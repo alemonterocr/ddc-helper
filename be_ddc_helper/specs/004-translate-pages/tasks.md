@@ -23,7 +23,7 @@ description: "Task list for 004-translate-pages implementation"
 
 - [x] T001 [P] Add `beautifulsoup4` and `lxml` to `be_ddc_helper/pyproject.toml` dependencies and `be_ddc_helper/requirements.txt`, then `uv sync`
 - [x] T002 [P] Create BE package `be_ddc_helper/src/application/translate_pages/` with `__init__.py` and a module-level `spec.md` (frontmatter: `type: graph`, `status: planned`, `layer: application`)
-- [ ] T003 [P] Create FE folders `fe_ddc_helper/src/components/organisms/PageTranslateTab/` and `fe_ddc_helper/src/components/molecules/WidgetRow/` each with a placeholder `spec.md` (frontmatter: `status: planned`)
+- [x] T003 [P] Create FE folders `fe_ddc_helper/src/components/organisms/PageTranslateTab/` and `fe_ddc_helper/src/components/molecules/WidgetRow/` each with a placeholder `spec.md` (frontmatter: `status: planned`)
 
 ---
 
@@ -31,9 +31,9 @@ description: "Task list for 004-translate-pages implementation"
 
 **Purpose**: Shared FE type + helper layer that US2 and US3 both build on. **US1 (BE) does NOT depend on this phase** — it can start right after Setup.
 
-- [ ] T004 [P] Add page types to `fe_ddc_helper/src/types/index.ts`: `WidgetType`, `PageWidget`, `PageWidgetResult`, `TranslatePageRequest`, `PageLoadResult`, `PageStreamEvent` (per [data-model.md](./data-model.md) §5)
-- [ ] T005 [P] Add store types to `fe_ddc_helper/src/store/types.ts`: `WidgetRowStatus`, `SpanishWidgetRow`, and optional `pages?: Record<string, SpanishWidgetRow[]>` on `SpanishMigrationProject` (per [data-model.md](./data-model.md) §6)
-- [ ] T006 Extract shared `findComposerTabId` + `_extractUserId` into `fe_ddc_helper/src/services/adapters/ddcTab.ts` and refactor `LabelAdapter.ts` to import them (no behavior change)
+- [x] T004 [P] Add page types to `fe_ddc_helper/src/types/index.ts`: `WidgetType`, `PageWidget`, `PageWidgetResult`, `TranslatePageRequest`, `PageLoadResult`, `PageStreamEvent` (per [data-model.md](./data-model.md) §5)
+- [x] T005 [P] Add store types to `fe_ddc_helper/src/store/types.ts`: `WidgetRowStatus`, `SpanishWidgetRow`, and optional `pages?: Record<string, SpanishWidgetRow[]>` on `SpanishMigrationProject` (per [data-model.md](./data-model.md) §6)
+- [x] T006 Extract shared `findComposerTabId` + `_extractUserId` into `fe_ddc_helper/src/services/adapters/ddcTab.ts` and refactor `LabelAdapter.ts` to import them (no behavior change)
 
 **Checkpoint**: FE shared layer ready — US2/US3 can begin.
 
@@ -75,14 +75,14 @@ description: "Task list for 004-translate-pages implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T019 [US2] Create `fe_ddc_helper/src/services/ports/PagePort.ts`: `loadPage`, `translatePageStream`, `saveWidget` signatures (per [spec.md](./spec.md) §5.3)
-- [ ] T020 [US2] Implement `loadPage` in `fe_ddc_helper/src/services/adapters/PageAdapter.ts`: `loadPageInjected(slug, targetPath, locale)` self-contained render GET (`credentials:'include'`), via shared `findComposerTabId`
-- [ ] T021 [US2] Implement `translatePageStream` in `PageAdapter.ts`: `fetch` POST + `res.body.getReader()` + `TextDecoder`, buffer + split on `\n`, `JSON.parse` each line → `onEvent`, honor `AbortSignal` (per [research.md](./research.md) R3)
-- [ ] T022 [US2] Add store actions in `fe_ddc_helper/src/store/useMigrationStore.ts`: seed `pages[path]` placeholder rows on `extracted`, resolve a row on each `widget` event (match by `windowId`)
-- [ ] T023 [US2] Create `fe_ddc_helper/src/components/organisms/PageTranslateTab/PageTranslateTab.tsx`: path input + Load button → `Promise.all([loadPage(en_US), loadPage(es_US)])` → open stream → placeholder cards + counters + skipped footer; `ensureProvider` pattern reused from `NavTranslateTab`
-- [ ] T024 [US2] Create `fe_ddc_helper/src/components/molecules/WidgetRow/WidgetRow.tsx` (or adapt `LabelRow`): EN preview (collapsible), ES editor, `content`/`raw` badge, warnings + reasoning
-- [ ] T025 [US2] Wire the 3rd tab `[Translate Page]` in `fe_ddc_helper/src/components/pages/ProjectPage/ProjectPage.tsx` (Spanish branch `<Tabs>`)
-- [ ] T026 [US2] Register `PageAdapter`/`PagePort` in `fe_ddc_helper/src/services/ServicesContext` and export the organism from `organisms/index.ts`
+- [x] T019 [US2] Create `fe_ddc_helper/src/services/ports/PagePort.ts`: `loadPage`, `translatePageStream`, `saveWidget` signatures (per [spec.md](./spec.md) §5.3)
+- [x] T020 [US2] Implement `loadPage` in `fe_ddc_helper/src/services/adapters/PageAdapter.ts`: `loadPageInjected(slug, targetPath, locale)` self-contained render GET (`credentials:'include'`), via shared `findComposerTabId`
+- [x] T021 [US2] Implement `translatePageStream` in `PageAdapter.ts`: `fetch` POST + `res.body.getReader()` + `TextDecoder`, buffer + split on `\n`, `JSON.parse` each line → `onEvent`, honor `AbortSignal` (per [research.md](./research.md) R3)
+- [x] T022 [US2] Add store actions in `fe_ddc_helper/src/store/useMigrationStore.ts`: seed `pages[path]` placeholder rows on `extracted`, resolve a row on each `widget` event (match by `windowId`)
+- [x] T023 [US2] Create `fe_ddc_helper/src/components/organisms/PageTranslateTab/PageTranslateTab.tsx`: path input + Load button → `Promise.all([loadPage(en_US), loadPage(es_US)])` → open stream → placeholder cards + counters + skipped footer; `ensureProvider` pattern reused from `NavTranslateTab`
+- [x] T024 [US2] Create `fe_ddc_helper/src/components/molecules/WidgetRow/WidgetRow.tsx` (or adapt `LabelRow`): EN preview (collapsible), ES editor, `content`/`raw` badge, warnings + reasoning
+- [x] T025 [US2] Wire the 3rd tab `[Translate Page]` in `fe_ddc_helper/src/components/pages/ProjectPage/ProjectPage.tsx` (Spanish branch `<Tabs>`)
+- [x] T026 [US2] Register `PageAdapter`/`PagePort` in `fe_ddc_helper/src/services/ServicesContext` and export the organism from `organisms/index.ts`
 
 **Checkpoint**: US1 + US2 — a page's widgets stream into a live review board.
 
@@ -96,9 +96,9 @@ description: "Task list for 004-translate-pages implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T027 [US3] Implement `saveWidget` in `PageAdapter.ts`: `saveWidgetInjected` doing the two-save — **content** → `SaveContent` ×2 (`currentLocale` es_US then en_US, `windowId` keeps `-editable`, includes `userId` from JWT); **raw** → `sitecontent` ×2 (`{"es_US":…}` then `{"en_US":…}`, `windowId` strips `-editable`); abort the English write if the Spanish write fails (per [contracts/ddc-endpoints.md](./contracts/ddc-endpoints.md))
-- [ ] T028 [US3] Wire handlers in `PageTranslateTab.tsx`: Save → `saveWidget` → `saved`; Retranslate → existing `POST /translations/translate` via `LabelPort.translateLabel`; Skip → `skipped`
-- [ ] T029 [US3] Force-translate in the skipped footer: move the row into the board (`translating`) and run translation (mirrors `NavTranslateTab.handleForceTranslate`)
+- [x] T027 [US3] Implement `saveWidget` in `PageAdapter.ts`: `saveWidgetInjected` doing the two-save — **content** → `SaveContent` ×2 (`currentLocale` es_US then en_US, `windowId` keeps `-editable`, includes `userId` from JWT); **raw** → `sitecontent` ×2 (`{"es_US":…}` then `{"en_US":…}`, `windowId` strips `-editable`); abort the English write if the Spanish write fails (per [contracts/ddc-endpoints.md](./contracts/ddc-endpoints.md))
+- [x] T028 [US3] Wire handlers in `PageTranslateTab.tsx`: Save → `saveWidget` → `saved`; Retranslate → existing `POST /translations/translate` via `LabelPort.translateLabel`; Skip → `skipped`
+- [x] T029 [US3] Force-translate in the skipped footer: move the row into the board (`translating`) and run translation (mirrors `NavTranslateTab.handleForceTranslate`)
 - [ ] T030 [US3] Run [quickstart.md](./quickstart.md) §3 live walkthrough; confirm both-locale writes and English intact
 
 **Checkpoint**: Full loop working end-to-end.
@@ -169,7 +169,7 @@ Each increment is independently testable and adds user-visible value.
 ## Notes
 - `[P]` = different files, no incomplete-task dependency.
 - `[US#]` maps each task to its story for traceability.
-- The per-widget "subagent" is the existing `translate_labels_graph` — do not re-implement translation.
+- Per-widget translation is text-node based (`html_translate` + `translate_text_segments`) — it does NOT reuse `translate_labels_graph` (that truncated large widgets; see spec §3.4).
 - The checker is the existing `judge_translation` — do not write a new judge prompt.
 - Keep the graph browser-free; all DDC I/O stays in FE injected scripts.
 - Commit after each task or logical group; validate at each checkpoint.
