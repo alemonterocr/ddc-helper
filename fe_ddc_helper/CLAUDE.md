@@ -115,6 +115,7 @@ of any dependency.
 - `001-salesforce-intake/spec.md` — Salesforce intake wizard
 - `002-spanish-translation/spec.md` — Spanish label translation workflow (covers BE pipeline, glossary, validation, FE components, and data model)
 - `003-translate-nav/spec.md` — Batch nav label translation (LoadNavigation → nav-check → translate loop, reuse existing pipeline)
+- `004-translate-pages/spec.md` — Page widget translation (render GET ×2 → streaming fan-out graph: extract (bs4) → LLM check → Send per widget → reuse translate_labels_graph → NDJSON stream → two-save dance)
 
 ## Key contracts (do not violate)
 

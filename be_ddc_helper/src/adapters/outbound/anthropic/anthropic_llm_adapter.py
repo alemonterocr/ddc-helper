@@ -109,6 +109,47 @@ _TRANSLATION_SUBMIT_TOOL = {
 }
 
 
+_SEGMENT_TRANSLATIONS_TOOL = {
+    "name": "submit_translations",
+    "description": "Submit the Spanish translation for every input fragment, addressed by id.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "string", "description": "The fragment's input id."},
+                        "es": {"type": "string", "description": "es_US translation of that fragment."},
+                    },
+                    "required": ["id", "es"],
+                },
+                "description": "One {id, es} entry per input id (any order).",
+            },
+        },
+        "required": ["items"],
+    },
+}
+
+
+def _segments_in_order(items: list, originals: list[str]) -> list[str]:
+    """Match {id, es} items back to input order by id; fill any dropped id with
+    the original English. Guarantees one entry per input. Empty when the model
+    returned no usable items (signals a hard failure to the caller)."""
+    by_id: dict[str, str] = {}
+    for entry in items or []:
+        if not isinstance(entry, dict):
+            continue
+        key = str(entry.get("id", ""))
+        value = entry.get("es")
+        if key and isinstance(value, str):
+            by_id[key] = value
+    if not by_id:
+        return []
+    return [by_id.get(str(i), originals[i]) for i in range(len(originals))]
+
+
 _JUDGE_VERDICT_TOOL = {
     "name": "submit_verdict",
     "description": "Submit your evaluation of the candidate Spanish translation.",
@@ -146,6 +187,8 @@ from src.adapters.outbound.prompts import (
     build_label_translation_user_message,
     build_nav_parser_system_prompt,
     build_nav_parser_user_message,
+    build_segment_translation_system_prompt,
+    build_segment_translation_user_message,
     build_staff_extraction_system_prompt,
     build_staff_extraction_user_message,
     build_standalone_clean_system_prompt,
@@ -595,12 +638,11 @@ class AnthropicLLMAdapter:
         for _ in range(_TOOL_LOOP_CAP):
             response = await self._client.messages.create(
                 model=model,
-                max_tokens=4096,
+                max_tokens=16000,
                 system=system,
                 tools=[_GLOSSARY_LOOKUP_TOOL, _TRANSLATION_SUBMIT_TOOL],
                 messages=messages,
             )
-            self._record(model, "translate_label_with_tools", response)
 
             text_parts: list[str] = []
             tool_uses: list = []
@@ -648,6 +690,35 @@ class AnthropicLLMAdapter:
 
         # Hit the cap — return whatever text we last captured, no reasoning.
         return {"translation": fallback_text, "reasoning": ""}
+
+    async def translate_text_segments(
+        self,
+        segments: list[str],
+        dealer_name: str,
+    ) -> list[str]:
+        if not segments:
+            return []
+        model = "claude-haiku-4-5"
+        try:
+            response = await self._client.messages.create(
+                model=model,
+                max_tokens=8192,
+                system=build_segment_translation_system_prompt(dealer_name),
+                tools=[_SEGMENT_TRANSLATIONS_TOOL],
+                tool_choice={"type": "tool", "name": "submit_translations"},
+                messages=[{
+                    "role": "user",
+                    "content": build_segment_translation_user_message(segments),
+                }],
+            )
+            self._record(model, "translate_text_segments", response)
+        except Exception:
+            return []
+
+        for block in response.content:
+            if getattr(block, "type", None) == "tool_use" and block.name == "submit_translations":
+                return _segments_in_order((block.input or {}).get("items", []), segments)
+        return []
 
     async def judge_translation(
         self,

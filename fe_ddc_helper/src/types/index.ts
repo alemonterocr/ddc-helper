@@ -419,6 +419,55 @@ export interface NavLoadResult {
   error?: string
 }
 
+// ── API: /translations/translate-page (streaming) ───────────────────────────
+
+/** Editable-widget kind on a DDC page (distinct from the migration `WidgetType`). */
+export type PageWidgetType = 'content' | 'raw'
+
+export interface PageWidget {
+  window_id: string
+  widget_type: PageWidgetType
+  en_html: string
+  es_html: string
+}
+
+export interface PageWidgetResult extends PageWidget {
+  status: LabelTranslationStatus
+  warnings: string[]
+  raw: string | null
+  reasoning: string
+}
+
+export interface TranslatePageRequest {
+  en_page_html: string
+  es_page_html: string
+  dealer_name: string
+  provider?: LLMProvider
+}
+
+/** One NDJSON line from POST /translations/translate-page. */
+export type PageStreamEvent =
+  | { type: 'extracted'; total: number }
+  | { type: 'checked'; to_translate: PageWidget[]; skipped: PageWidget[] }
+  | { type: 'widget'; widget: PageWidgetResult }
+  | { type: 'done' }
+  | { type: 'error'; message: string }
+
+// ── Page render load result (extension-side) ─────────────────────────────────
+
+export interface PageLoadResult {
+  /** Raw rendered page HTML for one locale, or null on failure. */
+  html: string | null
+  error?: string
+}
+
+// ── DDC widget save result (extension-side) ──────────────────────────────────
+
+export interface DDCWidgetSaveResult {
+  success: boolean
+  error?: string
+}
+
 // ── Salesforce intake ───────────────────────────────────────────────────────
 export type {
   Classification,

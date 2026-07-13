@@ -1,5 +1,7 @@
 """Pydantic DTOs for the EN→es_US label translation endpoints."""
 
+from enum import Enum
+
 from pydantic import BaseModel
 
 from src.domain.models import LLMProvider
@@ -53,3 +55,25 @@ class NavCheckResponse(BaseModel):
     to_translate: list[NavCheckItem]
     skipped: list[NavCheckItem]
     total: int
+
+
+# ── /translations/translate-page ────────────────────────────────────────────────
+
+
+class WidgetType(str, Enum):
+    CONTENT = "content"
+    RAW = "raw"
+
+
+class PageWidget(BaseModel):
+    window_id: str          # raw div id, WITH the -editable suffix
+    widget_type: WidgetType
+    en_html: str            # inner HTML of the en_US widget
+    es_html: str            # inner HTML of the es_US widget ("" if absent)
+
+
+class TranslatePageRequest(BaseModel):
+    en_page_html: str       # full en_US render (~0.5–2 MB)
+    es_page_html: str       # full es_US render
+    dealer_name: str        # so brand/model names stay untranslated
+    provider: LLMProvider = LLMProvider.ANTHROPIC

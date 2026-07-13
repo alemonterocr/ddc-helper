@@ -11,6 +11,7 @@ import type {
 } from '../../types'
 import { BackendError } from '../../types'
 import type { LabelPort } from '../ports/LabelPort'
+import { extractUserId as _extractUserId, findComposerTabId } from './ddcTab'
 
 /**
  * Concrete LabelPort.
@@ -126,42 +127,6 @@ export class LabelAdapter implements LabelPort {
   }
 }
 
-// ── Composer tab lookup ──────────────────────────────────────────────────────
-
-/**
- * Find the DDC composer tab by URL pattern, not by "active tab in current
- * window" — the latter breaks when the extension page itself is in the
- * foreground (e.g. opened as a standalone tab/window), which produces:
- * `Cannot access contents of url "chrome-extension://...". Extension manifest
- * must request permission to access this host.`
- *
- * Mirrors the lookup used by WSClientAdapter._findCmsTab.
- */
-async function findComposerTabId(): Promise<number> {
-  const tabs = await chrome.tabs.query({
-    url: '*://*.website.dealercenter.coxautoinc.com/*',
-  })
-  const composer = tabs.find((t) => t.id !== undefined)
-  if (composer?.id !== undefined) return composer.id
-
-  throw new Error(
-    'No DDC composer tab found — open the composer in a browser tab first',
-  )
-}
-
-// ── Helpers ───────────────────────────────────────────────────────────────────
-
-function _extractUserId(jwt: string): string {
-  try {
-    const base64 = jwt.split('.')[1]?.replace(/-/g, '+').replace(/_/g, '/')
-    if (!base64) return ''
-    const claims = JSON.parse(atob(base64)) as Record<string, unknown>
-    return (claims['sub'] as string) ?? ''
-  } catch {
-    return ''
-  }
-}
-
 // ── Injected functions — self-contained, zero imports ────────────────────────
 
 /**
@@ -253,9 +218,9 @@ async function loadNavInjected(
   userId: string,
 ): Promise<NavLoadResult> {
   async function discoverNavId(): Promise<string> {
-    let pageUrl = `https://${window.location.hostname}/?_renderer=desktop&buildingPage=false&useAjaxWrap=true&locale=es_US&_toggleBasePageCache=false`;
+    const pageUrl = `https://${window.location.hostname}/?_renderer=desktop&buildingPage=false&useAjaxWrap=true&locale=es_US&_toggleBasePageCache=false`;
     try {
-      let res = await fetch(pageUrl, {
+      const res = await fetch(pageUrl, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -263,32 +228,32 @@ async function loadNavInjected(
         },
       });
       if (!res.ok) return '';
-      let text = await res.text();
-      let match = text.match(/"navigation\.id"\s*:\s*"([^"]+)"/);
+      const text = await res.text();
+      const match = text.match(/"navigation\.id"\s*:\s*"([^"]+)"/);
       if (match?.[1]) return match[1];
-    } catch (_) { /* page fetch may fail */ }
+    } catch { /* page fetch may fail */ }
     return '';
   }
 
   function extractItems(dto: Record<string, unknown>): { alias: string; label_es: string }[] {
-    let result: { alias: string; label_es: string }[] = [];
-    let navItems = dto.navigationItems as Record<string, unknown> | undefined;
+    const result: { alias: string; label_es: string }[] = [];
+    const navItems = dto.navigationItems as Record<string, unknown> | undefined;
     if (!navItems) { return result; }
-    let list = navItems.list as Array<Record<string, unknown>> | undefined;
+    const list = navItems.list as Array<Record<string, unknown>> | undefined;
     if (!list) { return result; }
 
     function walk(items: Array<Record<string, unknown>>) {
       for (let i = 0; i < items.length; i++) {
-        let item = items[i];
+        const item = items[i];
         if (!item) continue;
-        let alias = (item.labelAlias as string || '').trim();
-        let label = (item.label as string || '').trim();
+        const alias = (item.labelAlias as string || '').trim();
+        const label = (item.label as string || '').trim();
         if (alias) {
           result.push({ alias: alias, label_es: label });
         }
-        let children = item.navigationItems as Record<string, unknown> | undefined;
+        const children = item.navigationItems as Record<string, unknown> | undefined;
         if (children) {
-          let childList = children.list as Array<Record<string, unknown>> | undefined;
+          const childList = children.list as Array<Record<string, unknown>> | undefined;
           if (childList) { walk(childList); }
         }
       }
@@ -298,9 +263,9 @@ async function loadNavInjected(
     return result;
   }
 
-  let navId = await discoverNavId();
+  const navId = await discoverNavId();
 
-  let siteId = window.location.hostname.split('.')[0] || '';
+  const siteId = window.location.hostname.split('.')[0] || '';
 
   if (!userId) {
     return { items: [], raw: null, error: 'No userId available' };
@@ -309,9 +274,9 @@ async function loadNavInjected(
     return { items: [], raw: null, error: 'Could not discover navId from page context' };
   }
 
-  let url = `https://${window.location.hostname}/composer/views/CommandExecutor?cmd=LoadNavigation`;
+  const url = `https://${window.location.hostname}/composer/views/CommandExecutor?cmd=LoadNavigation`;
 
-  let payload = {
+  const payload = {
     javaClass: 'com.dealer.cms.apps.composer.commands.nav.LoadNavigation',
     navId: navId,
     siteId: siteId,
@@ -322,7 +287,7 @@ async function loadNavInjected(
   };
 
   try {
-    let res = await fetch(url, {
+    const res = await fetch(url, {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -338,11 +303,11 @@ async function loadNavInjected(
       return { items: [], raw: null, error: `Status: ${res.status}` };
     }
 
-    let data = await res.json() as Record<string, unknown>;
-    let result = data.result as Record<string, unknown> | undefined;
-    let dto = result?.dto as Record<string, unknown> | undefined;
+    const data = await res.json() as Record<string, unknown>;
+    const result = data.result as Record<string, unknown> | undefined;
+    const dto = result?.dto as Record<string, unknown> | undefined;
     if (!dto) {
-      let resultNavId = (result?.navId as string) || '';
+      const resultNavId = (result?.navId as string) || '';
       return {
         items: [], raw: null,
         error: `Nav '${resultNavId}' returned no data for dealer '${siteId}'. Make sure the composer tab matches this project's dealer.`,

@@ -10,13 +10,19 @@ nav-check receives a raw LoadNavigation response JSON, walks the tree, and
 returns which labels need translation vs. which already have Spanish text.
 """
 
+import json
 import re
+from collections.abc import AsyncIterator
 
 from fastapi import APIRouter, Depends
+from fastapi.responses import StreamingResponse
 
 from src.adapters.outbound.llm_factory import LLMFactory
 from src.application.translate_labels.translate_labels_graph import (
     build_translate_labels_graph,
+)
+from src.application.translate_pages.translate_page_graph import (
+    build_translate_page_graph,
 )
 from src.domain.errors import ProviderNotConfiguredError
 
@@ -29,6 +35,7 @@ from .translations_dtos import (
     SanitizeAliasesResponse,
     TranslateLabelRequest,
     TranslateLabelResponse,
+    TranslatePageRequest,
 )
 
 router = APIRouter(prefix="/translations", tags=["translations"])
@@ -146,4 +153,78 @@ async def nav_check(body: NavCheckRequest) -> NavCheckResponse:
         to_translate=to_translate,
         skipped=skipped,
         total=len(to_translate) + len(skipped),
+    )
+
+
+# ── /translations/translate-page ────────────────────────────────────────────────
+
+
+def _pick(widget: dict) -> dict:
+    """Project a candidate widget down to the PageWidget wire shape."""
+    return {
+        "window_id": widget.get("window_id", ""),
+        "widget_type": widget.get("widget_type", ""),
+        "en_html": widget.get("en_html", ""),
+        "es_html": widget.get("es_html", ""),
+    }
+
+
+def _updates_to_events(node: str, update: dict) -> list[dict]:
+    """Map one LangGraph node update to zero or more stream events."""
+    if node == "extract_widgets":
+        return [{"type": "extracted", "total": len(update.get("candidates", []))}]
+    if node == "check":
+        return [{
+            "type": "checked",
+            "to_translate": [_pick(w) for w in update.get("to_translate", [])],
+            "skipped": [_pick(w) for w in update.get("skipped", [])],
+        }]
+    if node == "translate_widget":
+        return [{"type": "widget", "widget": r} for r in update.get("results", [])]
+    return []
+
+
+async def _stream_page_translation(
+    graph, initial_state: dict
+) -> AsyncIterator[str]:
+    """Yield NDJSON lines as the graph progresses; terminal done/error line."""
+    try:
+        async for chunk in graph.astream(initial_state, stream_mode="updates"):
+            for node, update in chunk.items():
+                # Parallel branches may batch as a list of partial updates.
+                updates = update if isinstance(update, list) else [update]
+                for one in updates:
+                    for event in _updates_to_events(node, one):
+                        yield json.dumps(event) + "\n"
+        yield json.dumps({"type": "done"}) + "\n"
+    except Exception as e:  # surface as a terminal event — status is already 200
+        yield json.dumps({"type": "error", "message": str(e)}) + "\n"
+
+
+@router.post("/translate-page")
+async def translate_page(
+    body: TranslatePageRequest,
+    factory: LLMFactory = Depends(get_llm_factory),
+) -> StreamingResponse:
+    try:
+        llm = factory.get(body.provider)
+    except ProviderNotConfiguredError as e:
+        err_msg = str(e)
+
+        async def _error_only() -> AsyncIterator[str]:
+            yield json.dumps({"type": "error", "message": err_msg}) + "\n"
+
+        return StreamingResponse(_error_only(), media_type="application/x-ndjson")
+
+    llm.reset_usage()
+    graph = build_translate_page_graph(llm=llm)
+    initial_state = {
+        "en_page_html": body.en_page_html,
+        "es_page_html": body.es_page_html,
+        "dealer_name": body.dealer_name,
+        "provider": str(body.provider),
+    }
+    return StreamingResponse(
+        _stream_page_translation(graph, initial_state),
+        media_type="application/x-ndjson",
     )

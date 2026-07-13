@@ -219,6 +219,26 @@ class LLMPort(Protocol):
         "reasoning": ""}."""
         ...
 
+    async def translate_text_segments(
+        self,
+        segments: list[str],
+        dealer_name: str,
+    ) -> list[str]:
+        """Translate a batch of plain-text fragments EN→es_US.
+
+        Used by the page-widget translator: markup is extracted client-side and
+        only the visible text strings are sent here, so there is nothing to
+        preserve structurally and no truncation risk from re-emitting HTML.
+
+        Robustness: the model is addressed by id (not position), so adapters
+        match results back by id and fill any id the model drops with the
+        original English — the returned list always has one entry per input, in
+        order, even when the model omits or reorders items. Empty input → empty
+        list. On a hard transport/parse failure (nothing usable) the adapter
+        returns an empty list so the caller can mark the widget failed rather
+        than saving an empty translation."""
+        ...
+
     async def judge_translation(
         self,
         en_html: str,

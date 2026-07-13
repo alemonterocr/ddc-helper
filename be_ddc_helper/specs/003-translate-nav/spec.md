@@ -1,6 +1,6 @@
 # Translate Navigation Labels
 
-**Status:** PLANNED
+**Status:** BUILT
 **Date:** 2026-07-06
 **Purpose:** Batch-translate all navigation labels from a dealer's DDC CMS composer — load the nav tree via `CommandExecutor?cmd=LoadNavigation`, detect which labels need translation, and feed them through the existing `/translations/translate` pipeline one by one, reusing the same review-and-save workflow.
 
@@ -57,14 +57,20 @@ Body: json={URL-encoded payload}
 ```json
 {
   "javaClass": "com.dealer.cms.apps.composer.commands.nav.LoadNavigation",
-  "navId": "...",
-  "siteId": "{dealerSlug}",
+  "navId": "{discovered inside the injected script — see below}",
+  "siteId": "{derived from composer hostname}",
   "locale": "es_US",
-  "accountId": "{dealerSlug}",
-  "userId": "{discovered from page state}",
+  "accountId": "{same as siteId}",
+  "userId": "{extracted FE-side from the ccIdtToken JWT}",
   "siteType": "primary"
 }
 ```
+
+**Resolved parameter sourcing** (the open questions from §8 are now answered by the implementation):
+
+- **`userId`** — extracted **FE-side, before injection**, in `LabelAdapter.loadNav()`. Reads `ccIdtToken` from `chrome.storage.local`, base64-decodes the JWT payload, and takes the `sub` claim (`_extractUserId`). Passed into the injected script as its single argument. This is why the port method is `loadNav()` with no parameters — the caller supplies nothing; the adapter discovers everything.
+- **`navId`** — discovered **inside the injected script** (`discoverNavId`). Fetches the rendered composer page HTML (`GET https://{host}/?...&locale=es_US...`) and regex-matches `"navigation.id":"([^"]+)"` out of the embedded page state. This is §8.1 option 2 (read from page state) realized via an HTML page fetch rather than a preferences call. Returns `''` on any failure; the script then surfaces a clean `"Could not discover navId from page context"` error.
+- **`siteId` / `accountId`** — derived from the composer tab hostname (`window.location.hostname.split('.')[0]`). The composer tab must match the project's dealer; a nav response with no `dto` surfaces a "make sure the composer tab matches this project's dealer" error.
 
 **Response shape** (relevant fields):
 ```
@@ -219,26 +225,33 @@ export interface LabelPort {
   // ... existing methods ...
 
   /** Load the navigation tree from DDC's CommandExecutor.
-   *  Injects a self-contained script into the composer tab. */
-  loadNav(dealerSlug: string, userId: string): Promise<NavLoadResult>
+   *  Injects a self-contained script into the composer tab.
+   *  Derives siteId from the composer tab's hostname — the tab must
+   *  match the project's dealer. */
+  loadNav(): Promise<NavLoadResult>
 }
 ```
+
+**No parameters** — resolves open question §8.4. The adapter discovers `userId`, `navId`, and `siteId` itself, so the caller passes nothing.
 
 ### 5.4 LabelAdapter (new method)
 
 ```ts
-async loadNav(dealerSlug: string, userId: string): Promise<NavLoadResult> {
+async loadNav(): Promise<NavLoadResult> {
   // 1. findComposerTabId() — same pattern as fetchLabel / saveLabel
-  // 2. chrome.scripting.executeScript with injected loadNav function
-  // 3. Return { items, raw, error }
+  // 2. Read ccIdtToken from chrome.storage.local, decode JWT → userId (sub claim)
+  // 3. chrome.scripting.executeScript with injected loadNav function, args: [userId]
+  // 4. Return { items, raw, error }
 }
 ```
 
-The injected script:
-1. Reads `userId` from page state (or accepts it as an argument)
-2. Calls `POST /composer/views/CommandExecutor?cmd=LoadNavigation` with `locale: "es_US"`
-3. Walks the tree, collects `{ alias, label }` for all items (parent + child)
-4. Returns `{ items, raw }`
+The injected script (receives `userId` as its one argument):
+1. `discoverNavId()` — fetches the rendered composer page HTML and regex-matches `"navigation.id"` out of embedded page state
+2. Derives `siteId` from `window.location.hostname`
+3. Guards: bail with a clean error if `userId` or `navId` is missing
+4. Calls `POST /composer/views/CommandExecutor?cmd=LoadNavigation` with `locale: "es_US"`
+5. Walks the tree, collects `{ alias, label_es }` for all items (parent + child)
+6. Returns `{ items, raw }` — or `{ items: [], raw: null, error }` on any failure
 
 ### 5.5 ProjectPage changes
 
@@ -309,11 +322,10 @@ Follows the same `<Tabs>` pattern already used by `GmPrebuildFlowPanel` in `Proj
 ### FE — New
 | File | What changes |
 |------|-------------|
-| `src/services/ports/LabelPort.ts` | Add `loadNav(dealerSlug, userId)` method |
-| `src/services/adapters/LabelAdapter.ts` | Implement `loadNav` (injected script + CommandExecutor call) |
+| `src/services/ports/LabelPort.ts` | Add `loadNav()` + `navCheck()` methods |
+| `src/services/adapters/LabelAdapter.ts` | Implement `loadNav` + `navCheck`; JWT `userId` extraction and the `loadNavInjected` script live inline here |
 | `src/types/index.ts` | Add `NavCheckRequest`, `NavCheckItem`, `NavCheckResponse`, `NavLoadResult` types |
 | `src/components/organisms/NavTranslateTab/NavTranslateTab.tsx` | New organism: nav load → nav-check → translate loop |
-| `src/scripts/loadNav.ts` or inline in `LabelAdapter` | Injected script for `LoadNavigation` command |
 
 ### FE — Modified
 | File | What changes |
@@ -329,36 +341,27 @@ Follows the same `<Tabs>` pattern already used by `GmPrebuildFlowPanel` in `Proj
 
 ---
 
-## 8. Risks & open questions
+## 8. Risks & resolved questions
 
-### 8.1 How to discover `navId`?
+### 8.1 How to discover `navId`? — RESOLVED (page-state read)
 
-The `LoadNavigation` command requires a `navId` (e.g. `"V9-MAIN-HYUNDAI"`). This value is not derivable from the dealer slug alone — it depends on the site template. Options to resolve:
+The `LoadNavigation` command requires a `navId` (e.g. `"V9-MAIN-HYUNDAI"`). It is not derivable from the dealer slug — it depends on the site template.
 
-1. **Call `GetWindowPreferences` or equivalent first** (same pattern as `SetWindowPreferences` in `cmsTools.ts`) to read the saved nav ID from composer preferences. Preferred — deterministic, same-origin.
-2. **Read from page JS state** — the composer's ExtJS/React store likely has a `navId` or `navList` property. Parseable via `document` inspection in the injected script. Frail against UI changes.
-3. **Brute-force try** — attempt `V9-MAIN-{BRAND}` patterns and check for valid responses. Ugly but self-contained.
-4. **User input** — expose a dropdown or text field for the nav ID. Breaks the "one button" UX goal.
+**Chosen approach: option 2 (read from page state), via an HTML page fetch.** `discoverNavId()` inside the injected script does `GET https://{host}/?...&locale=es_US...` and regex-matches `"navigation.id":"([^"]+)"` from the rendered page's embedded state. Option 1 (a preferences call) was not needed once the page HTML was confirmed to carry the nav id inline.
 
-**Recommendation:** spike option 1 first (preferences call), fall back to option 2 (page state read). Document the chosen approach here once resolved.
+**Known frailty:** the regex depends on the `"navigation.id"` key remaining in the page HTML. If DDC changes how it embeds page state, discovery returns `''` and the script surfaces `"Could not discover navId from page context"`. This is the accepted trade-off for staying same-origin and self-contained.
 
-### 8.2 How to discover `userId`?
+### 8.2 How to discover `userId`? — RESOLVED (JWT decode, FE-side)
 
-The `LoadNavigation` payload requires `userId` (e.g. `"almontero"`). Options:
-
-1. **Read from page state** — the composer page's JS context likely has this in a user/session object. Same ExtJS/React store read as navId.
-2. **From the URL** — not present in the composer URL.
-3. **From a separate API call** — `GET /cc-website/as/{slug}/{slug}-admin/composer/...` likely returns user info.
-
-**Recommendation:** same spike as navId — read from page state.
+**Chosen approach: decode the session JWT.** `LabelAdapter.loadNav()` reads `ccIdtToken` from `chrome.storage.local`, base64-decodes the JWT payload, and takes the `sub` claim (`_extractUserId`). This runs FE-side (not in the injected script) and is passed in as the script's argument. More robust than an ExtJS/React store read since the token shape is stable.
 
 ### 8.3 `userId` in flat map → no context
 
 The nav tree is collected as a flat list. The user won't see which parent item a child belongs to. For 59 labels this is acceptable — the DDC composer already shows the tree. If confusion arises, add a small `parentLabel` context in the `LabelRow` header: "VEHICLE_RESEARCH *under* Shop". This is a v1.1 polish item, not blocking.
 
-### 8.4 Extra `userId` parameter on `loadNav`
+### 8.4 Extra `userId` parameter on `loadNav` — RESOLVED (zero params)
 
-The `loadNav(dealerSlug, userId)` method takes an extra parameter compared to `fetchLabel(dealerSlug, alias)`. If `userId` can be discovered inside the injected script (from the page state), this parameter can be removed — `loadNav(dealerSlug)` alone would suffice.
+The final signature is `loadNav()` with **no parameters**. `userId` is discovered from the JWT (§8.2), `siteId` from the composer hostname, and `navId` from page state (§8.1) — all inside the adapter or its injected script. The caller passes nothing.
 
 ### 8.5 False negatives in the detection heuristic
 

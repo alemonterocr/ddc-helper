@@ -1,4 +1,9 @@
-import type { DealerBundle, SectionPlanItem, TokenInfo } from "../types";
+import type {
+  DealerBundle,
+  PageWidgetType,
+  SectionPlanItem,
+  TokenInfo,
+} from "../types";
 
 // ── Domain models ──────────────────────────────────────────────────────────────
 
@@ -95,6 +100,33 @@ export interface SpanishLabelRow {
   reasoning: string;
 }
 
+// ── Spanish (page widget translation) flow ───────────────────────────────────
+
+/** Lifecycle of one page widget inside the Translate Page tab. */
+export type WidgetRowStatus =
+  | "queued"        // placeholder card shown after `checked`
+  | "translating"   // awaiting its `widget` stream event
+  | "ready"         // translated, awaiting save
+  | "error"         // translation failed validation/judge
+  | "saved"         // two-save completed
+  | "skipped";      // user skipped (or force-translate source)
+
+/** One editable page widget (content or RAW HTML) under translation. */
+export interface SpanishWidgetRow {
+  /** Raw DDC div id, WITH the -editable suffix. Pairing key + save windowId. */
+  windowId: string;
+  widgetType: PageWidgetType;
+  status: WidgetRowStatus;
+  /** Original English inner HTML — re-saved verbatim after the Spanish write. */
+  enHtml: string;
+  /** ES value — model output, user-editable before save. */
+  esHtml: string;
+  warnings: string[];
+  raw: string | null;
+  error: string | null;
+  reasoning: string;
+}
+
 export interface BaseProject {
   id: string;
   dealerId: string;
@@ -133,6 +165,10 @@ export interface SpanishMigrationProject extends BaseProject {
   type: "spanish";
   dealerName: string;
   labels: SpanishLabelRow[];
+  /** Widgets for the Translate Page tab. v1 holds one page at a time (see
+   *  004 spec §8.8); `pageTargetPath` records which page they came from. */
+  pageWidgets: SpanishWidgetRow[];
+  pageTargetPath?: string;
 }
 
 // ── Router ─────────────────────────────────────────────────────────────────────

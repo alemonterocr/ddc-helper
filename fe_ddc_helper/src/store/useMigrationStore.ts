@@ -10,6 +10,7 @@ import type {
   GMPrebuildProject,
   SpanishMigrationProject,
   SpanishLabelRow,
+  SpanishWidgetRow,
 } from "./types";
 import type { ColumnWidget, DealerBundle, SectionPlanItem } from "../types";
 import {
@@ -47,6 +48,18 @@ interface AppState extends RouterState {
     projectId: string,
     alias: string,
     patch: Partial<SpanishLabelRow>,
+  ) => void;
+  /** Replace the project's page-widget list — used when a page is (re)loaded. */
+  setPageWidgets: (
+    projectId: string,
+    targetPath: string,
+    widgets: SpanishWidgetRow[],
+  ) => void;
+  /** Patch one page-widget row, matched by windowId. */
+  updatePageWidget: (
+    projectId: string,
+    windowId: string,
+    patch: Partial<SpanishWidgetRow>,
   ) => void;
 
   // ── Page actions ────────────────────────────────────────────────────────────
@@ -169,6 +182,7 @@ function makeSpanishProject(
     status: "In Progress",
     dealerName,
     labels: [],
+    pageWidgets: [],
   };
 }
 
@@ -344,6 +358,29 @@ export const useMigrationStore = create<AppState>()(
                   ...proj,
                   labels: proj.labels.map((row) =>
                     row.alias !== alias ? row : { ...row, ...patch },
+                  ),
+                },
+          ),
+        })),
+
+      setPageWidgets: (projectId, targetPath, widgets) =>
+        set((state) => ({
+          spanishProjects: state.spanishProjects.map((proj) =>
+            proj.id !== projectId
+              ? proj
+              : { ...proj, pageTargetPath: targetPath, pageWidgets: widgets },
+          ),
+        })),
+
+      updatePageWidget: (projectId, windowId, patch) =>
+        set((state) => ({
+          spanishProjects: state.spanishProjects.map((proj) =>
+            proj.id !== projectId
+              ? proj
+              : {
+                  ...proj,
+                  pageWidgets: (proj.pageWidgets ?? []).map((row) =>
+                    row.windowId !== windowId ? row : { ...row, ...patch },
                   ),
                 },
           ),
