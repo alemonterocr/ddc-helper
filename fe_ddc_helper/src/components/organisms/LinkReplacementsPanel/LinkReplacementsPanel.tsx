@@ -35,7 +35,7 @@ export function LinkReplacementsPanel({ projectId, page }: LinkReplacementsPanel
       {hrefs.length === 0 ? (
         <p className="text-xs text-muted-foreground">No links found in this plan.</p>
       ) : (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 max-h-[320px] overflow-y-auto scrollbar-thin pr-1">
           {hrefs.map(({ href, count }) => (
             <div key={href} className="flex flex-col gap-1">
               {/* Original URL + occurrence count */}
