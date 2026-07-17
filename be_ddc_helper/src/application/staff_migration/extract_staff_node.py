@@ -40,7 +40,14 @@ def build_extract_staff_node(
         html = strip_noise(state.get("html", ""))
         base_url = state.get("base_url", "")
 
-        await _progress("AI is reading the staff page")
+        # Report the input magnitude up front — this streams to the progress log
+        # so the user can see how much is being sent even if the call then hangs
+        # or fails (exact in/out land in token_info once a response comes back).
+        approx_tokens = max(1, len(html) // 4)
+        await _progress(
+            f"AI is reading the staff page — sending {len(html):,} chars "
+            f"(~{approx_tokens:,} tokens)"
+        )
 
         try:
             members = await llm.extract_staff(html, base_url)

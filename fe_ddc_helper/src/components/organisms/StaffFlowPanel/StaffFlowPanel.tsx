@@ -147,7 +147,18 @@ export function StaffFlowPanel({
       );
 
       if (response.error) {
-        patch({ status: "error", error: response.error });
+        // Keep the token counter on failure when the LLM actually processed
+        // something (0-token hard failures fall back to the progress-log
+        // "sending N chars" line rather than a misleading empty badge).
+        const info = response.token_info;
+        const usedTokens =
+          !!info &&
+          info.total_input_tokens + info.total_output_tokens > 0;
+        patch({
+          status: "error",
+          error: response.error,
+          tokenInfo: usedTokens ? info : null,
+        });
         return;
       }
 

@@ -46,13 +46,24 @@ async def parse_staff(
             staff=[],
             warnings=["No HTML captured from the page — skeleton.raw_html is empty"],
             error="empty_html",
+            token_info=_build_token_info_dto(llm.usage_log),
         )
 
     async def progress(msg: str) -> None:
         await bridge.send_progress(body.dealer_id, msg)
 
     graph = build_staff_extraction_graph(llm=llm, progress=progress)
-    out = await graph.ainvoke(_initial_state(html, base_url, body.dealer_id))
+    try:
+        out = await graph.ainvoke(_initial_state(html, base_url, body.dealer_id))
+    except Exception as e:
+        # Surface token usage even on failure — whatever the LLM already
+        # processed is recorded in usage_log regardless of how the run ended.
+        return ParseStaffResponse(
+            staff=[],
+            warnings=["Staff extraction failed"],
+            error=str(e),
+            token_info=_build_token_info_dto(llm.usage_log),
+        )
 
     return ParseStaffResponse(
         staff=_to_staff_dtos(out.get("staff", [])),
