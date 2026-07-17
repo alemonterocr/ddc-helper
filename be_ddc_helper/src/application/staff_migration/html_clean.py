@@ -50,3 +50,58 @@ def strip_noise(html: str) -> str:
         return _BLANK_LINES.sub("\n", cleaned)
     except Exception:
         return html
+
+
+# Character budget per extraction chunk. A large roster (dozens of staff) can't
+# fit in one LLM response — the JSON output truncates. Splitting the page into
+# windows bounds each call's output and lets them run in parallel. ~24k chars ≈
+# ~6-8k input tokens per chunk, whose staff JSON fits comfortably in 8192 out.
+_CHUNK_CHARS = 24000
+_CHUNK_OVERLAP = 2000
+
+
+def chunk_html(html: str, max_chars: int = _CHUNK_CHARS, overlap: int = _CHUNK_OVERLAP) -> list[str]:
+    """Split HTML into overlapping windows for batched staff extraction.
+
+    Returns `[html]` unchanged when it already fits. Windows overlap so a staff
+    card straddling a boundary appears whole in at least one chunk; the caller
+    dedupes the results. Splits are nudged to the next `>` so tags aren't cut
+    mid-token (extraction tolerates minor fragmentation regardless).
+    """
+    if len(html) <= max_chars:
+        return [html]
+
+    chunks: list[str] = []
+    start = 0
+    n = len(html)
+    while start < n:
+        end = min(start + max_chars, n)
+        if end < n:
+            gt = html.find(">", end)
+            if gt != -1 and gt - end < 500:
+                end = gt + 1
+        chunks.append(html[start:end])
+        if end >= n:
+            break
+        start = max(end - overlap, start + 1)
+    return chunks
+
+
+def dedup_staff(members: list[dict]) -> list[dict]:
+    """Merge staff dicts from overlapping chunks, keyed by email then name+dept.
+
+    First occurrence wins. Rows with neither an email nor a name are dropped."""
+    seen: set[str] = set()
+    out: list[dict] = []
+    for m in members:
+        if not isinstance(m, dict):
+            continue
+        email = str(m.get("email") or "").strip().lower()
+        name = str(m.get("name") or "").strip().lower()
+        dept = str(m.get("department") or "").strip().lower()
+        key = email or (f"{name}|{dept}" if name else "")
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        out.append(m)
+    return out

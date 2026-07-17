@@ -501,8 +501,9 @@ class AnthropicLLMAdapter:
         }
         response = await self._client.messages.create(
             model="claude-haiku-4-5",
-            # 8192 comfortably fits a large staff roster; 16000 just let a slow
-            # generation run twice as long (output tokens dominate latency).
+            # 8192 fits one chunk's worth of staff (the node splits large
+            # rosters into chunks so a single response never has to emit the
+            # whole roster and truncate). Output tokens dominate latency.
             max_tokens=8192,
             system=build_staff_extraction_system_prompt(),
             tools=[_TOOL],

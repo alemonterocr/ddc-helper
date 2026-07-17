@@ -1,6 +1,10 @@
-"""Unit tests for staff-page noise stripping."""
+"""Unit tests for staff-page noise stripping, chunking, and dedup."""
 
-from src.application.staff_migration.html_clean import strip_noise
+from src.application.staff_migration.html_clean import (
+    chunk_html,
+    dedup_staff,
+    strip_noise,
+)
 
 
 def test_removes_script_style_svg_and_head_junk():
@@ -59,3 +63,50 @@ def test_empty_and_malformed_are_safe():
     assert strip_noise("   ") == "   "
     # not valid HTML — should not raise, content preserved
     assert "hello" in strip_noise("hello <div unclosed")
+
+
+# ── chunk_html ────────────────────────────────────────────────────────────────
+
+
+def test_small_html_is_single_chunk():
+    assert chunk_html("<div>small</div>") == ["<div>small</div>"]
+
+
+def test_large_html_splits_with_overlap_and_full_coverage():
+    html = "".join(f"<div>staff-{i}</div>" for i in range(4000))  # well over 24k chars
+    chunks = chunk_html(html, max_chars=24000, overlap=2000)
+    assert len(chunks) > 1
+    # every chunk within budget (+ small nudge to next '>')
+    assert all(len(c) <= 24000 + 500 for c in chunks)
+    # first and last content present across the set
+    assert any("staff-0<" in c or "staff-0" in c for c in chunks)
+    assert any("staff-3999" in c for c in chunks)
+    # consecutive chunks overlap (end of one reappears at start of next)
+    assert chunks[0][-100:] in chunks[1] or chunks[1].startswith(chunks[0][-2000:][:50])
+
+
+# ── dedup_staff ───────────────────────────────────────────────────────────────
+
+
+def test_dedup_by_email_case_insensitive():
+    members = [
+        {"name": "Jane Doe", "department": "Sales", "email": "Jane@x.com"},
+        {"name": "Jane D.", "department": "Sales", "email": "jane@x.com"},  # dup email
+        {"name": "Bob Roe", "department": "Service", "email": "bob@x.com"},
+    ]
+    out = dedup_staff(members)
+    assert [m["name"] for m in out] == ["Jane Doe", "Bob Roe"]
+
+
+def test_dedup_falls_back_to_name_dept_when_no_email():
+    members = [
+        {"name": "Ana", "department": "Parts"},
+        {"name": "ana", "department": "parts"},   # dup (case-insensitive)
+        {"name": "Ana", "department": "Sales"},    # different dept → kept
+    ]
+    out = dedup_staff(members)
+    assert len(out) == 2
+
+
+def test_dedup_drops_keyless_rows():
+    assert dedup_staff([{"department": "Sales"}, {}, "junk"]) == []

@@ -5,16 +5,23 @@ Staff-page workflow. Two flows:
 ## Extract (analyze)
 One-node LangGraph: takes raw page HTML + base URL → `StaffMember[]`.
 
-- `html_clean.py` — `strip_noise(html)` drops `<script>`/`<style>`/`<svg>`/
-  head-junk and inline `style=` attributes (bs4) before the LLM sees the page.
-  Raw staff pages are mostly non-content; this cuts input tokens/latency/cost
-  sharply (≈90% on inline-style-heavy pages) with no loss of extractable
-  content. Fail-safe: returns the input unchanged on any parse error.
-- `extract_staff_node.py` — `strip_noise` → `llm.extract_staff(html, base_url)`
+- `html_clean.py`:
+  - `strip_noise(html)` drops `<script>`/`<style>`/`<svg>`/head-junk and inline
+    `style=` attributes (bs4). Helps token-heavy templates; on a clean roster
+    page it barely reduces size (the content *is* the staff). Fail-safe:
+    returns input unchanged on parse error.
+  - `chunk_html(html)` splits a large page into overlapping ~24k-char windows.
+  - `dedup_staff(members)` merges chunk results by email, then name+dept.
+- `extract_staff_node.py` — `strip_noise` -> `chunk_html` -> **parallel**
+  `llm.extract_staff` per chunk (`asyncio.gather`) -> `dedup_staff` -> filter.
+  A big roster (e.g. 80+ people) can't fit one LLM response — the JSON output
+  truncates — so we batch and merge; per-chunk failures degrade to a warning,
+  not a total failure.
 - `staff_graph.py` — graph wiring
-- Triggered by `POST /parse-staff`
-- Anthropic `extract_staff` caps output at `max_tokens=8192` (was 16000 —
-  oversized; output tokens dominate latency).
+- Triggered by `POST /parse-staff` — returns `token_info` on every path
+  (incl. failure); the node reports input size + chunk count over progress.
+- Anthropic `extract_staff` output `max_tokens=8192` — sized for one *chunk*
+  (was 16000; the whole-roster single call still truncated and was slow).
 
 ## Execute
 Sequential async class (not LangGraph) — same reasoning as `MigrationExecutor`.
