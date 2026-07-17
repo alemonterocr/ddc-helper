@@ -501,7 +501,9 @@ class AnthropicLLMAdapter:
         }
         response = await self._client.messages.create(
             model="claude-haiku-4-5",
-            max_tokens=16000,
+            # 8192 comfortably fits a large staff roster; 16000 just let a slow
+            # generation run twice as long (output tokens dominate latency).
+            max_tokens=8192,
             system=build_staff_extraction_system_prompt(),
             tools=[_TOOL],
             tool_choice={"type": "tool", "name": "submit_staff"},

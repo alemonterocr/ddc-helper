@@ -13,6 +13,8 @@ from typing import Awaitable, Callable, TypedDict
 
 from src.ports.outbound import LLMPort
 
+from .html_clean import strip_noise
+
 Progress = Callable[[str], Awaitable[None]]
 
 
@@ -33,7 +35,9 @@ def build_extract_staff_node(
             await progress(msg)
 
     async def extract_staff(state: StaffExtractState) -> dict:
-        html = state.get("html", "")
+        # Strip scripts/styles/svg/inline-style noise before the LLM sees it —
+        # a raw staff page is mostly non-content that inflates tokens/latency.
+        html = strip_noise(state.get("html", ""))
         base_url = state.get("base_url", "")
 
         await _progress("AI is reading the staff page")

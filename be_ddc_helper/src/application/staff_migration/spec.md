@@ -5,9 +5,16 @@ Staff-page workflow. Two flows:
 ## Extract (analyze)
 One-node LangGraph: takes raw page HTML + base URL → `StaffMember[]`.
 
-- `extract_staff_node.py` — calls `llm.extract_staff(html, base_url)`
+- `html_clean.py` — `strip_noise(html)` drops `<script>`/`<style>`/`<svg>`/
+  head-junk and inline `style=` attributes (bs4) before the LLM sees the page.
+  Raw staff pages are mostly non-content; this cuts input tokens/latency/cost
+  sharply (≈90% on inline-style-heavy pages) with no loss of extractable
+  content. Fail-safe: returns the input unchanged on any parse error.
+- `extract_staff_node.py` — `strip_noise` → `llm.extract_staff(html, base_url)`
 - `staff_graph.py` — graph wiring
 - Triggered by `POST /parse-staff`
+- Anthropic `extract_staff` caps output at `max_tokens=8192` (was 16000 —
+  oversized; output tokens dominate latency).
 
 ## Execute
 Sequential async class (not LangGraph) — same reasoning as `MigrationExecutor`.
