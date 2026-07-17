@@ -218,7 +218,7 @@ export function ProjectPage() {
         {/* ── Right: settings + links (collapsible) + project status (pinned) ── */}
         <aside
           aria-label="Project settings and status"
-          className="w-72 shrink-0 border-l border-border p-4 overflow-y-auto scrollbar-thin hidden xl:flex flex-col gap-4"
+          className="w-72 shrink-0 border-l border-border p-4 overflow-y-auto scrollbar-thin hidden xl:block space-y-4"
         >
           <Accordion
             type="multiple"
