@@ -30,12 +30,20 @@ export function StaffMemberCard({
   }
 
   function save() {
+    const photoUrl = draft.original_photo_url?.trim() || null;
+    // If the source photo URL changed, drop any previously-uploaded CDN photo
+    // so execution re-uploads from the corrected source.
+    const urlChanged =
+      (photoUrl ?? "") !== (member.original_photo_url ?? "");
     onEdit(index, {
       name: draft.name,
       title: draft.title,
       phone: draft.phone,
       email: draft.email,
       bio: draft.bio,
+      original_photo_url: photoUrl,
+      has_photo: !!photoUrl,
+      ...(urlChanged ? { photo: null } : {}),
     });
     setEditing(false);
   }
@@ -97,6 +105,51 @@ export function StaffMemberCard({
             className="min-h-16 max-h-40 resize-none"
           />
         </Field>
+        <Field>
+          <FieldLabel htmlFor={`photo-${index}`} className="text-xs">
+            Photo URL
+          </FieldLabel>
+          <div className="flex items-center gap-3">
+            {/* keyed by URL so the load-error state resets when the URL changes */}
+            <Avatar
+              key={draft.photo ?? draft.original_photo_url ?? "none"}
+              url={draft.photo || draft.original_photo_url}
+              name={draft.name}
+            />
+            <div className="flex flex-1 items-center gap-1.5 min-w-0">
+              <Input
+                id={`photo-${index}`}
+                value={draft.original_photo_url ?? ""}
+                onChange={(e) =>
+                  setDraft({
+                    ...draft,
+                    original_photo_url: e.target.value || null,
+                  })
+                }
+                placeholder="https://…/jane.jpg"
+                className="font-mono text-xs"
+              />
+              {(draft.original_photo_url || draft.photo) && (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 shrink-0 text-muted-foreground hover:text-destructive"
+                  onClick={() =>
+                    setDraft({ ...draft, original_photo_url: null, photo: null })
+                  }
+                  title="Remove photo"
+                >
+                  <X size={12} />
+                </Button>
+              )}
+            </div>
+          </div>
+          <p className="text-[11px] text-muted-foreground">
+            Paste a new image URL if the wrong photo was detected. Leave blank
+            for no photo.
+          </p>
+        </Field>
         <div className="flex justify-end gap-2">
           <Button variant="outline" size="sm" onClick={cancel}>
             Cancel
@@ -113,7 +166,7 @@ export function StaffMemberCard({
   return (
     <div className="group flex items-start gap-3 p-3 rounded-md border border-border bg-card hover:bg-accent/30 transition-colors">
       {/* Avatar */}
-      <PhotoAvatar member={member} />
+      <Avatar url={member.photo || member.original_photo_url} name={member.name} />
 
       {/* Body */}
       <div className="flex-1 min-w-0 flex flex-col gap-0.5">
@@ -168,9 +221,10 @@ export function StaffMemberCard({
   );
 }
 
-function PhotoAvatar({ member }: { member: StaffMember }) {
+/** Round avatar for a photo URL, with a fallback icon when absent or unloadable.
+ *  Callers reset the error state on URL change by passing a `key`. */
+function Avatar({ url, name }: { url: string | null; name: string }) {
   const [errored, setErrored] = useState(false);
-  const url = member.photo || member.original_photo_url;
   if (!url || errored) {
     return (
       <div className="shrink-0 w-10 h-10 rounded-full bg-muted flex items-center justify-center">
@@ -181,7 +235,7 @@ function PhotoAvatar({ member }: { member: StaffMember }) {
   return (
     <img
       src={url}
-      alt={member.name}
+      alt={name}
       loading="lazy"
       onError={() => setErrored(true)}
       className="shrink-0 w-10 h-10 rounded-full object-cover"
