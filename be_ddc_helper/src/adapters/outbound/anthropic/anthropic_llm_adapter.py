@@ -499,17 +499,22 @@ class AnthropicLLMAdapter:
                 "required": ["staff"],
             },
         }
-        response = await self._client.messages.create(
+        # A big roster (80+ people) emitted as JSON needs real output room;
+        # 32000 fits it with headroom and stays well under Haiku's 64k output
+        # ceiling. The whole page goes in one call (input is small relative to
+        # the 200k context) so departments stay consistent. We must STREAM: the
+        # SDK refuses a non-streaming request whose max_tokens could exceed the
+        # ~10-min HTTP timeout, and streaming also avoids idle-timeout drops on
+        # the long generation.
+        async with self._client.messages.stream(
             model="claude-haiku-4-5",
-            # 8192 fits one chunk's worth of staff (the node splits large
-            # rosters into chunks so a single response never has to emit the
-            # whole roster and truncate). Output tokens dominate latency.
-            max_tokens=8192,
+            max_tokens=32000,
             system=build_staff_extraction_system_prompt(),
             tools=[_TOOL],
             tool_choice={"type": "tool", "name": "submit_staff"},
             messages=[{"role": "user", "content": build_staff_extraction_user_message(html, base_url)}],
-        )
+        ) as stream:
+            response = await stream.get_final_message()
         self._record("claude-haiku-4-5", "extract_staff", response)
         for block in response.content:
             if block.type == "tool_use" and block.name == "submit_staff":

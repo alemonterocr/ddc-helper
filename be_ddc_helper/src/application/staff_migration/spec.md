@@ -5,23 +5,21 @@ Staff-page workflow. Two flows:
 ## Extract (analyze)
 One-node LangGraph: takes raw page HTML + base URL → `StaffMember[]`.
 
-- `html_clean.py`:
-  - `strip_noise(html)` drops `<script>`/`<style>`/`<svg>`/head-junk and inline
-    `style=` attributes (bs4). Helps token-heavy templates; on a clean roster
-    page it barely reduces size (the content *is* the staff). Fail-safe:
-    returns input unchanged on parse error.
-  - `chunk_html(html)` splits a large page into overlapping ~24k-char windows.
-  - `dedup_staff(members)` merges chunk results by email, then name+dept.
-- `extract_staff_node.py` — `strip_noise` -> `chunk_html` -> **parallel**
-  `llm.extract_staff` per chunk (`asyncio.gather`) -> `dedup_staff` -> filter.
-  A big roster (e.g. 80+ people) can't fit one LLM response — the JSON output
-  truncates — so we batch and merge; per-chunk failures degrade to a warning,
-  not a total failure.
+- `html_clean.py` — `strip_noise(html)` drops `<script>`/`<style>`/`<svg>`/
+  head-junk and inline `style=` attributes (bs4). Helps token-heavy templates;
+  on a clean roster page it barely reduces size (the content *is* the staff).
+  Fail-safe: returns input unchanged on parse error.
+- `extract_staff_node.py` — `strip_noise` -> **single** `llm.extract_staff` over
+  the whole page -> filter. The page fits the context easily (~18-27k input vs a
+  200k window), and one call keeps department names consistent (chunking made
+  independent calls that re-invented departments). The node reports input size
+  over the progress channel.
 - `staff_graph.py` — graph wiring
-- Triggered by `POST /parse-staff` — returns `token_info` on every path
-  (incl. failure); the node reports input size + chunk count over progress.
-- Anthropic `extract_staff` output `max_tokens=8192` — sized for one *chunk*
-  (was 16000; the whole-roster single call still truncated and was slow).
+- Triggered by `POST /parse-staff` — returns `token_info` on every path,
+  including failure.
+- Anthropic `extract_staff` output `max_tokens=32000` — real room for a large
+  roster's JSON, still under Haiku's 64k output ceiling (8192 truncated big
+  rosters; the constraint is output, not input).
 
 ## Execute
 Sequential async class (not LangGraph) — same reasoning as `MigrationExecutor`.

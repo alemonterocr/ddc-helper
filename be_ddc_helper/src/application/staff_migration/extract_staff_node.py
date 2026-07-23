@@ -3,19 +3,19 @@
 One-node LangGraph because parsing staff HTML is non-deterministic (department
 names vary, photo URLs need resolution, bios may span multiple elements).
 
-State carries the raw HTML + base URL. The node strips non-content noise, then
-extracts staff. Large rosters are split into overlapping chunks and extracted
-in parallel — a single call can't emit the JSON for dozens of people without
-truncating — and the results are merged and deduped. Malformed rows are
-filtered on the way out.
+Single LLM call over the whole (noise-stripped) page. The page fits the model's
+context easily (~18-27k input tokens vs a 200k window), and one call lets the
+model see every department together — so department names stay consistent rather
+than being re-invented per chunk. Output room, not input room, is the real
+constraint, so the adapter sets a generous `max_tokens` (still well under the
+model's 64k output cap).
 """
 
-import asyncio
 from typing import Awaitable, Callable, TypedDict
 
 from src.ports.outbound import LLMPort
 
-from .html_clean import chunk_html, dedup_staff, strip_noise
+from .html_clean import strip_noise
 
 Progress = Callable[[str], Awaitable[None]]
 
@@ -41,53 +41,31 @@ def build_extract_staff_node(
         html = strip_noise(state.get("html", ""))
         base_url = state.get("base_url", "")
 
-        # A big roster's JSON output won't fit one response — chunk it.
-        chunks = chunk_html(html)
-
-        # Report input magnitude + chunk count up front — streams to the
-        # progress log so the size is visible even if the calls then fail.
+        # Report the input magnitude up front — streams to the progress log so
+        # the size is visible even if the call then hangs or fails.
         approx_tokens = max(1, len(html) // 4)
         await _progress(
             f"AI is reading the staff page — {len(html):,} chars "
-            f"(~{approx_tokens:,} tokens) in {len(chunks)} chunk(s)"
+            f"(~{approx_tokens:,} tokens)"
         )
 
-        results = await asyncio.gather(
-            *(llm.extract_staff(chunk, base_url) for chunk in chunks),
-            return_exceptions=True,
-        )
-
-        members: list[dict] = []
-        failures = 0
-        for result in results:
-            if isinstance(result, BaseException):
-                failures += 1
-                continue
-            members.extend(result)
-
-        if failures == len(results):
+        try:
+            members = await llm.extract_staff(html, base_url)
+        except Exception:
             await _progress("⚠ Staff extraction failed")
             return {"staff": [], "warnings": ["Staff extraction failed — try again"]}
 
-        # Merge overlapping-chunk duplicates, then drop rows missing required
-        # fields (defensive against malformed model output).
+        # Drop rows missing required fields (defensive against malformed output).
         valid = [
-            m for m in dedup_staff(members)
-            if m.get("name") and m.get("department")
+            m for m in members
+            if isinstance(m, dict) and m.get("name") and m.get("department")
         ]
-
-        warnings: list[str] = []
-        if failures:
-            warnings.append(
-                f"{failures} of {len(results)} page chunk(s) failed — "
-                "some staff may be missing."
-            )
 
         with_photo = sum(1 for m in valid if m.get("has_photo"))
         await _progress(
             f"✓ Found {len(valid)} staff member(s) ({with_photo} with photos)"
         )
 
-        return {"staff": valid, "warnings": warnings}
+        return {"staff": valid, "warnings": []}
 
     return extract_staff
